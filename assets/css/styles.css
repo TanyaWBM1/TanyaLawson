@@ -321,6 +321,10 @@ header{
   line-height: 1;
 }
 
+.ticker-shift{
+  margin-top: 48px; /* tune this */
+}
+
 /* scroll left by one duplicate block */
 @keyframes ticker-scroll{
   0%{ transform: translateX(0); }
@@ -700,3 +704,4 @@ footer{
     animation: none !important;
   }
 }
+
