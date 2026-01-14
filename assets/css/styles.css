@@ -394,14 +394,35 @@ body.page-contact .nav a[href="/contact/"]::after{
   box-shadow: 0 4px 10px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.06);
 }
 
-/* Soft row styling (no labels needed) */
+/* =========================================
+   Soft metallic gold — Row 2 (working style)
+   ========================================= */
 .proof-row--soft .proof-pill{
-  background: rgba(255,255,255,.50);
-  border: 1px solid rgba(0,0,0,.10);
-  color: rgba(11,11,12,.78);
-  opacity: .92;
-  box-shadow: 0 3px 10px rgba(0,0,0,.10);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(201,178,124,.48),
+      rgba(201,178,124,.28) 55%,
+      rgba(251,250,247,.30)
+    );
+  border: 1px solid rgba(201,178,124,.55);
+  color: rgba(11,11,12,.82);
+  opacity: 1;
+  box-shadow:
+    0 6px 16px rgba(0,0,0,.10),
+    inset 0 1px 0 rgba(255,255,255,.50),
+    inset 0 -1px 0 rgba(0,0,0,.06);
 }
+
+/* Optional executive hover — still restrained */
+.proof-row--soft .proof-pill:hover{
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.12),
+    0 10px 22px rgba(201,178,124,.18),
+    inset 0 1px 0 rgba(255,255,255,.55),
+    inset 0 -1px 0 rgba(0,0,0,.06);
+}
+
 
 /* ========= Desktop tuning: FIT perfectly at 1024+ ========= */
 @media (min-width: 1024px){
@@ -525,3 +546,4 @@ body.page-contact .nav a[href="/contact/"]::after{
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
