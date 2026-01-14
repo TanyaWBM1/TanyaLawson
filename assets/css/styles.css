@@ -13,18 +13,9 @@
   --max: 1120px;
   --pad: clamp(16px, 3vw, 28px);
 
-/* ==========================================================
-   Sticky Header Offset (Layout Authority)
-   ========================================================== */
-
-:root{
+  /* Sticky Header Offset (Option B) */
   --sticky-offset: 88px; /* header height + breathing room */
-}
 
-.below-sticky{
-  padding-top: var(--sticky-offset);
-}
-   
   /* Base */
   --bg: #fbfaf7;                 /* warm paper */
   --surface: rgba(255,255,255,.70);
@@ -52,6 +43,11 @@
   --shadow-hover: 0 22px 62px rgba(0,0,0,.13);
 }
 
+/* Sticky Header Offset (Option B) */
+.below-sticky{
+  padding-top: var(--sticky-offset);
+}
+
 /* ---------- Reset ---------- */
 *,
 *::before,
@@ -74,59 +70,6 @@ body{
   overflow-x: hidden;
 }
 
-/* Signature background wash (CSS only, no images) */
-body::before{
-  content:"";
-  position: fixed;
-  inset: -20%;
-  z-index: -1;
-  background:
-    radial-gradient(900px 520px at 18% 12%, rgba(47,183,179,.18), transparent 60%),
-    radial-gradient(820px 560px at 78% 16%, rgba(201,178,124,.16), transparent 58%),
-    radial-gradient(900px 700px at 50% 84%, rgba(0,0,0,.05), transparent 62%);
-  filter: saturate(1.05);
-
-  /* Optional gentle drift (still speed-safe) */
-  animation: bg-drift 18s ease-in-out infinite alternate;
-  will-change: transform, filter;
-}
-
-@keyframes bg-drift{
-  0%{
-    transform: translate3d(0, 0, 0) scale(1);
-    filter: saturate(1.03);
-  }
-  50%{
-    transform: translate3d(-1.2%, -0.8%, 0) scale(1.02);
-    filter: saturate(1.06);
-  }
-  100%{
-    transform: translate3d(1.0%, 0.9%, 0) scale(1.03);
-    filter: saturate(1.04);
-  }
-}
-
-img, video, svg{
-  display:block;
-  max-width: 100%;
-  height:auto;
-}
-
-h1, h2, h3, p{
-  margin: 0;
-  overflow-wrap: anywhere;
-}
-
-a{
-  color: inherit;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-}
-
-a:hover{
-  text-decoration-thickness: 2px;
-}
-
 /* ---------- Layout ---------- */
 .container{
   width: min(var(--max), 100% - (var(--pad) * 2));
@@ -147,78 +90,10 @@ header{
   backdrop-filter: blur(10px);
 }
 
-.nav{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 14px;
-  padding: 12px 0;
-}
-
-/* A) Bigger logo + header name */
-.brand{
-  display:flex;
-  align-items:center;
-  gap: 12px;
-  text-decoration:none;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  font-size: 1.08rem;
-}
-
-@media (min-width: 920px){
-  .brand{
-    font-size: 1.18rem;
-  }
-}
-
-.brand-mark{
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,.14);
-  background: #fff;
-}
-
-.navlinks{
-  display:flex;
-  align-items:center;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content:flex-end;
-  font-size: .98rem;
-}
-
-.navlinks a{
-  text-decoration:none;
-  padding: 9px 10px;
-  border-radius: 14px;
-  border: 1px solid transparent;
-}
-
-.navlinks a:hover{
-  background: rgba(255,255,255,.65);
-  border-color: rgba(0,0,0,.08);
-}
-
-/* E) Nav CTA visible on desktop */
-.nav-cta{
-  display:none;
-}
-
-@media (min-width: 920px){
-  .nav-cta{
-    display:inline-flex;
-  }
-}
-
 /* ==========================================================
-   Motivational Ticker (Editorial style: single line, slower,
-   larger, fewer items, more “magazine strip”)
+   Motivational Ticker — Option B friendly
+   (No need for margin-top now. below-sticky handles it.)
    ========================================================== */
-
-.ticker{
-  position: relative;
 
 .ticker{
   position: relative;
@@ -254,8 +129,6 @@ header{
   background: rgba(255,255,255,.36);
   border: 1px solid rgba(0,0,0,.10);
   overflow: hidden;
-
-  /* slimmer height */
   padding: 6px 12px;
 
   box-shadow:
@@ -263,44 +136,24 @@ header{
     inset 0 1px 0 rgba(255,255,255,.65);
 }
 
-.ticker-badge{
-  display:inline-flex;
-  align-items:center;
-  font-size: .86rem;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  color: rgba(20,20,20,.62);
-  border: 1px solid rgba(0,0,0,.10);
-  background: rgba(255,255,255,.82);
-  padding: 6px 10px;
-  border-radius: 999px;
-}
-
-/* single-line viewport */
 .ticker-viewport{
   overflow: hidden;
   white-space: nowrap;
   line-height: 1;
 }
 
-/* track: force one line and slow it down */
 .ticker-move{
-  display: inline-flex;        /* prevents stacking */
+  display: inline-flex;
   align-items: center;
   gap: 18px;
 
-  padding-left: 124px;         /* space for badge */
-
-  white-space: nowrap;         /* no wrap */
-  flex-wrap: nowrap;           /* no wrap */
+  white-space: nowrap;
+  flex-wrap: nowrap;
 
   will-change: transform;
-
-  /* Editorial drift: slower and calmer */
   animation: ticker-scroll 72s linear infinite;
 }
 
-/* each row stays single line */
 .ticker-row{
   display: inline-flex;
   align-items: center;
@@ -309,7 +162,6 @@ header{
   flex-wrap: nowrap;
 }
 
-/* editorial quote “capsules” */
 .ticker-pill{
   display:inline-flex;
   align-items:center;
@@ -319,7 +171,6 @@ header{
   background: rgba(255,255,255,.60);
   color: rgba(0,0,0,.72);
 
-  /* Editorial: slightly larger, more airy */
   font-size: 1.02rem;
   font-weight: 520;
   letter-spacing: -0.01em;
@@ -333,22 +184,15 @@ header{
   line-height: 1;
 }
 
-.ticker-shift{
-  margin-top: 48px; /* tune this */
-}
-
-/* scroll left by one duplicate block */
 @keyframes ticker-scroll{
   0%{ transform: translateX(0); }
   100%{ transform: translateX(-50%); }
 }
 
-/* pause on hover */
 .ticker-shell:hover .ticker-move{
   animation-play-state: paused;
 }
 
-/* reduced motion */
 @media (prefers-reduced-motion: reduce){
   .ticker-move{
     animation: none !important;
@@ -716,6 +560,7 @@ footer{
     animation: none !important;
   }
 }
+
 
 
 
