@@ -150,15 +150,6 @@ header{
     inset 0 1px 0 rgba(255,255,255,.65);
 }
 
-.ticker-label{
-  position:absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  z-index: 3;
-}
-
 .ticker-badge{
   display:inline-flex;
   align-items:center;
@@ -247,6 +238,7 @@ header{
     transform: none !important;
   }
 }
+
 
 /* ---------- Typography ---------- */
 h1{
