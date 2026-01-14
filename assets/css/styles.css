@@ -1,3 +1,5 @@
+please update this portion of the css
+
 /* ==========================================================
    TanyaMLawson.com — Stylish + Speed-First CSS (UPDATED)
    Includes requested upgrades:
@@ -29,18 +31,15 @@
   --p:  clamp(1.05rem, 1.25vw, 1.16rem);
 
   /* Brand accents */
-  --cta-primary: #2fb7b3;        /* sea-glass turquoise */
-  --cta-hover-bg: #ffffff;      /* white hover */
-  --cta-outline: #c9b27c;       /* soft metallic gold */
+  --cta-primary: #2fb7b3;         /* sea-glass turquoise */
+  --cta-hover-bg: #ffffff;       /* white hover */
+  --cta-outline: #c9b27c;        /* soft metallic gold */
   --cta-text: #000000;
 
   /* Shadows */
   --shadow: 0 18px 50px rgba(0,0,0,.10);
   --shadow-soft: 0 10px 28px rgba(0,0,0,.09);
   --shadow-hover: 0 22px 62px rgba(0,0,0,.13);
-
-  /* Sticky header + ticker spacing control (ONLY adjust this) */
-  --ticker-offset: 56px;        /* try 48px–84px */
 }
 
 /* ---------- Reset ---------- */
@@ -76,14 +75,25 @@ body::before{
     radial-gradient(820px 560px at 78% 16%, rgba(201,178,124,.16), transparent 58%),
     radial-gradient(900px 700px at 50% 84%, rgba(0,0,0,.05), transparent 62%);
   filter: saturate(1.05);
+
+  /* Optional gentle drift (still speed-safe) */
   animation: bg-drift 18s ease-in-out infinite alternate;
   will-change: transform, filter;
 }
 
 @keyframes bg-drift{
-  0%{ transform: translate3d(0,0,0) scale(1); filter: saturate(1.03); }
-  50%{ transform: translate3d(-1.2%,-0.8%,0) scale(1.02); filter: saturate(1.06); }
-  100%{ transform: translate3d(1.0%,0.9%,0) scale(1.03); filter: saturate(1.04); }
+  0%{
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: saturate(1.03);
+  }
+  50%{
+    transform: translate3d(-1.2%, -0.8%, 0) scale(1.02);
+    filter: saturate(1.06);
+  }
+  100%{
+    transform: translate3d(1.0%, 0.9%, 0) scale(1.03);
+    filter: saturate(1.04);
+  }
 }
 
 img, video, svg{
@@ -125,9 +135,6 @@ header{
   border-bottom: 1px solid rgba(0,0,0,.10);
   background: rgba(251,250,247,.78);
   backdrop-filter: blur(10px);
-
-  /* subtle separation/shadow without affecting layout flow */
-  box-shadow: 0 8px 22px rgba(0,0,0,.06);
 }
 
 .nav{
@@ -150,7 +157,9 @@ header{
 }
 
 @media (min-width: 920px){
-  .brand{ font-size: 1.18rem; }
+  .brand{
+    font-size: 1.18rem;
+  }
 }
 
 .brand-mark{
@@ -183,27 +192,27 @@ header{
 }
 
 /* E) Nav CTA visible on desktop */
-.nav-cta{ display:none; }
+.nav-cta{
+  display:none;
+}
+
 @media (min-width: 920px){
-  .nav-cta{ display:inline-flex; }
+  .nav-cta{
+    display:inline-flex;
+  }
 }
 
 /* ==========================================================
-   Motivational Ticker (sticky-header safe)
-   Goal: move ticker DOWN without overlap
-   Adjust only: --ticker-offset
+   Motivational Ticker (Editorial style: single line, slower,
+   larger, fewer items, more “magazine strip”)
    ========================================================== */
 
 .ticker{
   position: relative;
 
-  /* THIS is what moves the ticker down below the sticky header */
-  margin-top: var(--ticker-offset);
-
-  /* small breathing room before hero */
-  margin-bottom: 10px;
-
-  /* keep hairlines tight */
+  /* Move ticker down from header and reduce dead space */
+  margin-top: 14px;
+  margin-bottom: 8px;
   padding: 6px 0;
 }
 
@@ -244,6 +253,19 @@ header{
     inset 0 1px 0 rgba(255,255,255,.65);
 }
 
+.ticker-badge{
+  display:inline-flex;
+  align-items:center;
+  font-size: .86rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: rgba(20,20,20,.62);
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(255,255,255,.82);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
 /* single-line viewport */
 .ticker-viewport{
   overflow: hidden;
@@ -253,17 +275,18 @@ header{
 
 /* track: force one line and slow it down */
 .ticker-move{
-  display: inline-flex;
+  display: inline-flex;        /* prevents stacking */
   align-items: center;
   gap: 18px;
 
-  /* no badge now, so no huge left padding */
-  padding-left: 12px;
+  padding-left: 124px;         /* space for badge */
 
-  white-space: nowrap;
-  flex-wrap: nowrap;
+  white-space: nowrap;         /* no wrap */
+  flex-wrap: nowrap;           /* no wrap */
+
   will-change: transform;
 
+  /* Editorial drift: slower and calmer */
   animation: ticker-scroll 72s linear infinite;
 }
 
@@ -276,20 +299,17 @@ header{
   flex-wrap: nowrap;
 }
 
-/* editorial quote capsules */
+/* editorial quote “capsules” */
 .ticker-pill{
   display:inline-flex;
   align-items:center;
-
   padding: 10px 14px;
   border-radius: 999px;
-
-  /* FIXED: was incorrectly 50px */
-  border: 1px solid rgba(0,0,0,.10);
-
+  border: 10px solid rgba(0,0,0,.10);
   background: rgba(255,255,255,.60);
   color: rgba(0,0,0,.72);
 
+  /* Editorial: slightly larger, more airy */
   font-size: 1.02rem;
   font-weight: 520;
   letter-spacing: -0.01em;
@@ -319,6 +339,7 @@ header{
   .ticker-move{
     animation: none !important;
     transform: none !important;
+  }
 }
 
 /* ---------- Typography ---------- */
