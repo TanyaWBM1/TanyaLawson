@@ -1,24 +1,138 @@
 /* ==========================================================
-   Header / Navigation (UPDATED — editorial separation)
+   TanyaMLawson.com — Stylish + Speed-First CSS (UPDATED)
+   Includes requested upgrades:
+   A) Bigger logo + header name
+   B) Gold separator lines between sections
+   C) Stronger hero layout + spacing
+   D) Full-bleed image hero panel (fills entire right box)
+   E) Nav CTA visible on desktop
    ========================================================== */
 
+/* ---------- Theme Variables ---------- */
+:root{
+  --max: 1120px;
+  --pad: clamp(16px, 3vw, 28px);
+
+  /* Base */
+  --bg: #fbfaf7;                 /* warm paper */
+  --surface: rgba(255,255,255,.70);
+  --surface-2: rgba(255,255,255,.55);
+  --text: #0b0b0c;
+  --muted: #4b5563;
+  --line: rgba(10,10,10,.12);
+
+  --radius: 22px;
+
+  /* Type */
+  --h1: clamp(2.2rem, 4.6vw, 3.7rem);
+  --h2: clamp(1.6rem, 2.8vw, 2.2rem);
+  --p:  clamp(1.05rem, 1.25vw, 1.16rem);
+
+  /* Brand accents */
+  --cta-primary: #2fb7b3;         /* sea-glass turquoise */
+  --cta-hover-bg: #ffffff;       /* white hover */
+  --cta-outline: #c9b27c;        /* soft metallic gold */
+  --cta-text: #000000;
+
+  /* Shadows */
+  --shadow: 0 18px 50px rgba(0,0,0,.10);
+  --shadow-soft: 0 10px 28px rgba(0,0,0,.09);
+  --shadow-hover: 0 22px 62px rgba(0,0,0,.13);
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+html{
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+/* Signature background wash (CSS only, no images) */
+body::before{
+  content:"";
+  position: fixed;
+  inset: -20%;
+  z-index: -1;
+  background:
+    radial-gradient(900px 520px at 18% 12%, rgba(47,183,179,.18), transparent 60%),
+    radial-gradient(820px 560px at 78% 16%, rgba(201,178,124,.16), transparent 58%),
+    radial-gradient(900px 700px at 50% 84%, rgba(0,0,0,.05), transparent 62%);
+  filter: saturate(1.05);
+
+  /* Optional gentle drift (still speed-safe) */
+  animation: bg-drift 18s ease-in-out infinite alternate;
+  will-change: transform, filter;
+}
+
+@keyframes bg-drift{
+  0%{
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: saturate(1.03);
+  }
+  50%{
+    transform: translate3d(-1.2%, -0.8%, 0) scale(1.02);
+    filter: saturate(1.06);
+  }
+  100%{
+    transform: translate3d(1.0%, 0.9%, 0) scale(1.03);
+    filter: saturate(1.04);
+  }
+}
+
+img, video, svg{
+  display:block;
+  max-width: 100%;
+  height:auto;
+}
+
+h1, h2, h3, p{
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+a{
+  color: inherit;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover{
+  text-decoration-thickness: 2px;
+}
+
+/* ---------- Layout ---------- */
+.container{
+  width: min(var(--max), 100% - (var(--pad) * 2));
+  margin-inline: auto;
+}
+
+main{
+  padding: clamp(22px, 3.8vw, 54px) 0;
+}
+
+/* ---------- Header / Nav ---------- */
 header{
   position: sticky;
   top: 0;
   z-index: 40;
-
-  background: rgba(251,250,247,.82);
-  backdrop-filter: blur(10px);
-
   border-bottom: 1px solid rgba(0,0,0,.10);
-
-  /* NEW: visual separation from ticker */
-  margin-bottom: 22px;
-
-  /* NEW: subtle editorial shadow */
-  box-shadow:
-    0 8px 22px rgba(0,0,0,.06),
-    inset 0 -1px 0 rgba(255,255,255,.6);
+  background: rgba(251,250,247,.78);
+  backdrop-filter: blur(10px);
 }
 
 .nav{
@@ -29,7 +143,7 @@ header{
   padding: 12px 0;
 }
 
-/* Brand */
+/* A) Bigger logo + header name */
 .brand{
   display:flex;
   align-items:center;
@@ -75,7 +189,7 @@ header{
   border-color: rgba(0,0,0,.08);
 }
 
-/* Nav CTA visible on desktop */
+/* E) Nav CTA visible on desktop */
 .nav-cta{
   display:none;
 }
@@ -87,20 +201,19 @@ header{
 }
 
 /* ==========================================================
-   Motivational Ticker — Editorial Strip (FINAL)
+   Motivational Ticker (Editorial style: single line, slower,
+   larger, fewer items, more “magazine strip”)
    ========================================================== */
 
 .ticker{
   position: relative;
 
-  /* CLEAR separation from header */
-  margin-top: 18px;
-  margin-bottom: 6px;
-
+  /* Move ticker down from header and reduce dead space */
+  margin-top: 14px;
+  margin-bottom: 8px;
   padding: 6px 0;
 }
 
-/* gold hairlines above/below ticker */
 .ticker::before{
   content:"";
   position:absolute;
@@ -108,13 +221,8 @@ header{
   right: 0;
   top: 0;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(201,178,124,.75),
-    transparent
-  );
-  opacity: .9;
+  background: linear-gradient(90deg, transparent, rgba(201,178,124,.75), transparent);
+  opacity: .95;
 }
 
 .ticker::after{
@@ -124,44 +232,43 @@ header{
   right: 0;
   bottom: 0;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(201,178,124,.55),
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, rgba(201,178,124,.55), transparent);
   opacity: .75;
 }
 
 .ticker-shell{
   position: relative;
   border-radius: 18px;
-
   background: rgba(255,255,255,.36);
   border: 1px solid rgba(0,0,0,.10);
   overflow: hidden;
 
-  /* slim, editorial height */
+  /* slimmer height */
   padding: 6px 12px;
 
-  /* refined magazine shadow */
   box-shadow:
-    0 6px 18px rgba(0,0,0,.06),
+    0 6px 16px rgba(0,0,0,.06),
     inset 0 1px 0 rgba(255,255,255,.65);
+}
+
+.ticker-label{
+  position:absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 3;
 }
 
 .ticker-badge{
   display:inline-flex;
   align-items:center;
-
   font-size: .86rem;
-  letter-spacing: .06em;
+  letter-spacing: .04em;
   text-transform: uppercase;
-
   color: rgba(20,20,20,.62);
-  background: rgba(255,255,255,.85);
   border: 1px solid rgba(0,0,0,.10);
-
+  background: rgba(255,255,255,.82);
   padding: 6px 10px;
   border-radius: 999px;
 }
@@ -173,40 +280,43 @@ header{
   line-height: 1;
 }
 
-/* track — slow editorial drift */
+/* track: force one line and slow it down */
 .ticker-move{
-  display: inline-flex;
+  display: inline-flex;        /* prevents stacking */
   align-items: center;
   gap: 18px;
 
-  padding-left: 124px; /* room for badge */
+  padding-left: 124px;         /* space for badge */
 
-  white-space: nowrap;
-  flex-wrap: nowrap;
+  white-space: nowrap;         /* no wrap */
+  flex-wrap: nowrap;           /* no wrap */
 
   will-change: transform;
 
+  /* Editorial drift: slower and calmer */
   animation: ticker-scroll 72s linear infinite;
 }
 
+/* each row stays single line */
 .ticker-row{
   display: inline-flex;
   align-items: center;
   gap: 14px;
   white-space: nowrap;
+  flex-wrap: nowrap;
 }
 
-/* quote capsules */
+/* editorial quote “capsules” */
 .ticker-pill{
   display:inline-flex;
   align-items:center;
-
   padding: 10px 14px;
   border-radius: 999px;
   border: 1px solid rgba(0,0,0,.10);
   background: rgba(255,255,255,.60);
-
   color: rgba(0,0,0,.72);
+
+  /* Editorial: slightly larger, more airy */
   font-size: 1.02rem;
   font-weight: 520;
   letter-spacing: -0.01em;
@@ -220,7 +330,7 @@ header{
   line-height: 1;
 }
 
-/* seamless scroll */
+/* scroll left by one duplicate block */
 @keyframes ticker-scroll{
   0%{ transform: translateX(0); }
   100%{ transform: translateX(-50%); }
@@ -238,7 +348,6 @@ header{
     transform: none !important;
   }
 }
-
 
 /* ---------- Typography ---------- */
 h1{
