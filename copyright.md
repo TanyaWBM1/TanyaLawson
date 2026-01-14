@@ -6,5 +6,6 @@ This repository and the website content it contains (including, without limitati
 
 No part of this repository may be reproduced, distributed, modified, published, or used for commercial purposes without express written permission from the copyright owner.
 
-**Website:** https://iamtanyalawson.com  
+**Website:** https://tanyamlawson.com  
 **Author:** Tanya M. Lawson
+
