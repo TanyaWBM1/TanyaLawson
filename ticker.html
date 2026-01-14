@@ -1,0 +1,20 @@
+<section class="ticker" aria-label="Motivational quote ticker">
+  <div class="ticker-rule top"></div>
+  <div class="ticker-rule bottom"></div>
+
+  <div class="container">
+    <div class="ticker-shell">
+      <div class="ticker-track" aria-hidden="true">
+        {% assign quotes = "“Integrity is doing the right thing when nobody’s watching.”|“Calm is a strategy.”|“Consistency beats intensity.”|“Do the work. Keep your word. Let results speak.”" | split: "|" %}
+        {% for loopset in (1..3) %}
+          <div class="ticker-set">
+            {% for q in quotes %}
+              <span class="ticker-pill">{{ q }}</span>
+              <span class="ticker-dot">•</span>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>
+  {% if page.title %}{{ page.title }}{% else %}Tanya M. Lawson — Operations, Systems, and Calm Execution{% endif %}
+</title>
+
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Tanya M. Lawson provides warm, professional operations support, coordination, and modern workflow systems.{% endif %}" />
+
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
+
+<link rel="stylesheet" href="/assets/css/styles.css?v=20260114a" />
+<link rel="icon" href="/assets/img/favicon.png" type="image/png" />
+
+<meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% else %}Tanya M. Lawson{% endif %}">
+<meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% else %}Warm competence. Clear systems. Real follow-through.{% endif %}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}">

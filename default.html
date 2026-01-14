@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+
+<body class="site">
+  <div class="bg-wash" aria-hidden="true"></div>
+
+  {% include header.html %}
+
+  <main class="site-main">
+    {% if page.show_ticker != false %}
+      <div class="ticker-wrap">
+        {% include ticker.html %}
+      </div>
+    {% endif %}
+
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>
