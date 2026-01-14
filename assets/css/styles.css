@@ -219,7 +219,7 @@ header{
   position:absolute;
   left: 0;
   right: 0;
-  top: 30px;
+  top: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(201,178,124,.75), transparent);
   opacity: .95;
@@ -303,7 +303,7 @@ header{
   align-items:center;
   padding: 10px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(0,0,0,.10);
+  border: 50px solid rgba(0,0,0,.10);
   background: rgba(255,255,255,.60);
   color: rgba(0,0,0,.72);
 
