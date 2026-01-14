@@ -1,0 +1,21 @@
+/* TEAM */
+Developer: Tanya M. Lawson
+Project: I Am Tanya Lawson — Professional Hub
+Role: Producer, Writer, Designer, Voice, and Architect
+Website: https://iamtanyalawson.com
+GitHub: https://github.com/TanyaWBM1
+
+/* PURPOSE */
+A fast, human-centered professional website for employment, partnerships,
+and consulting opportunities. Built for clarity, integrity, and real connection.
+
+/* TECHNOLOGY */
+Platform: GitHub Pages
+Markup: HTML5, CSS3, JSON-LD Schema
+SEO: Sitemap, Structured Data, OpenGraph
+
+/* CONTACT */
+Email: contact@iamtanyalawson.com
+
+/* COPYRIGHT */
+© 2026 Tanya M. Lawson — All Rights Reserved.

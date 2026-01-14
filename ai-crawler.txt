@@ -1,0 +1,16 @@
+# AI & LLM Crawling Policy
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: BingAI
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: *
+Allow: /

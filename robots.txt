@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://iamtanyalawson.com/sitemap.xml
