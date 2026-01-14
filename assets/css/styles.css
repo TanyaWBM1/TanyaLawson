@@ -133,9 +133,6 @@ header{
   border-bottom: 1px solid rgba(0,0,0,.10);
   background: rgba(251,250,247,.78);
   backdrop-filter: blur(10px);
-
-  /* ADD THIS */
-  padding-bottom: 28px;
 }
 
 .nav{
@@ -241,7 +238,7 @@ header{
 
 .ticker-shell{
   position: relative;
-  border-radius: 18px;
+  border-radius: 48px;
   background: rgba(255,255,255,.36);
   border: 1px solid rgba(0,0,0,.10);
   overflow: hidden;
