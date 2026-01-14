@@ -13,6 +13,18 @@
   --max: 1120px;
   --pad: clamp(16px, 3vw, 28px);
 
+/* ==========================================================
+   Sticky Header Offset (Layout Authority)
+   ========================================================== */
+
+:root{
+  --sticky-offset: 88px; /* header height + breathing room */
+}
+
+.below-sticky{
+  padding-top: var(--sticky-offset);
+}
+   
   /* Base */
   --bg: #fbfaf7;                 /* warm paper */
   --surface: rgba(255,255,255,.70);
@@ -704,4 +716,5 @@ footer{
     animation: none !important;
   }
 }
+
 
