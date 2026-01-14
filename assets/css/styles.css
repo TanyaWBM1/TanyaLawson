@@ -209,9 +209,9 @@ header{
   position: relative;
 
   /* Move ticker down from header and reduce dead space */
-  margin-top: 44px;
+  margin-top: 14px;
   margin-bottom: 8px;
-  padding: 6px 0;
+  padding: 46px 0;
 }
 
 .ticker::before{
