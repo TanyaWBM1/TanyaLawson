@@ -293,17 +293,36 @@ body.page-contact .nav a[href="/contact/"]::after{
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 .card:hover{ transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: rgba(0,0,0,.20); }
+/* =========================================
+   Section eyebrow labels — soft metallic gold
+   (working style / human execution signal)
+   ========================================= */
 .eyebrow{
   display:inline-flex;
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(0,0,0,.10);
-  background: rgba(255,255,255,.55);
-  color: rgba(11,11,12,.60);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(201,178,124,.55),
+      rgba(201,178,124,.32) 55%,
+      rgba(251,250,247,.35)
+    );
+
+  border: 1px solid rgba(201,178,124,.55);
+  color: rgba(11,11,12,.82);
+
   font-size: .72rem;
   font-weight: 800;
   letter-spacing: .12em;
   text-transform: uppercase;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,.10),
+    inset 0 1px 0 rgba(255,255,255,.55),
+    inset 0 -1px 0 rgba(0,0,0,.06);
+
   margin-bottom: 14px;
 }
 .card strong{ display:block; font-size: 1.08rem; margin-bottom: 10px; letter-spacing: -0.015em; }
@@ -546,4 +565,5 @@ body.page-contact .nav a[href="/contact/"]::after{
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
 
