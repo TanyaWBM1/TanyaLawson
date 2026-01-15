@@ -1,4 +1,3 @@
-```css
 :root{
   --bg: #fbfaf7;
   --teal: #2fb7b3;
@@ -609,3 +608,4 @@ body.page-contact .nav a[href="/contact/"]::after{
   text-underline-offset: 4px;
 }
 ```
+
