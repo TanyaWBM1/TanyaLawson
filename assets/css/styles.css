@@ -342,6 +342,25 @@ body.page-contact .nav a[href="/contact/"]::after{
   .hero-grid{ grid-template-columns: 1.1fr 0.9fr; gap: 40px; }
 }
 
+/* =========================================
+   Hero → Proof spacing (mobile-first)
+   ========================================= */
+.hero-proof{
+  margin-top: 18px; /* mobile breathing room */
+}
+
+@media (min-width: 768px){
+  .hero-proof{
+    margin-top: 28px;
+  }
+}
+
+@media (min-width: 1024px){
+  .hero-proof{
+    margin-top: 20px; /* tighter on desktop */
+  }
+}
+
 .badge{
   display:inline-flex;
   justify-content: center;  /* centers the text inside the pill */
