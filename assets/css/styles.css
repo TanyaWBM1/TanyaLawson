@@ -671,3 +671,301 @@ body.page-contact .nav a[href="/contact/"]::after{
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
+/* =========================================================
+   USE CASES — visuals + motion (bank-safe)
+   ========================================================= */
+
+.usecases-hero{
+  padding-top: calc(var(--section-y) * .6);
+  padding-bottom: calc(var(--section-y) * .35);
+}
+
+.usecases-filters{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.filter-chip{
+  appearance:none;
+  border: 1px solid rgba(0,0,0,.14);
+  background: rgba(255,255,255,.55);
+  color: rgba(11,11,12,.78);
+  border-radius: 999px;
+  padding: 10px 12px;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.filter-chip:hover{
+  transform: translateY(-1px);
+  border-color: rgba(201,178,124,.45);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+.filter-chip.is-active{
+  background: rgba(255,255,255,.75);
+  border-color: rgba(201,178,124,.55);
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+}
+
+/* Make use case cards feel special without changing your bento system */
+.usecase{
+  position: relative;
+  overflow: hidden;
+}
+.usecase::before{
+  content:"";
+  position:absolute;
+  inset: -2px;
+  pointer-events:none;
+  background:
+    radial-gradient(500px 240px at 12% 8%, rgba(47,183,179,.10), transparent 60%),
+    radial-gradient(520px 280px at 84% 14%, rgba(201,178,124,.12), transparent 58%);
+  opacity: .9;
+}
+
+.usecase-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 12px;
+}
+
+.usecase-badges{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content:flex-end;
+}
+
+.tag-pill{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(255,255,255,.55);
+  color: rgba(11,11,12,.70);
+  font-weight: 700;
+  font-size: .82rem;
+}
+
+.usecase-title{
+  margin: 10px 0 8px;
+  font-size: 1.22rem;
+  letter-spacing: -0.015em;
+}
+
+.usecase-summary{
+  margin: 0 0 14px;
+  color: rgba(11,11,12,.72);
+  line-height: 1.65;
+  max-width: 74ch;
+}
+
+/* Blueprint visual (Actor → Trigger → System → Outcome) */
+.blueprint{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 14px 0 16px;
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: rgba(255,255,255,.55);
+  box-shadow: 0 6px 16px rgba(0,0,0,.06), inset 0 1px 0 rgba(255,255,255,.60);
+}
+
+@media (min-width: 900px){
+  .blueprint{
+    grid-template-columns: 1fr 34px 1fr 34px 1fr 34px 1fr;
+    align-items: stretch;
+  }
+}
+
+.bp-node{
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(255,255,255,.70);
+  padding: 12px 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+  position: relative;
+}
+
+.bp-node--outcome{
+  border-color: rgba(201,178,124,.45);
+  box-shadow: 0 10px 24px rgba(201,178,124,.12), 0 6px 16px rgba(0,0,0,.06);
+}
+
+.bp-label{
+  font-size: .72rem;
+  font-weight: 850;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(11,11,12,.58);
+  margin-bottom: 6px;
+}
+
+.bp-value{
+  font-weight: 750;
+  color: rgba(11,11,12,.80);
+  line-height: 1.35;
+}
+
+.bp-line{
+  display:none;
+}
+@media (min-width: 900px){
+  .bp-line{
+    display:block;
+    border-radius: 999px;
+    position: relative;
+    margin: 10px 0;
+    background: linear-gradient(to right, rgba(0,0,0,.10), rgba(201,178,124,.35), rgba(0,0,0,.10));
+  }
+  .bp-line::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: linear-gradient(to right, transparent, rgba(47,183,179,.35), transparent);
+    transform: translateX(-40%);
+    animation: bp-sweep 3.4s ease-in-out infinite;
+    opacity: .6;
+  }
+}
+
+@keyframes bp-sweep{
+  0%{ transform: translateX(-45%); opacity:.2; }
+  40%{ opacity:.65; }
+  100%{ transform: translateX(45%); opacity:.25; }
+}
+
+.blueprint--compact{
+  margin-top: 10px;
+}
+
+.usecase-details{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 900px){
+  .usecase-details{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.usecase-col{
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(255,255,255,.65);
+  padding: 12px 12px;
+}
+
+.usecase-k{
+  font-size: .72rem;
+  font-weight: 850;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(11,11,12,.58);
+  margin-bottom: 6px;
+}
+
+.usecase-v{
+  color: rgba(11,11,12,.72);
+  line-height: 1.6;
+  font-weight: 650;
+}
+
+/* Mini flow (for smaller cards) */
+.mini-flow{
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(255,255,255,.55);
+  margin: 14px 0 0;
+}
+
+.mini-step{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  color: rgba(11,11,12,.74);
+  font-weight: 650;
+}
+
+.mini-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(201,178,124,.65);
+  box-shadow: 0 0 0 1px rgba(0,0,0,.10);
+}
+
+/* CTA block at bottom */
+.usecases-cta{
+  margin-top: 22px;
+}
+.usecases-cta-inner{
+  display:flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px;
+  border-radius: var(--r-lg);
+  border: 1px solid rgba(0,0,0,.14);
+  background: rgba(255,255,255,.70);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+@media (min-width: 900px){
+  .usecases-cta-inner{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+}
+
+.usecases-cta-title{
+  margin: 6px 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.usecases-cta-text{
+  margin: 0;
+  max-width: 70ch;
+  color: rgba(11,11,12,.72);
+  line-height: 1.65;
+}
+
+.usecases-cta-actions{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Scroll reveal */
+.reveal{
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 520ms ease, transform 520ms ease;
+}
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduce motion accessibility */
+@media (prefers-reduced-motion: reduce){
+  .reveal{ transition: none; transform:none; opacity:1; }
+  .bp-line::after{ animation: none; }
+}
+
