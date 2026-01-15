@@ -941,7 +941,7 @@ body.page-contact .nav a[href="/contact/"]::after{
 
 .usecases-cta-text{
   margin: 0;
-  max-width: 70ch;
+  max-width: 75ch;
   color: rgba(11,11,12,.72);
   line-height: 1.65;
 }
@@ -968,4 +968,5 @@ body.page-contact .nav a[href="/contact/"]::after{
   .reveal{ transition: none; transform:none; opacity:1; }
   .bp-line::after{ animation: none; }
 }
+
 
