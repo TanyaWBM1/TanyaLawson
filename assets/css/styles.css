@@ -1,3 +1,4 @@
+```css
 :root{
   --bg: #fbfaf7;
   --teal: #2fb7b3;
@@ -133,7 +134,10 @@ a.btn, a.btn-primary, a.btn-ghost{ text-decoration: none; }
   text-decoration:none;
 }
 
-/* Active nav state via one body class per page */
+/* Active nav state via one body class per page
+   Example:
+   <body class="site page-home"> or page-about, page-use-cases, page-resume, page-contact
+*/
 body.page-home .nav a[href="/"],
 body.page-about .nav a[href="/about/"],
 body.page-use-cases .nav a[href="/use-cases/"],
@@ -176,7 +180,8 @@ body.page-contact .nav a[href="/contact/"]::after{
 }
 
 /* =========================================
-   Executive buttons
+   Executive buttons (all same color)
+   + soft metallic gold highlight shadow
    ========================================= */
 .btn,
 .btn-primary,
@@ -193,8 +198,11 @@ body.page-contact .nav a[href="/contact/"]::after{
   background: var(--cta-bg);
   color: var(--cta-text);
   border: 1px solid rgba(255,255,255,.12);
+
+  /* base executive shadow + subtle gold highlight */
   box-shadow: 0 8px 22px rgba(0,0,0,.22), var(--cta-gold-glow);
 }
+
 .btn:hover,
 .btn-primary:hover,
 .btn-ghost:hover{
@@ -202,6 +210,7 @@ body.page-contact .nav a[href="/contact/"]::after{
   box-shadow: 0 10px 28px rgba(0,0,0,.28), 0 0 0 1px rgba(201,178,124,.30), 0 16px 40px rgba(201,178,124,.20);
   transform: none;
 }
+
 .btn:active,
 .btn-primary:active,
 .btn-ghost:active{
@@ -210,9 +219,7 @@ body.page-contact .nav a[href="/contact/"]::after{
   transform: none;
 }
 
-/* =========================================
-   Ticker (base)
-   ========================================= */
+/* Ticker */
 .ticker-wrap{ margin-top: 18px; margin-bottom: 12px; }
 .ticker{ position: relative; }
 .ticker-rule{
@@ -257,33 +264,6 @@ body.page-contact .nav a[href="/contact/"]::after{
 }
 .ticker-dot{ opacity:.35; font-size: 1.2rem; }
 
-/* =========================================
-   Ticker Divider (used as a section separator)
-   ========================================= */
-.ticker-divider{ margin: 0; }
-
-.section--numbers{
-  padding-top: calc(var(--section-y) - 10px);
-}
-.section--numbers .ticker-divider{
-  position: relative;
-  margin-top: 0;
-  margin-bottom: 22px;
-}
-/* Slightly slimmer shell so it reads like a divider, not a hero element */
-.section--numbers .ticker-shell{
-  padding: 8px 0;
-  border-radius: var(--r-lg);
-  background: rgba(255,255,255,.30);
-}
-/* Optional: tighten pill styling a touch inside divider tickers */
-.section--numbers .ticker-pill{
-  padding: 9px 12px;
-  background: rgba(255,255,255,.55);
-}
-/* More “divider-like” dots */
-.section--numbers .ticker-dot{ opacity: .28; }
-
 /* Sections */
 .section{ padding: var(--section-y) 0; position: relative; }
 .section-rule{
@@ -315,11 +295,14 @@ body.page-contact .nav a[href="/contact/"]::after{
 }
 .card:hover{ transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: rgba(0,0,0,.20); }
 
-/* Eyebrow labels — soft metallic gold */
+/* =========================================
+   Section eyebrow labels — soft metallic gold
+   ========================================= */
 .eyebrow{
   display:inline-flex;
   padding: 6px 12px;
   border-radius: 999px;
+
   background:
     linear-gradient(
       180deg,
@@ -327,16 +310,20 @@ body.page-contact .nav a[href="/contact/"]::after{
       rgba(201,178,124,.32) 55%,
       rgba(251,250,247,.35)
     );
+
   border: 1px solid rgba(201,178,124,.55);
   color: rgba(11,11,12,.82);
+
   font-size: .72rem;
   font-weight: 800;
   letter-spacing: .12em;
   text-transform: uppercase;
+
   box-shadow:
     0 4px 10px rgba(0,0,0,.10),
     inset 0 1px 0 rgba(255,255,255,.55),
     inset 0 -1px 0 rgba(0,0,0,.06);
+
   margin-bottom: 14px;
 }
 
@@ -391,12 +378,16 @@ body.page-contact .nav a[href="/contact/"]::after{
 }
 .hero-cta{ display:flex; flex-wrap:wrap; gap: 12px; margin-bottom: 18px; }
 
-/* Proof pills */
+/* =========================================
+   Proof pills (two fixed rows + tuned)
+   ========================================= */
 .proof{
   display:flex;
   flex-direction:column;
   gap: 10px;
 }
+
+/* Mobile/tablet: keep one line, allow horizontal scroll (no wrap) */
 .proof-row{
   display:flex;
   flex-wrap:nowrap;
@@ -407,6 +398,7 @@ body.page-contact .nav a[href="/contact/"]::after{
 }
 .proof-row::-webkit-scrollbar{ display:none; }
 
+/* Base pill sizing (mobile-first) */
 .proof-pill{
   padding: 10px 12px;
   border-radius: 999px;
@@ -446,8 +438,12 @@ body.page-contact .nav a[href="/contact/"]::after{
     inset 0 -1px 0 rgba(0,0,0,.06);
 }
 
+/* Desktop tuning: fit perfectly at 1024+ */
 @media (min-width: 1024px){
-  .proof-row{ overflow: visible; gap: 8px; }
+  .proof-row{
+    overflow: visible;
+    gap: 8px;
+  }
   .proof-pill{
     padding: 9px 11px;
     font-size: .88rem;
@@ -461,6 +457,7 @@ body.page-contact .nav a[href="/contact/"]::after{
   }
 }
 
+/* Large desktop: breathe a little more */
 @media (min-width: 1280px){
   .proof-row{ gap: 10px; }
   .proof-pill{
@@ -549,13 +546,17 @@ body.page-contact .nav a[href="/contact/"]::after{
 }
 .cta-actions{ display:flex; flex-wrap:wrap; gap: 12px; }
 
-/* CTA grid + image */
+/* ================================
+   CTA: two-column layout + image
+   (mirrors hero structure)
+   ================================ */
 .cta-grid{
   display:grid;
   grid-template-columns: 1fr;
   gap: 26px;
   align-items:start;
 }
+
 @media (min-width: 1024px){
   .cta-grid{
     grid-template-columns: 1.1fr 0.9fr;
@@ -563,6 +564,7 @@ body.page-contact .nav a[href="/contact/"]::after{
     align-items:center;
   }
 }
+
 .cta-panel{
   position: relative;
   border-radius: var(--r-xl);
@@ -571,7 +573,10 @@ body.page-contact .nav a[href="/contact/"]::after{
   height: 340px;
   box-shadow: var(--shadow-lg);
 }
-@media (min-width: 768px){ .cta-panel{ height: 420px; } }
+
+@media (min-width: 768px){
+  .cta-panel{ height: 420px; }
+}
 
 .cta-img{
   position:absolute;
@@ -582,6 +587,7 @@ body.page-contact .nav a[href="/contact/"]::after{
   transform: scale(1.01);
   opacity: .98;
 }
+
 .cta-overlay{
   position:absolute;
   inset:0;
@@ -602,3 +608,4 @@ body.page-contact .nav a[href="/contact/"]::after{
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+```
