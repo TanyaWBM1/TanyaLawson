@@ -730,13 +730,25 @@ body.page-contact .nav a[href="/contact/"]::after{
 }
 
 .usecase-top{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 12px;
+
+  /* KEY FIX */
+  flex-wrap: nowrap;
+}
+
+.usecase-top .eyebrow{
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .usecase-badges{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap; /* badges can wrap if needed */
+}
   display:flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -968,5 +980,6 @@ body.page-contact .nav a[href="/contact/"]::after{
   .reveal{ transition: none; transform:none; opacity:1; }
   .bp-line::after{ animation: none; }
 }
+
 
 
