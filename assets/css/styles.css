@@ -344,6 +344,9 @@ body.page-contact .nav a[href="/contact/"]::after{
 
 .badge{
   display:inline-flex;
+  justify-content: center;  /* centers the text inside the pill */
+  align-items: center;
+  text-align: center;       /* optional, helps if it wraps to 2 lines */
   gap: 10px;
   padding: 10px 12px;
   border-radius: 999px;
@@ -607,6 +610,7 @@ body.page-contact .nav a[href="/contact/"]::after{
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
 
 
 
