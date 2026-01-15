@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Use Cases — Tanya M. Lawson
-description: Practical, human-first use cases that combine operational discipline with responsible AI implementation.
+description: Real-world examples that show how Tanya thinks, researches, builds systems, and applies AI responsibly.
 og_title: Use Cases — Tanya M. Lawson
-og_description: Practical, human-first systems built for speed, compliance, and clarity.
+og_description: How decisions get made — not just how work gets done.
 show_ticker: true
 ---
 
@@ -11,199 +11,261 @@ show_ticker: true
   <div class="container">
     <div class="section-head">
       <h2>Use Cases</h2>
-      <div class="cta-kicker">Human needs → operational systems → measurable outcomes</div>
+      <div class="cta-kicker">How decisions get made → how systems get built → how outcomes happen</div>
     </div>
 
-    <p class="hero-lead" style="max-width: 72ch;">
-      These are real-world solution blueprints — designed the way banks and business leaders think:
-      risk-aware, documentation-first, and built for clean execution. Each use case shows an “actor,”
-      a trigger moment, the system response, and the success outcome.
+    <p class="hero-lead" style="max-width: 74ch;">
+      These use cases are written in everyday language on purpose. They’re not a list of tools or tasks —
+      they’re real-world examples of how I think, how I structure problems, and how I turn confusion into execution.
     </p>
 
     <div class="usecases-filters" role="group" aria-label="Filter use cases">
       <button class="filter-chip is-active" type="button" data-filter="all">All</button>
-      <button class="filter-chip" type="button" data-filter="operations">Operations</button>
-      <button class="filter-chip" type="button" data-filter="compliance">Compliance</button>
-      <button class="filter-chip" type="button" data-filter="ai">AI Systems</button>
-      <button class="filter-chip" type="button" data-filter="documentation">Documentation</button>
-      <button class="filter-chip" type="button" data-filter="content">Content Systems</button>
+      <button class="filter-chip" type="button" data-filter="thinking">How I Think</button>
+      <button class="filter-chip" type="button" data-filter="research">How I Research</button>
+      <button class="filter-chip" type="button" data-filter="systems">How I Build Systems</button>
+      <button class="filter-chip" type="button" data-filter="ai">How I Use AI</button>
     </div>
   </div>
 </section>
 
-<section class="section" aria-label="Use case cards">
+<section class="section" aria-label="Definition and use case cards">
   <div class="section-rule" aria-hidden="true"></div>
 
   <div class="container">
-    <div class="bento usecases-grid">
+    <!-- Definition block -->
+    <article class="card reveal" aria-label="Definition of use cases">
+      <div class="eyebrow">Definition</div>
+      <h3 class="usecase-title">What “Use Cases” Mean on This Site</h3>
+      <p class="usecase-summary" style="max-width: 80ch;">
+        On this site, a use case isn’t just a list of tasks or tools. It’s a real-world example of how I think,
+        how I structure problems, and how I turn confusion into execution.
+      </p>
 
-      <!-- USE CASE 01 -->
-      <article class="card usecase span-8 reveal" data-tags="operations compliance ai documentation">
-        <div class="usecase-top">
-          <div class="eyebrow">Operations + Compliance</div>
-          <div class="usecase-badges">
-            <span class="tag-pill">Risk Reduction</span>
-            <span class="tag-pill">Audit-Ready</span>
-          </div>
-        </div>
-
-        <h3 class="usecase-title">Automating Contractor Compliance Intake</h3>
-        <p class="usecase-summary">
-          A project manager needs to ensure every new hire has complete, signed onboarding documents
-          before arriving on-site — without spending hours chasing paperwork.
-        </p>
-
-        <div class="blueprint">
-          <div class="bp-node">
-            <div class="bp-label">Actor</div>
-            <div class="bp-value">Project Manager</div>
-          </div>
-          <div class="bp-line" aria-hidden="true"></div>
-          <div class="bp-node">
-            <div class="bp-label">Trigger</div>
-            <div class="bp-value">New hire scheduled</div>
-          </div>
-          <div class="bp-line" aria-hidden="true"></div>
-          <div class="bp-node">
-            <div class="bp-label">System</div>
-            <div class="bp-value">Doc scan + missing item alerts</div>
-          </div>
-          <div class="bp-line" aria-hidden="true"></div>
-          <div class="bp-node bp-node--outcome">
-            <div class="bp-label">Outcome</div>
-            <div class="bp-value">Complete packet before Day 1</div>
-          </div>
-        </div>
-
-        <div class="usecase-details">
-          <div class="usecase-col">
-            <div class="usecase-k">AI / System</div>
-            <div class="usecase-v">
-              A structured intake workflow + document checklist. An AI assistant can flag missing signatures,
-              inconsistent dates, or incomplete fields and notify the manager.
-            </div>
-          </div>
-          <div class="usecase-col">
-            <div class="usecase-k">Success Metric</div>
-            <div class="usecase-v">
-              5–10 minutes per hire vs. 1–2 hours manual review + fewer on-site delays.
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- USE CASE 02 -->
-      <article class="card usecase span-4 reveal" data-tags="documentation operations ai">
-        <div class="usecase-top">
-          <div class="eyebrow">Documentation System</div>
-          <div class="usecase-badges">
-            <span class="tag-pill">Speed</span>
-            <span class="tag-pill">Consistency</span>
-          </div>
-        </div>
-
-        <h3 class="usecase-title">Executive Meeting Notes → Actionable Ops Brief</h3>
-        <p class="usecase-summary">
-          A leader needs meeting notes converted into a clean, shareable brief with owners, deadlines,
-          and next steps — without losing nuance.
-        </p>
-
-        <div class="mini-flow" aria-label="Mini flow">
-          <div class="mini-step">
-            <span class="mini-dot"></span>
-            <span>Raw notes</span>
-          </div>
-          <div class="mini-step">
-            <span class="mini-dot"></span>
-            <span>Structured brief</span>
-          </div>
-          <div class="mini-step">
-            <span class="mini-dot"></span>
-            <span>Owners + deadlines</span>
-          </div>
-        </div>
-
-        <div class="usecase-foot">
-          <div class="usecase-k">Outcome</div>
-          <div class="usecase-v">Clear follow-through, fewer dropped handoffs, faster execution.</div>
-        </div>
-      </article>
-
-      <!-- USE CASE 03 -->
-      <article class="card usecase span-4 reveal" data-tags="content ai documentation">
-        <div class="usecase-top">
-          <div class="eyebrow">AI + Content Systems</div>
-          <div class="usecase-badges">
-            <span class="tag-pill">Reusable</span>
-            <span class="tag-pill">Brand-safe</span>
-          </div>
-        </div>
-
-        <h3 class="usecase-title">Reusable Prompt Library for a Team</h3>
-        <p class="usecase-summary">
-          A team wants AI speed — but needs guardrails, consistent tone, and fewer “random” outputs.
-        </p>
-
-        <div class="usecase-foot">
-          <div class="usecase-k">System</div>
+      <div class="usecase-details" style="margin-top: 14px;">
+        <div class="usecase-col">
+          <div class="usecase-k">Each use case shows</div>
           <div class="usecase-v">
-            A prompt + template library with quality checks, examples, and “do / don’t” rules.
+            • how I analyze a situation<br>
+            • how I identify risk and constraints<br>
+            • how I design a system that works for real people<br>
+            • how I use technology only where it adds clarity
           </div>
+        </div>
+        <div class="usecase-col">
+          <div class="usecase-k">Bottom line</div>
+          <div class="usecase-v">
+            Use cases show how decisions get made — not just how work gets done.
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Use case cards -->
+    <div class="bento usecases-grid" style="margin-top: 14px;">
+
+      <!-- USE CASE #1 -->
+      <article class="card usecase span-8 reveal" data-tags="thinking systems documentation">
+        <div class="usecase-top">
+          <div class="eyebrow">Use Case #1</div>
+          <div class="usecase-badges">
+            <span class="tag-pill">Problem Framing</span>
+            <span class="tag-pill">Decision Clarity</span>
+          </div>
+        </div>
+
+        <h3 class="usecase-title">How I Think</h3>
+        <p class="usecase-summary" style="max-width: 80ch;">
+          This use case shows how I approach complex problems before touching tools or technology.
+          I focus on understanding the real issue, the human pressure involved, the risks, and what success
+          actually looks like.
+        </p>
+
+        <!-- Thinking Pattern Diagram -->
+        <div class="think-diagram" aria-label="Thinking pattern diagram">
+          <div class="think-head">
+            <div class="eyebrow">Thinking Pattern</div>
+            <div class="think-sub">How I move from chaos to clean execution</div>
+          </div>
+
+          <div class="think-track" role="list" aria-label="Thinking steps">
+            <div class="think-step" role="listitem">
+              <div class="think-num">1</div>
+              <div class="think-body">
+                <div class="think-title">Step back</div>
+                <div class="think-text">Pause the noise. Get the full picture before acting.</div>
+              </div>
+            </div>
+
+            <div class="think-connector" aria-hidden="true"></div>
+
+            <div class="think-step" role="listitem">
+              <div class="think-num">2</div>
+              <div class="think-body">
+                <div class="think-title">Find the real constraint</div>
+                <div class="think-text">Identify what’s truly blocking progress (risk, rules, structure, time).</div>
+              </div>
+            </div>
+
+            <div class="think-connector" aria-hidden="true"></div>
+
+            <div class="think-step" role="listitem">
+              <div class="think-num">3</div>
+              <div class="think-body">
+                <div class="think-title">Turn confusion into a simple path</div>
+                <div class="think-text">Convert complexity into clear next steps people can follow.</div>
+              </div>
+            </div>
+
+            <div class="think-connector" aria-hidden="true"></div>
+
+            <div class="think-step" role="listitem">
+              <div class="think-num">4</div>
+              <div class="think-body">
+                <div class="think-title">Build a compliant system</div>
+                <div class="think-text">Design the structure so it works inside the rules — not against them.</div>
+              </div>
+            </div>
+
+            <div class="think-connector" aria-hidden="true"></div>
+
+            <div class="think-step think-step--outcome" role="listitem">
+              <div class="think-num">5</div>
+              <div class="think-body">
+                <div class="think-title">Execute + document</div>
+                <div class="think-text">Follow through with clean records so results hold up later.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="usecase-details" style="margin-top: 14px;">
+          <div class="usecase-col">
+            <div class="usecase-k">Includes two real examples</div>
+            <div class="usecase-v">
+              <strong>1A:</strong> Pro Se Handbook — turning legal confusion into clear next steps for people and small businesses.<br>
+              <strong>1B:</strong> Used Car Dealership Overhaul — solving a licensing blocker with a practical, compliant “office trailer” solution.
+            </div>
+          </div>
+          <div class="usecase-col">
+            <div class="usecase-k">Why it matters</div>
+            <div class="usecase-v">
+              This establishes me as strategic — not reactive — in high-stakes environments.
+            </div>
+          </div>
+        </div>
+
+        <div class="usecase-actions">
+          <a class="btn btn-primary" href="/use-cases/how-i-think/">Read Use Case #1</a>
+          <a class="btn btn-ghost" href="/">Home</a>
         </div>
       </article>
 
-      <!-- USE CASE 04 -->
-      <article class="card usecase span-8 reveal" data-tags="compliance documentation operations">
+      <!-- USE CASE #2 -->
+      <article class="card usecase span-4 reveal" data-tags="research ai">
         <div class="usecase-top">
-          <div class="eyebrow">Compliance Readiness</div>
+          <div class="eyebrow">Use Case #2</div>
           <div class="usecase-badges">
-            <span class="tag-pill">Controls</span>
-            <span class="tag-pill">Visibility</span>
+            <span class="tag-pill">Signal Filtering</span>
+            <span class="tag-pill">Source Checks</span>
           </div>
         </div>
 
-        <h3 class="usecase-title">Audit-Friendly File Architecture + Controls</h3>
+        <h3 class="usecase-title">How I Research</h3>
         <p class="usecase-summary">
-          A business needs clean records that can withstand scrutiny: consistent naming, access control,
-          retention logic, and “one source of truth.”
+          This use case explains how I research when the stakes are high. I don’t look for the loudest answers —
+          I look for what’s missing, what’s assumed, and what people aren’t saying.
         </p>
 
-        <div class="blueprint blueprint--compact">
-          <div class="bp-node">
-            <div class="bp-label">Actor</div>
-            <div class="bp-value">Finance / Ops Lead</div>
-          </div>
-          <div class="bp-line" aria-hidden="true"></div>
-          <div class="bp-node">
-            <div class="bp-label">Trigger</div>
-            <div class="bp-value">Audit / lender request</div>
-          </div>
-          <div class="bp-line" aria-hidden="true"></div>
-          <div class="bp-node">
-            <div class="bp-label">System</div>
-            <div class="bp-value">Folder + naming + checklist</div>
-          </div>
-          <div class="bp-line" aria-hidden="true"></div>
-          <div class="bp-node bp-node--outcome">
-            <div class="bp-label">Outcome</div>
-            <div class="bp-value">Faster retrieval + lower risk</div>
+        <div class="usecase-foot">
+          <div class="usecase-k">Highlights</div>
+          <div class="usecase-v">
+            • separating fact from opinion<br>
+            • spotting conflicts of interest<br>
+            • cross-checking sources<br>
+            • recognizing misaligned “expert” incentives<br>
+            • using AI as support, not a truth machine
           </div>
         </div>
+
+        <div class="usecase-actions">
+          <a class="btn btn-primary" href="/use-cases/how-i-research/">Read Use Case #2</a>
+          <a class="btn btn-ghost" href="/">Home</a>
+        </div>
+      </article>
+
+      <!-- USE CASE #3 -->
+      <article class="card usecase span-4 reveal" data-tags="systems documentation">
+        <div class="usecase-top">
+          <div class="eyebrow">Use Case #3</div>
+          <div class="usecase-badges">
+            <span class="tag-pill">Repeatable</span>
+            <span class="tag-pill">Scalable</span>
+          </div>
+        </div>
+
+        <h3 class="usecase-title">How I Build Systems</h3>
+        <p class="usecase-summary">
+          This use case shows how I turn complicated processes into clear, repeatable systems that real people can follow —
+          even under stress or time pressure.
+        </p>
+
+        <div class="usecase-foot">
+          <div class="usecase-k">Examples</div>
+          <div class="usecase-v">
+            • Pro Se Playbook structure<br>
+            • documentation workflows<br>
+            • AI prompt libraries with guardrails<br>
+            • SOPs that don’t rely on tribal knowledge
+          </div>
+        </div>
+
+        <div class="usecase-actions">
+          <a class="btn btn-primary" href="/use-cases/how-i-build-systems/">Read Use Case #3</a>
+          <a class="btn btn-ghost" href="/">Home</a>
+        </div>
+      </article>
+
+      <!-- USE CASE #4 -->
+      <article class="card usecase span-8 reveal" data-tags="ai systems">
+        <div class="usecase-top">
+          <div class="eyebrow">Use Case #4</div>
+          <div class="usecase-badges">
+            <span class="tag-pill">Guardrails</span>
+            <span class="tag-pill">Accountability</span>
+          </div>
+        </div>
+
+        <h3 class="usecase-title">How I Use AI (Responsibly)</h3>
+        <p class="usecase-summary" style="max-width: 80ch;">
+          This use case shows how I use AI to reduce friction and improve clarity — without replacing judgment,
+          accountability, or human oversight. AI is an enhancer, not the brain.
+        </p>
 
         <div class="usecase-details">
           <div class="usecase-col">
-            <div class="usecase-k">Controls</div>
+            <div class="usecase-k">What AI supports</div>
             <div class="usecase-v">
-              Standard operating naming conventions, permissions, versioning rules,
-              and a monthly “documentation hygiene” checklist.
+              • drafting and rewriting<br>
+              • organizing and summarizing<br>
+              • checking consistency and completeness<br>
+              • explaining complex material in plain language
             </div>
           </div>
           <div class="usecase-col">
-            <div class="usecase-k">Success Metric</div>
+            <div class="usecase-k">What stays human</div>
             <div class="usecase-v">
-              Faster lender/audit responses, fewer missing docs, cleaner decision-making.
+              • final decisions and accountability<br>
+              • risk judgment and compliance calls<br>
+              • quality control and approvals<br>
+              • context, ethics, and discretion
             </div>
           </div>
+        </div>
+
+        <div class="usecase-actions">
+          <a class="btn btn-primary" href="/use-cases/how-i-use-ai/">Read Use Case #4</a>
+          <a class="btn btn-ghost" href="/">Home</a>
         </div>
       </article>
 
@@ -222,6 +284,7 @@ show_ticker: true
         <div class="usecases-cta-actions">
           <a class="btn btn-primary" href="/contact/">Contact Tanya</a>
           <a class="btn btn-ghost" href="/resume/">Download Full CV</a>
+          <a class="btn btn-ghost" href="/">Home</a>
         </div>
       </div>
     </div>
@@ -273,4 +336,3 @@ show_ticker: true
   });
 })();
 </script>
-
