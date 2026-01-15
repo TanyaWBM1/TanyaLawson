@@ -1,3 +1,4 @@
+```html
 ---
 layout: default
 title: Tanya M. Lawson — Operational Excellence, Reimagined through AI
@@ -147,8 +148,41 @@ show_ticker: true
   </div>
 </section>
 
-<section class="section" aria-label="By the numbers">
-  <div class="section-rule" aria-hidden="true"></div>
+<!-- UPDATED: section-rule removed, ticker-divider inserted first -->
+<section class="section section--numbers" aria-label="By the numbers">
+  <!-- Ticker divider (replaces the thin line) -->
+  <div class="ticker ticker-divider" aria-hidden="true">
+    <div class="ticker-rule top"></div>
+    <div class="ticker-shell">
+      <div class="ticker-track">
+        <div class="ticker-set">
+          <span class="ticker-pill">This site was designed by Tanya and created with AI.</span>
+          <span class="ticker-dot">•</span>
+          <span class="ticker-pill">Do you like it?</span>
+          <span class="ticker-dot">•</span>
+          <span class="ticker-pill">This is site serves as a use case.</span>
+          <span class="ticker-dot">•</span>
+          <span class="ticker-pill">An example of Tanya's creativity.</span>
+          <span class="ticker-dot">•</span>
+          <span class="ticker-pill">What can Tanya create for you?</span>
+        </div>
+
+        <!-- duplicate set for seamless loop (keeps your existing ticker animation working) -->
+        <div class="ticker-set" aria-hidden="true">
+          <span class="ticker-pill">This site was designed by Tanya and created with AI.</span>
+          <span class="ticker-dot">•</span>
+          <span class="ticker-pill">Do you like it?</span>
+          <span class="ticker-dot">•</span>
+          <span class="ticker-pill">This is site serves as a use case.</span>
+          <span class="ticker-dot">•</span>
+          <span class="ticker-pill">An example of Tanya's creativity.</span>
+          <span class="ticker-dot">•</span>
+          <span class="ticker-pill">What can Tanya create for you?</span>
+        </div>
+      </div>
+    </div>
+    <div class="ticker-rule bottom"></div>
+  </div>
 
   <div class="container">
     <div class="section-head">
@@ -230,3 +264,4 @@ show_ticker: true
     </aside>
   </div>
 </section>
+```
