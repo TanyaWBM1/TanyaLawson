@@ -1035,12 +1035,17 @@ body.page-contact .nav a[href="/contact/"]::after{
   box-shadow: 0 0 0 1px rgba(0,0,0,.10);
 }
 
-/* usecase actions row */
+/* =========================================
+   Use case action buttons — centered
+   ========================================= */
+
 .usecase-actions{
-  display:flex;
+  display: flex;
+  justify-content: center;   /* centers within card */
+  align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 14px;
+  margin-top: 16px;
 }
 
 /* =========================
@@ -1145,3 +1150,4 @@ body.page-contact .nav a[href="/contact/"]::after{
 /* If any global CSS reset is stripping list styles, force them back */
 .uc-list{ list-style-type: disc; }
 .thinking-list{ list-style-type: decimal; }
+
