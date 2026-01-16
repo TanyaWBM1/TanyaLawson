@@ -1239,7 +1239,7 @@ body.page-contact .nav a[href="/contact/"]::after{
 
 .contact-image{
   width: 100%;
-  max-width: 360px;     /* adjust bigger/smaller */
+  max-width: 220px;     /* adjust bigger/smaller */
   height: auto;         /* keeps proportions */
   display: block;
 
@@ -1344,6 +1344,7 @@ body.page-contact .nav a[href="/contact/"]::after{
   top: 0;
   opacity: .55;
 }
+
 
 
 
