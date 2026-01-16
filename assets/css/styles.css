@@ -744,28 +744,35 @@ body.page-contact .nav a[href="/contact/"]::after{
   flex-shrink: 0;
 }
 
+/* =========================================
+   Tag pills (Use Case badges)
+   ========================================= */
+
 .usecase-badges{
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap; /* badges can wrap if needed */
-}
   display:flex;
-  flex-wrap: wrap;
   gap: 8px;
-  justify-content:flex-end;
+  flex-wrap: wrap; /* allows pills to wrap as a group if needed */
+  justify-content: flex-end;
 }
 
 .tag-pill{
   display:inline-flex;
   align-items:center;
-  gap: 8px;
-  padding: 8px 10px;
+  justify-content:center;
+
+  padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(0,0,0,.10);
-  background: rgba(255,255,255,.55);
-  color: rgba(11,11,12,.70);
-  font-weight: 700;
-  font-size: .82rem;
+
+  border: 1px solid rgba(0,0,0,.12);
+  background: rgba(255,255,255,.65);
+
+  color: rgba(11,11,12,.78);
+  font-weight: 750;
+  font-size: .78rem;
+  letter-spacing: .02em;
+
+  white-space: nowrap;   /* keeps “Signal Filtering” on one line */
+  line-height: 1;
 }
 
 .usecase-title{
@@ -980,6 +987,7 @@ body.page-contact .nav a[href="/contact/"]::after{
   .reveal{ transition: none; transform:none; opacity:1; }
   .bp-line::after{ animation: none; }
 }
+
 
 
 
