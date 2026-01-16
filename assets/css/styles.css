@@ -1192,4 +1192,30 @@ body.page-contact .nav a[href="/contact/"]::after{
   max-width: 220px;
 }
 
+/* =========================================
+   Personal image stack (sidebar)
+   ========================================= */
+
+.personal-image-stack{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.personal-image-card{
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(255,255,255,.65);
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+.personal-image-card img{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 
