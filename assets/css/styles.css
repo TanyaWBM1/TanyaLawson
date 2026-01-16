@@ -1107,3 +1107,41 @@ body.page-contact .nav a[href="/contact/"]::after{
   .reveal{ transition: none; transform:none; opacity:1; }
   .bp-line::after{ animation: none; }
 }
+
+/* =========================================
+   Use Case bullets — true hanging indent
+   (fixes wrapped-line alignment)
+   ========================================= */
+
+.uc-list,
+.thinking-list{
+  margin: 0;
+  padding-left: 1.25rem;          /* space for bullet/number */
+  list-style-position: outside;    /* REQUIRED for hanging indent */
+}
+
+.uc-list li,
+.thinking-list li{
+  margin: 8px 0;
+  padding-left: .35rem;           /* gap between marker and text block */
+  line-height: 1.6;
+}
+
+/* Optional: make bullets feel “executive” */
+.uc-list li::marker{
+  color: rgba(11,11,12,.55);
+  font-weight: 800;
+}
+
+/* Numbered list markers (Thinking Pattern) */
+.thinking-list{
+  counter-reset: item;
+}
+.thinking-list li::marker{
+  color: rgba(11,11,12,.70);
+  font-weight: 900;
+}
+
+/* If any global CSS reset is stripping list styles, force them back */
+.uc-list{ list-style-type: disc; }
+.thinking-list{ list-style-type: decimal; }
