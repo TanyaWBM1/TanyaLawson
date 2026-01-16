@@ -1,1 +1,162 @@
+---
+layout: default
+title: Contact — Tanya M. Lawson
+description: Reach Tanya for operations support, systems work, documentation cleanup, or responsible AI implementation.
+og_title: Contact — Tanya M. Lawson
+og_description: Reach out with a clear goal — I’ll respond with next steps.
+show_ticker: true
+---
+
+<section class="section contact-hero" aria-label="Contact intro">
+  <div class="container">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <div class="cta-kicker">Clear asks → clean next steps</div>
+    </div>
+
+    <p class="hero-lead" style="max-width: 80ch;">
+      If you’re trying to get organized, reduce risk, or build a system that people can actually follow,
+      send me a note. The fastest way to start is to tell me what you’re trying to accomplish and what’s
+      getting in the way.
+    </p>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="mailto:hello@tanyamlawson.com?subject=Inquiry%20—%20Tanya%20M.%20Lawson">Email Tanya</a>
+      <a class="btn btn-ghost" href="/">Home</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-label="Contact options">
+  <div class="section-rule" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="bento contact-grid">
+
+      <!-- LEFT: form -->
+      <article class="card span-8 reveal" aria-label="Send a message">
+        <div class="eyebrow">Send a message</div>
+        <h3 class="usecase-title">Tell me what you need</h3>
+        <p class="usecase-summary" style="max-width: 78ch;">
+          I’m not looking for a long backstory — just enough context to understand the goal, constraints,
+          and timeline.
+        </p>
+
+        <form class="contact-form" action="mailto:hello@tanyamlawson.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <label class="form-label" for="name">Your name</label>
+            <input class="form-input" id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label" for="topic">What’s this about?</label>
+            <select class="form-input" id="topic" name="topic" required>
+              <option value="" selected disabled>Select one</option>
+              <option>Operations support / coordination</option>
+              <option>Documentation cleanup / audit readiness</option>
+              <option>Process design / SOPs / systems build</option>
+              <option>AI workflow (responsible + practical)</option>
+              <option>Speaking / collaboration</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-input form-textarea" id="message" name="message" rows="7" required
+              placeholder="Example: “We’re losing time because our handoffs are unclear. I need a repeatable workflow + a simple file structure.”"></textarea>
+          </div>
+
+          <div class="form-row form-row--two">
+            <div>
+              <label class="form-label" for="timeline">Timeline (optional)</label>
+              <input class="form-input" id="timeline" name="timeline" type="text" placeholder="e.g., This month / Q1 / ASAP">
+            </div>
+            <div>
+              <label class="form-label" for="budget">Budget range (optional)</label>
+              <input class="form-input" id="budget" name="budget" type="text" placeholder="e.g., Under $1k / $1–3k / $3k+">
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <button class="btn btn-primary" type="submit">Send</button>
+            <a class="btn btn-ghost" href="mailto:hello@tanyamlawson.com?subject=Inquiry%20—%20Tanya%20M.%20Lawson">Email instead</a>
+          </div>
+
+          <p class="form-note">
+            Note: This form uses your email app to send. If you prefer, click “Email instead.”
+          </p>
+        </form>
+      </article>
+
+      <!-- RIGHT: quick cards -->
+      <aside class="span-4 reveal" aria-label="Quick contact options" style="display:flex; flex-direction:column; gap:14px;">
+        <div class="card">
+          <div class="eyebrow">Fastest</div>
+          <h3 class="usecase-title">Email</h3>
+          <p class="usecase-summary">
+            Send a clear goal + what’s stuck. I’ll reply with next steps.
+          </p>
+          <div class="contact-mini">
+            <a class="btn btn-primary" href="mailto:hello@tanyamlawson.com?subject=Inquiry%20—%20Tanya%20M.%20Lawson">hello@tanyamlawson.com</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="eyebrow">Professional</div>
+          <h3 class="usecase-title">LinkedIn</h3>
+          <p class="usecase-summary">
+            Prefer messaging there? That works too.
+          </p>
+          <div class="contact-mini">
+            <a class="btn btn-ghost" href="#" aria-label="LinkedIn profile link">Message on LinkedIn</a>
+          </div>
+          <p class="form-note" style="margin-top:10px;">
+            Replace the “#” with your LinkedIn URL.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="eyebrow">What helps me respond fast</div>
+          <ul class="bullet-list" aria-label="What to include">
+            <li><strong>Goal:</strong> what “done” looks like</li>
+            <li><strong>Constraint:</strong> rules, deadlines, people, risk</li>
+            <li><strong>Reality:</strong> what’s currently happening</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="eyebrow">Website note</div>
+          <p class="usecase-summary">
+            This site is a live example of my work: I built it from scratch (no pre-made template),
+            used AI to learn and edit HTML/CSS in GitHub on the fly, and designed each section to reduce
+            confusion and help the right people make a decision.
+          </p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  // Scroll reveal
+  const items = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  items.forEach(el => io.observe(el));
+})();
+</script>
 
