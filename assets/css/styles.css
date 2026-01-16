@@ -1218,4 +1218,113 @@ body.page-contact .nav a[href="/contact/"]::after{
   object-fit: cover;
 }
 
+/* =========================================================
+   CONTACT — layout + form styling
+   ========================================================= */
+
+.contact-hero{
+  padding-top: calc(var(--section-y) * .6);
+  padding-bottom: calc(var(--section-y) * .35);
+}
+
+.contact-grid{
+  align-items: start;
+}
+
+/* Form */
+.contact-form{
+  margin-top: 14px;
+}
+
+.form-row{
+  display:flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.form-row--two{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 900px){
+  .form-row--two{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-label{
+  font-weight: 800;
+  font-size: .82rem;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  color: rgba(11,11,12,.62);
+}
+
+.form-input{
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.14);
+  background: rgba(255,255,255,.70);
+  padding: 12px 12px;
+  font: inherit;
+  color: rgba(11,11,12,.88);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.55);
+}
+
+.form-input:focus{
+  outline: none;
+  border-color: rgba(201,178,124,.55);
+  box-shadow:
+    0 0 0 3px rgba(201,178,124,.22),
+    inset 0 1px 0 rgba(255,255,255,.55);
+}
+
+.form-textarea{
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-actions{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.form-note{
+  margin: 12px 0 0;
+  color: rgba(11,11,12,.62);
+  line-height: 1.6;
+  font-size: .95rem;
+}
+
+/* Simple bullet list with hanging indent */
+.bullet-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bullet-list li{
+  position: relative;
+  padding-left: 18px;
+  color: rgba(11,11,12,.72);
+  line-height: 1.6;
+  font-weight: 650;
+}
+.bullet-list li::before{
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .55;
+}
+
 
