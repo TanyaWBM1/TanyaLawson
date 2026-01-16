@@ -1048,6 +1048,13 @@ body.page-contact .nav a[href="/contact/"]::after{
   margin-top: 16px;
 }
 
+.usecase-actions--stacked{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
 /* =========================
    Thinking list (numbers visible)
    ========================= */
@@ -1184,4 +1191,5 @@ body.page-contact .nav a[href="/contact/"]::after{
   aspect-ratio: 1 / 1;
   max-width: 220px;
 }
+
 
