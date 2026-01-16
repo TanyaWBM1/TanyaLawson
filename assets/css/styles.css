@@ -1231,16 +1231,22 @@ body.page-contact .nav a[href="/contact/"]::after{
   align-items: start;
 }
 
-/* Contact page image */
 .contact-image-wrap{
-  display: flex;
-  justify-content: center;
+  display:flex;
+  justify-content:center;
   margin: 14px 0 18px;
 }
 
 .contact-image{
-  max-width: 300px;
-  aspect-ratio: 4 / 5;
+  width: 100%;
+  max-width: 360px;     /* adjust bigger/smaller */
+  height: auto;         /* keeps proportions */
+  display: block;
+
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: rgba(255,255,255,.35);
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
 }
 
 /* Form */
@@ -1338,6 +1344,7 @@ body.page-contact .nav a[href="/contact/"]::after{
   top: 0;
   opacity: .55;
 }
+
 
 
 
