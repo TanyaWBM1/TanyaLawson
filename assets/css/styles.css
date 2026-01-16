@@ -1151,3 +1151,37 @@ body.page-contact .nav a[href="/contact/"]::after{
 .uc-list{ list-style-type: disc; }
 .thinking-list{ list-style-type: decimal; }
 
+/* =========================================
+   Use case visuals
+   ========================================= */
+
+.usecase-visual{
+  margin-top: 14px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(255,255,255,.6);
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+.usecase-visual img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 9:16 portrait */
+.usecase-visual--portrait{
+  aspect-ratio: 9 / 16;
+  max-width: 320px;       /* prevents overpowering card */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 1:1 square */
+.usecase-visual--square{
+  aspect-ratio: 1 / 1;
+  max-width: 220px;
+}
+
