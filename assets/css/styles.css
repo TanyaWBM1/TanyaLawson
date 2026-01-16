@@ -1239,16 +1239,8 @@ body.page-contact .nav a[href="/contact/"]::after{
 }
 
 .contact-image{
-  width: 100%;
-  max-width: 320px;      /* keeps it elegant, not overpowering */
-  aspect-ratio: 1 / 1;   /* square image */
-  object-fit: cover;
-  border-radius: 18px;
-
-  border: 1px solid rgba(0,0,0,.12);
-  box-shadow:
-    0 10px 24px rgba(0,0,0,.10),
-    inset 0 1px 0 rgba(255,255,255,.55);
+  max-width: 300px;
+  aspect-ratio: 4 / 5;
 }
 
 /* Form */
@@ -1346,6 +1338,7 @@ body.page-contact .nav a[href="/contact/"]::after{
   top: 0;
   opacity: .55;
 }
+
 
 
 
