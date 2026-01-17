@@ -1015,26 +1015,26 @@ body.page-contact .nav a[href="/contact/"]::after{
 
 /* Clean executive bullet list */
 .usecase-col .bullet-list{
+  display: block;                 /* IMPORTANT: allow real markers */
   list-style: disc;
-  list-style-position: outside;   /* IMPORTANT */
-  padding-left: 1.1rem;           /* controls bullet distance from edge */
+  list-style-position: outside;
   margin: 0;
-
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  padding-left: 1.05rem;          /* controls bullet distance */
+  margin-left: -0.55rem;          /* pulls bullets left inside padded card */
+  gap: 0;                         /* neutralize flex spacing */
 }
 
 .usecase-col .bullet-list li{
-  padding-left: 0;                /* remove forced indent */
-  margin-left: 0;
-
-  color: rgba(11,11,12,.72);
-  line-height: 1.55;
-  font-weight: 650;
-
-  overflow-wrap: normal;          /* stop word-by-word breaking */
+  padding-left: 0;
+  margin: 8px 0;
+  position: static;               /* undo the pseudo-bullet positioning */
+  overflow-wrap: normal;
   word-break: normal;
+}
+
+/* turn OFF the pseudo-bullets inside usecase-col */
+.usecase-col .bullet-list li::before{
+  content: none !important;
 }
 
 /* “foot” box for smaller cards */
@@ -1661,6 +1661,7 @@ body.page-contact .nav a[href="/contact/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
 
 
