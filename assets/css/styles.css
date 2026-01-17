@@ -1345,6 +1345,58 @@ body.page-contact .nav a[href="/contact/"]::after{
   opacity: .55;
 }
 
+/* =========================================
+   Resume page styles (matches site aesthetic)
+   ========================================= */
+
+.resume-hero{
+  padding-top: calc(var(--section-y) * .6);
+  padding-bottom: calc(var(--section-y) * .35);
+}
+
+.resume-grid{
+  align-items: start;
+}
+
+/* Embedded PDF preview */
+.resume-preview{
+  margin-top: 14px;
+  border-radius: 18px;
+  overflow: hidden;
+
+  border: 1px solid rgba(0,0,0,.12);
+  background: rgba(255,255,255,.55);
+
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.10),
+    inset 0 1px 0 rgba(255,255,255,.55);
+}
+
+.resume-preview iframe{
+  width: 100%;
+  height: 860px;
+  border: 0;
+  display:block;
+}
+
+@media (max-width: 768px){
+  .resume-preview iframe{
+    height: 720px;
+  }
+}
+
+/* Optional: tighten bullet list spacing inside cards */
+.bullet-list{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: rgba(11,11,12,.72);
+  line-height: 1.6;
+}
+
+.bullet-list li{
+  margin: 6px 0;
+}
+
 
 
 
