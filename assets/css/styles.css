@@ -1560,6 +1560,71 @@ body.page-contact .nav a[href="/contact/"]::after{
   }
 }
 
+/* =========================================
+   Resume Lightbox (fullscreen preview)
+   ========================================= */
+
+.resume-lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(11,11,12,.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease;
+  z-index: 9999;
+}
+
+.resume-lightbox.is-open{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.rl-image{
+  max-width: min(92vw, 1100px);
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+
+  border-radius: 16px;
+  background: white;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.45),
+    0 0 0 1px rgba(255,255,255,.15);
+}
+
+/* Close button */
+.rl-close{
+  position: absolute;
+  top: 22px;
+  right: 26px;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.12);
+  color: white;
+
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+
+  box-shadow: 0 8px 22px rgba(0,0,0,.35);
+}
+
+.rl-close:hover{
+  background: rgba(255,255,255,.20);
+}
+
 
 
 
