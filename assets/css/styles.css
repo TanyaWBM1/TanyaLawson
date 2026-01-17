@@ -1447,28 +1447,35 @@ body.page-contact .nav a[href="/contact/"]::after{
 }
 
 /* Track must inherit viewport height */
-.rc-track{
-  display:flex;
-  width: auto; /* remove 300% */
+.resume-carousel .rc-track{
+  display: flex;
+  width: auto;            /* no hard 300% */
+  height: 100%;           /* IMPORTANT */
+  transform: translateX(0);
+  transition: transform 320ms ease; /* IMPORTANT */
+  will-change: transform;           /* IMPORTANT */
 }
 
 /* Each slide is a full viewport panel */
-.rc-slide{
+.resume-carousel .rc-slide{
   flex: 0 0 100%;
-  margin: 0;
   height: 100%;
+  margin: 0;
+
   display: flex;
-  align-items: flex-start;
+  align-items: center;    /* better than flex-start */
   justify-content: center;
-  padding: 18px 16px;
+
+  padding: 16px;
+  box-sizing: border-box;
 }
 
-/* make image fit viewport without cropping */
-.rc-slide img{
+/* Make image fit viewport without cropping */
+.resume-carousel .rc-slide img{
   width: auto;
-  height: 100%;
-  max-height: 100%;
+  height: auto;
   max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
   display: block;
 }
@@ -1552,6 +1559,7 @@ body.page-contact .nav a[href="/contact/"]::after{
     grid-template-columns: repeat(12, 1fr);
   }
 }
+
 
 
 
