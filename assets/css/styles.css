@@ -1467,8 +1467,8 @@ body.page-contact .nav a[href="/contact/"]::after{
 }
 
 .rc-slide{
-  flex: 0 0 100%;
-  margin: 0;
+  align-items: flex-start;
+  padding-top: 20px;
 }
 
 .rc-slide img{
@@ -1560,12 +1560,4 @@ body.page-contact .nav a[href="/contact/"]::after{
     grid-template-columns: repeat(12, 1fr);
   }
 }
-
-
-
-
-
-
-
-
 
