@@ -1014,7 +1014,7 @@ body.page-contact .nav a[href="/contact/"]::after{
 }
 
 /* Clean executive bullet list */
-.bullet-list{
+.usecase-col .bullet-list{
   list-style: disc;
   list-style-position: outside;   /* IMPORTANT */
   padding-left: 1.1rem;           /* controls bullet distance from edge */
@@ -1025,7 +1025,7 @@ body.page-contact .nav a[href="/contact/"]::after{
   gap: 10px;
 }
 
-.bullet-list li{
+.usecase-col .bullet-list li{
   padding-left: 0;                /* remove forced indent */
   margin-left: 0;
 
@@ -1661,6 +1661,7 @@ body.page-contact .nav a[href="/contact/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
 
 
