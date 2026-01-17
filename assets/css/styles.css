@@ -1432,6 +1432,24 @@ body.page-contact .nav a[href="/contact/"]::after{
   border-radius: 16px;
   border: 1px solid rgba(0,0,0,.12);
   background: rgba(255,255,255,.70);
+
+  /* KEY: control height */
+  max-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px){
+  .rc-viewport{
+    max-height: 420px;
+  }
+}
+
+@media (max-width: 480px){
+  .rc-viewport{
+    max-height: 340px;
+  }
 }
 
 .rc-track{
@@ -1448,10 +1466,13 @@ body.page-contact .nav a[href="/contact/"]::after{
 }
 
 .rc-slide img{
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: auto;
-  display: block;
+
   object-fit: contain;
+  display: block;
 }
 
 /* Arrow buttons */
@@ -1533,6 +1554,7 @@ body.page-contact .nav a[href="/contact/"]::after{
     grid-template-columns: repeat(12, 1fr);
   }
 }
+
 
 
 
