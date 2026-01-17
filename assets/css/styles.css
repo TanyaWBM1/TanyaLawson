@@ -973,19 +973,28 @@ body.page-contact .nav a[href="/contact/"]::after{
 
 /* details grid inside a card */
 .usecase-details{
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
+  min-width: 0;              /* NEW: prevents overflow in nested grid */
 }
+
 @media (min-width: 900px){
-  .usecase-details{ grid-template-columns: 1fr 1fr; }
+  .usecase-details{
+    grid-template-columns: 1fr 1fr;
+  }
 }
+
 .usecase-col{
   border-radius: 16px;
   border: 1px solid rgba(0,0,0,.10);
   background: rgba(255,255,255,.65);
   padding: 12px;
+
+  min-width: 0;              /* NEW: allows the column to shrink */
+  overflow: hidden;          /* NEW: keeps content inside */
 }
+
 .usecase-k{
   font-size: .72rem;
   font-weight: 850;
@@ -994,10 +1003,23 @@ body.page-contact .nav a[href="/contact/"]::after{
   color: rgba(11,11,12,.58);
   margin-bottom: 6px;
 }
+
 .usecase-v{
   color: rgba(11,11,12,.72);
   line-height: 1.6;
   font-weight: 650;
+
+  overflow-wrap: anywhere;   /* NEW: wraps long text safely */
+  word-break: normal;
+}
+
+/* If you’re using bullet lists inside the columns */
+.usecase-col .bullet-list{
+  max-width: 100%;
+}
+
+.usecase-col .bullet-list li{
+  overflow-wrap: anywhere;   /* NEW: bullet text won’t spill */
 }
 
 /* “foot” box for smaller cards */
@@ -1624,6 +1646,7 @@ body.page-contact .nav a[href="/contact/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
 
 
