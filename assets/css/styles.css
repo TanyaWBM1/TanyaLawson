@@ -1428,56 +1428,56 @@ body.page-contact .nav a[href="/contact/"]::after{
 }
 
 /* Resume preview window — taller for documents */
-.rc-viewport{
+.resume-carousel .rc-viewport{
   overflow: hidden;
   border-radius: 18px;
   border: 1px solid rgba(0,0,0,.12);
   background: rgba(255,255,255,.70);
-
-  /* Taller window for resume pages */
-  height: 680px;
+  height: 760px; /* taller so header is visible */
 }
 
-/* Tablet */
 @media (max-width: 1024px){
-  .rc-viewport{
-    height: 560px;
-  }
+  .resume-carousel .rc-viewport{ height: 620px; }
 }
-
-/* Mobile */
 @media (max-width: 768px){
-  .rc-viewport{
-    height: 440px;
-  }
+  .resume-carousel .rc-viewport{ height: 520px; }
 }
-
 @media (max-width: 480px){
-  .rc-viewport{
-    height: 360px;
-  }
+  .resume-carousel .rc-viewport{ height: 420px; }
 }
 
-.rc-track{
+/* Track must inherit viewport height */
+.resume-carousel .rc-track{
   display: flex;
-  width: 300%; /* 3 slides */
+  width: 300%;                 /* 3 slides */
+  height: 100%;                /* KEY */
   transform: translateX(0);
   transition: transform 320ms ease;
   will-change: transform;
 }
 
-.rc-slide{
-  align-items: flex-start;
-  padding-top: 20px;
+/* Each slide is a full viewport panel */
+.resume-carousel .rc-slide{
+  flex: 0 0 100%;              /* KEY */
+  height: 100%;                /* KEY */
+  margin: 0;
+
+  display: flex;               /* KEY */
+  align-items: center;         /* centers image vertically */
+  justify-content: center;     /* centers image horizontally */
+
+  padding: 16px;
+  box-sizing: border-box;
 }
 
-.rc-slide img{
+/* Image must be allowed to shrink to fit */
+.resume-carousel .rc-slide img{
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
 
-  object-fit: contain;
+  object-fit: contain;         /* no cropping */
   display: block;
 }
 
@@ -1560,4 +1560,5 @@ body.page-contact .nav a[href="/contact/"]::after{
     grid-template-columns: repeat(12, 1fr);
   }
 }
+
 
