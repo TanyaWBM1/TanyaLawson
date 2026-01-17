@@ -1,40 +1,139 @@
-<section class="section" aria-label="Resume preview">
-  <div class="container">
+---
+layout: default
+title: Resume — Tanya M. Lawson
+description: Download Tanya M. Lawson’s resume (PDF) and review a clean preview — operations, systems, documentation, and calm execution.
+og_title: Resume — Tanya M. Lawson
+og_description: Download the resume PDF and view a clean preview.
+show_ticker: true
+---
 
+<section class="section resume-hero" aria-label="Resume intro">
+  <div class="container">
     <div class="section-head">
-      <h2>Résumé</h2>
-      <div class="cta-kicker">Visual preview</div>
+      <h2>Resume</h2>
+      <div class="cta-kicker">Clear experience → clean execution</div>
     </div>
 
-    <article class="card reveal resume-card">
-      <div class="eyebrow">Current résumé</div>
+    <p class="hero-lead" style="max-width: 80ch;">
+      If you prefer a quick download, use the button below. If you want a fast look first, the preview is included.
+      (PDF is the most accurate format.)
+    </p>
 
-      <div class="resume-preview">
-        <img
-          src="/assets/img/resume/tanya-lawson-resume-page1.png"
-          alt="Tanya M. Lawson résumé – page 1"
-          loading="lazy"
-        >
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="/assets/pdf/Lawson Tanya RESUME 2025.pdf" download>Download Resume (PDF)</a>
+      <a class="btn btn-ghost" href="/contact/">Contact</a>
+      <a class="btn btn-ghost" href="/">Home</a>
+    </div>
+  </div>
+</section>
 
-        <!-- Optional second page -->
-        <!--
-        <img
-          src="/assets/img/resume/tanya-lawson-resume-page2.png"
-          alt="Tanya M. Lawson résumé – page 2"
-          loading="lazy"
-        >
-        -->
+<section class="section" aria-label="Resume content">
+  <div class="section-rule" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="bento resume-grid">
+
+      <!-- LEFT: Summary + highlights -->
+      <article class="card span-4 reveal" aria-label="Resume summary">
+        <div class="eyebrow">Snapshot</div>
+        <h3 class="usecase-title">What you’ll see in the PDF</h3>
+        <p class="usecase-summary">
+          Operations support, documentation discipline, executive coordination, and systems thinking — with a calm,
+          follow-through style built for real environments.
+        </p>
+
+        <div class="usecase-details" style="margin-top: 14px;">
+          <div class="usecase-col">
+            <div class="usecase-k">Strengths</div>
+            <ul class="bullet-list">
+              <li>Executive support + stakeholder coordination</li>
+              <li>Process cleanup + repeatable workflows</li>
+              <li>Documentation hygiene + audit-ready structure</li>
+              <li>Practical AI support (guardrails, clarity, speed)</li>
+            </ul>
+          </div>
+
+          <div class="usecase-col">
+            <div class="usecase-k">Best fit</div>
+            <div class="usecase-v">
+              High-trust teams that need someone who can reduce friction, protect timelines, and keep the work organized.
+            </div>
+          </div>
+        </div>
+
+        <div class="usecase-actions">
+          <a class="btn btn-primary" href="/assets/pdf/Lawson Tanya RESUME 2025.pdf" download>Download PDF</a>
+          <a class="btn btn-ghost" href="/use-cases/">View Use Cases</a>
+        </div>
+
+        <p class="form-note" style="margin-top: 12px;">
+          Tip: If the preview looks small on mobile, download the PDF for full clarity.
+        </p>
+      </article>
+
+      <!-- RIGHT: PDF Preview -->
+      <article class="card span-8 reveal" aria-label="Resume preview">
+        <div class="usecase-top" style="margin-bottom: 10px;">
+          <div class="eyebrow">Preview</div>
+          <div class="usecase-badges">
+            <span class="tag-pill">PDF</span>
+            <span class="tag-pill">Print-ready</span>
+          </div>
+        </div>
+
+        <h3 class="usecase-title">Resume Preview</h3>
+        <p class="usecase-summary" style="max-width: 78ch;">
+          This is an embedded preview of the PDF. For the cleanest view and best formatting, download the file.
+        </p>
+
+        <div class="resume-preview" role="region" aria-label="Embedded resume PDF">
+          <iframe
+            src="/assets/docs/Tanya-Lawson-Resume.pdf"
+            title="Tanya Lawson Resume PDF"
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <div class="usecase-actions" style="margin-top: 16px;">
+          <a class="btn btn-primary" href="/assets/pdf/Lawson Tanya RESUME 2025.pdf" download>Download Resume (PDF)</a>
+          <a class="btn btn-ghost" href="/contact/">Contact</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="usecases-cta reveal" style="margin-top: 22px;">
+      <div class="usecases-cta-inner">
+        <div>
+          <div class="cta-kicker">Want a tailored version?</div>
+          <h3 class="usecases-cta-title">I can align my resume to your role.</h3>
+          <p class="usecases-cta-text">
+            If you share the job description (or the outcomes you need), I can provide a targeted summary
+            of the most relevant experience and how I’d approach the work.
+          </p>
+        </div>
+        <div class="usecases-cta-actions">
+          <a class="btn btn-primary" href="/contact/">Contact Tanya</a>
+          <a class="btn btn-ghost" href="/">Home</a>
+        </div>
       </div>
-
-      <div class="resume-actions">
-        <a class="btn btn-primary" href="/assets/pdf/Lawson Tanya RESUME 2025.pdf" download>
-          Download PDF
-        </a>
-        <a class="btn btn-ghost" href="/contact/">Contact</a>
-      </div>
-
-    </article>
+    </div>
 
   </div>
 </section>
 
+<script>
+(() => {
+  // Scroll reveal
+  const items = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  items.forEach(el => io.observe(el));
+})();
+</script>
