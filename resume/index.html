@@ -20,9 +20,11 @@ show_ticker: true
     </p>
 
     <div class="hero-cta">
-      <a class="btn btn-primary" href="/assets/pdf/lawson_tanya_resume_2025.pdf" download>Download Resume (PDF)</a>
-      <a class="btn btn-ghost" href="/contact/">Contact</a>
-      <a class="btn btn-ghost" href="/">Home</a>
+      <a class="btn btn-primary" href="{{ '/assets/pdf/lawson_tanya_resume_2025.pdf' | relative_url }}" download>
+        Download Resume (PDF)
+      </a>
+      <a class="btn btn-ghost" href="{{ '/contact/' | relative_url }}">Contact</a>
+      <a class="btn btn-ghost" href="{{ '/' | relative_url }}">Home</a>
     </div>
   </div>
 </section>
@@ -62,41 +64,99 @@ show_ticker: true
         </div>
 
         <div class="usecase-actions">
-          <a class="btn btn-primary" href="/assets/pdf/lawson_tanya_resume_2025.pdf" download>Download PDF</a>
-          <a class="btn btn-ghost" href="/use-cases/">View Use Cases</a>
+          <a class="btn btn-primary" href="{{ '/assets/pdf/lawson_tanya_resume_2025.pdf' | relative_url }}" download>
+            Download PDF
+          </a>
+          <a class="btn btn-ghost" href="{{ '/use-cases/' | relative_url }}">View Use Cases</a>
         </div>
 
         <p class="form-note" style="margin-top: 12px;">
-          Tip: If the preview looks small on mobile, download the PDF for full clarity.
+          Tip: If the preview looks small on mobile, open the PDF in a new tab or download for full clarity.
         </p>
       </article>
 
-      <!-- RIGHT: PDF Preview -->
+      <!-- RIGHT: Resume Preview Carousel -->
       <article class="card span-8 reveal" aria-label="Resume preview">
         <div class="usecase-top" style="margin-bottom: 10px;">
           <div class="eyebrow">Preview</div>
           <div class="usecase-badges">
-            <span class="tag-pill">PDF</span>
-            <span class="tag-pill">Print-ready</span>
+            <span class="tag-pill">3 pages</span>
+            <span class="tag-pill">Swipe</span>
           </div>
         </div>
 
         <h3 class="usecase-title">Resume Preview</h3>
         <p class="usecase-summary" style="max-width: 78ch;">
-          This is an embedded preview of the PDF. For the cleanest view and best formatting, download the file.
+          Swipe (mobile) or use arrows to view each page. For the cleanest formatting, open the PDF in a new tab.
         </p>
 
-        <div class="resume-preview" role="region" aria-label="Embedded resume PDF">
-          <iframe
-            src="/assets/pdf/lawson_tanya_resume_2025.pdf"
-            title="Tanya Lawson Resume PDF"
-            loading="lazy"
-          ></iframe>
+        <!-- Carousel -->
+        <div class="resume-carousel" aria-label="Resume preview carousel">
+          <div class="resume-viewer" data-carousel>
+            <button class="rc-btn rc-prev" type="button" aria-label="Previous page">‹</button>
+
+            <div class="rc-viewport" aria-live="polite">
+              <div class="rc-track">
+                <figure class="rc-slide">
+                  <img
+                    src="{{ '/assets/img/resume/lawson_tanya_resume_img1.png' | relative_url }}"
+                    alt="Resume page 1 — Tanya M. Lawson"
+                    loading="lazy">
+                </figure>
+
+                <figure class="rc-slide">
+                  <img
+                    src="{{ '/assets/img/resume/lawson_tanya_resume_img2.png' | relative_url }}"
+                    alt="Resume page 2 — Tanya M. Lawson"
+                    loading="lazy">
+                </figure>
+
+                <figure class="rc-slide">
+                  <img
+                    src="{{ '/assets/img/resume/lawson_tanya_resume_img3.png' | relative_url }}"
+                    alt="Resume page 3 — Tanya M. Lawson"
+                    loading="lazy">
+                </figure>
+              </div>
+            </div>
+
+            <button class="rc-btn rc-next" type="button" aria-label="Next page">›</button>
+          </div>
+
+          <div class="rc-meta">
+            <div class="rc-count">
+              Page <span data-page>1</span> of <span data-total>3</span>
+            </div>
+
+            <div class="rc-dots" role="tablist" aria-label="Choose page">
+              <button class="rc-dot is-active" type="button" data-dot="0" aria-label="Page 1"></button>
+              <button class="rc-dot" type="button" data-dot="1" aria-label="Page 2"></button>
+              <button class="rc-dot" type="button" data-dot="2" aria-label="Page 3"></button>
+            </div>
+
+            <div class="usecase-actions" style="margin-top: 12px;">
+              <a class="btn btn-ghost"
+                 href="{{ '/assets/pdf/lawson_tanya_resume_2025.pdf' | relative_url }}"
+                 target="_blank" rel="noopener">
+                View full PDF
+              </a>
+
+              <a class="btn btn-primary"
+                 href="{{ '/assets/pdf/lawson_tanya_resume_2025.pdf' | relative_url }}"
+                 download>
+                Download PDF
+              </a>
+            </div>
+
+            <p class="form-note" style="margin-top: 10px;">
+              If images load slowly, refresh once — GitHub Pages can cache aggressively after new uploads.
+            </p>
+          </div>
         </div>
 
         <div class="usecase-actions" style="margin-top: 16px;">
-          <a class="btn btn-primary" href="/assets/pdf/lawson_tanya_resume_2025.pdf" download>Download Resume (PDF)</a>
-          <a class="btn btn-ghost" href="/contact/">Contact</a>
+          <a class="btn btn-ghost" href="{{ '/contact/' | relative_url }}">Contact</a>
+          <a class="btn btn-ghost" href="{{ '/' | relative_url }}">Home</a>
         </div>
       </article>
 
@@ -113,8 +173,8 @@ show_ticker: true
           </p>
         </div>
         <div class="usecases-cta-actions">
-          <a class="btn btn-primary" href="/contact/">Contact Tanya</a>
-          <a class="btn btn-ghost" href="/">Home</a>
+          <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Contact Tanya</a>
+          <a class="btn btn-ghost" href="{{ '/' | relative_url }}">Home</a>
         </div>
       </div>
     </div>
@@ -124,7 +184,9 @@ show_ticker: true
 
 <script>
 (() => {
+  // ----------------------------
   // Scroll reveal
+  // ----------------------------
   const items = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -135,5 +197,75 @@ show_ticker: true
     });
   }, { threshold: 0.12 });
   items.forEach(el => io.observe(el));
+
+  // ----------------------------
+  // Resume carousel (3 pages)
+  // ----------------------------
+  const viewer = document.querySelector('[data-carousel]');
+  if (!viewer) return;
+
+  const track = viewer.querySelector('.rc-track');
+  const slides = viewer.querySelectorAll('.rc-slide');
+  const prev = viewer.querySelector('.rc-prev');
+  const next = viewer.querySelector('.rc-next');
+  const dots = document.querySelectorAll('.rc-dot');
+  const pageEl = document.querySelector('[data-page]');
+  const totalEl = document.querySelector('[data-total]');
+
+  let index = 0;
+  const total = slides.length;
+
+  if (totalEl) totalEl.textContent = String(total);
+
+  function update(){
+    track.style.transform = `translateX(-${index * 100}%)`;
+    if (pageEl) pageEl.textContent = String(index + 1);
+
+    dots.forEach(d => d.classList.remove('is-active'));
+    if (dots[index]) dots[index].classList.add('is-active');
+
+    prev.disabled = (index === 0);
+    next.disabled = (index === total - 1);
+  }
+
+  prev.addEventListener('click', () => {
+    index = Math.max(0, index - 1);
+    update();
+  });
+
+  next.addEventListener('click', () => {
+    index = Math.min(total - 1, index + 1);
+    update();
+  });
+
+  dots.forEach(btn => {
+    btn.addEventListener('click', () => {
+      index = Number(btn.dataset.dot || 0);
+      update();
+    });
+  });
+
+  // Basic swipe support (mobile)
+  let x0 = null;
+  viewer.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+  viewer.addEventListener('touchend', (e) => {
+    if (x0 === null) return;
+    const x1 = e.changedTouches[0].clientX;
+    const dx = x1 - x0;
+    x0 = null;
+
+    if (Math.abs(dx) < 30) return;
+    if (dx < 0) index = Math.min(total - 1, index + 1);
+    else index = Math.max(0, index - 1);
+    update();
+  });
+
+  // Keyboard support when focused
+  viewer.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { index = Math.max(0, index - 1); update(); }
+    if (e.key === 'ArrowRight') { index = Math.min(total - 1, index + 1); update(); }
+  });
+
+  update();
 })();
 </script>
