@@ -1427,28 +1427,34 @@ body.page-contact .nav a[href="/contact/"]::after{
   }
 }
 
+/* Resume preview window — taller for documents */
 .rc-viewport{
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 18px;
   border: 1px solid rgba(0,0,0,.12);
   background: rgba(255,255,255,.70);
 
-  /* KEY: control height */
-  max-height: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* Taller window for resume pages */
+  height: 680px;
 }
 
+/* Tablet */
+@media (max-width: 1024px){
+  .rc-viewport{
+    height: 560px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px){
   .rc-viewport{
-    max-height: 420px;
+    height: 440px;
   }
 }
 
 @media (max-width: 480px){
   .rc-viewport{
-    max-height: 340px;
+    height: 360px;
   }
 }
 
@@ -1554,6 +1560,7 @@ body.page-contact .nav a[href="/contact/"]::after{
     grid-template-columns: repeat(12, 1fr);
   }
 }
+
 
 
 
