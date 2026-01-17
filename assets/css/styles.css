@@ -1013,13 +1013,28 @@ body.page-contact .nav a[href="/contact/"]::after{
   word-break: normal;
 }
 
-/* If you’re using bullet lists inside the columns */
-.usecase-col .bullet-list{
-  max-width: 100%;
+/* Clean executive bullet list */
+.bullet-list{
+  list-style: disc;
+  list-style-position: outside;   /* IMPORTANT */
+  padding-left: 1.1rem;           /* controls bullet distance from edge */
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.usecase-col .bullet-list li{
-  overflow-wrap: anywhere;   /* NEW: bullet text won’t spill */
+.bullet-list li{
+  padding-left: 0;                /* remove forced indent */
+  margin-left: 0;
+
+  color: rgba(11,11,12,.72);
+  line-height: 1.55;
+  font-weight: 650;
+
+  overflow-wrap: normal;          /* stop word-by-word breaking */
+  word-break: normal;
 }
 
 /* “foot” box for smaller cards */
@@ -1646,6 +1661,7 @@ body.page-contact .nav a[href="/contact/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
 
 
