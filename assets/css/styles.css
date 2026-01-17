@@ -1026,7 +1026,7 @@ body.page-contact .nav a[href="/contact/"]::after{
 
 .usecase-col .bullet-list li{
   padding-left: 0;
-  margin: 8px 0;
+  margin: 10px 0;
   position: static;               /* undo the pseudo-bullet positioning */
   overflow-wrap: normal;
   word-break: normal;
@@ -1661,6 +1661,7 @@ body.page-contact .nav a[href="/contact/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
 
 
