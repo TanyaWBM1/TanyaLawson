@@ -92,7 +92,7 @@ show_ticker: true
 
         <!-- Carousel -->
         <div class="resume-carousel" aria-label="Resume preview carousel">
-          <div class="resume-viewer" data-carousel>
+          <div class="resume-viewer" data-carousel tabindex="0">
             <button class="rc-btn rc-prev" type="button" aria-label="Previous page">‹</button>
 
             <div class="rc-viewport" aria-live="polite">
@@ -199,73 +199,76 @@ show_ticker: true
   items.forEach(el => io.observe(el));
 
   // ----------------------------
-  // Resume carousel (3 pages)
+  // Resume carousel (pixel-based, no blank settling)
   // ----------------------------
-  const viewer = document.querySelector('[data-carousel]');
-  if (!viewer) return;
+  const root = document.querySelector('[data-carousel]');
+  if (!root) return;
 
-  const track = viewer.querySelector('.rc-track');
-  const slides = viewer.querySelectorAll('.rc-slide');
-  const prev = viewer.querySelector('.rc-prev');
-  const next = viewer.querySelector('.rc-next');
-  const dots = document.querySelectorAll('.rc-dot');
+  const viewport = root.querySelector('.rc-viewport');
+  const track = root.querySelector('.rc-track');
+  const slides = Array.from(root.querySelectorAll('.rc-slide'));
+  const prev = root.querySelector('.rc-prev');
+  const next = root.querySelector('.rc-next');
+
+  const dots = Array.from(document.querySelectorAll('.rc-dot'));
   const pageEl = document.querySelector('[data-page]');
   const totalEl = document.querySelector('[data-total]');
 
   let index = 0;
-  const total = slides.length;
 
-  if (totalEl) totalEl.textContent = String(total);
+  if (totalEl) totalEl.textContent = String(slides.length);
 
-  function update(){
-    track.style.transform = `translateX(-${index * 100}%)`;
-    if (pageEl) pageEl.textContent = String(index + 1);
-
-    dots.forEach(d => d.classList.remove('is-active'));
-    if (dots[index]) dots[index].classList.add('is-active');
-
-    prev.disabled = (index === 0);
-    next.disabled = (index === total - 1);
+  function setButtons(){
+    if (prev) prev.disabled = (index === 0);
+    if (next) next.disabled = (index === slides.length - 1);
   }
 
-  prev.addEventListener('click', () => {
-    index = Math.max(0, index - 1);
-    update();
-  });
+  function render(){
+    const w = viewport.getBoundingClientRect().width;
+    track.style.transform = `translateX(${-index * w}px)`;
 
-  next.addEventListener('click', () => {
-    index = Math.min(total - 1, index + 1);
-    update();
-  });
+    if (pageEl) pageEl.textContent = String(index + 1);
+    dots.forEach((d, idx) => d.classList.toggle('is-active', idx === index));
+    setButtons();
+  }
+
+  function go(n){
+    index = Math.max(0, Math.min(slides.length - 1, n));
+    render();
+  }
+
+  prev?.addEventListener('click', () => go(index - 1));
+  next?.addEventListener('click', () => go(index + 1));
 
   dots.forEach(btn => {
     btn.addEventListener('click', () => {
-      index = Number(btn.dataset.dot || 0);
-      update();
+      go(Number(btn.dataset.dot || 0));
     });
   });
 
-  // Basic swipe support (mobile)
+  // Swipe support (mobile)
   let x0 = null;
-  viewer.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
-  viewer.addEventListener('touchend', (e) => {
+  root.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+  root.addEventListener('touchend', (e) => {
     if (x0 === null) return;
     const x1 = e.changedTouches[0].clientX;
     const dx = x1 - x0;
     x0 = null;
 
     if (Math.abs(dx) < 30) return;
-    if (dx < 0) index = Math.min(total - 1, index + 1);
-    else index = Math.max(0, index - 1);
-    update();
+    if (dx < 0) go(index + 1);
+    else go(index - 1);
   });
 
-  // Keyboard support when focused
-  viewer.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') { index = Math.max(0, index - 1); update(); }
-    if (e.key === 'ArrowRight') { index = Math.min(total - 1, index + 1); update(); }
+  // Keyboard
+  root.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') go(index - 1);
+    if (e.key === 'ArrowRight') go(index + 1);
   });
 
-  update();
+  // IMPORTANT: keep alignment on resize
+  window.addEventListener('resize', render);
+
+  render();
 })();
 </script>
