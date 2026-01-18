@@ -161,6 +161,7 @@ a.btn, a.btn-primary, a.btn-ghost{ text-decoration:none; }
   justify-content:space-between;
   gap:16px;
   padding: 12px var(--pad-x);
+  position: relative; /* NEW: anchor mobile dropdown */
 }
 
 .brand{
@@ -170,21 +171,55 @@ a.btn, a.btn-primary, a.btn-ghost{ text-decoration:none; }
   text-decoration:none;
   color:inherit;
 }
+
 .brand-logo{
   border-radius: 14px;
   border: 1px solid rgba(0,0,0,.10);
   box-shadow: var(--shadow-sm);
 }
+
 .brand-name{
   font-weight: 900;
   letter-spacing: var(--heading-track);
   font-size: 1.05rem;
 }
 
+/* =========================
+   Hamburger (mobile)
+   ========================= */
+.nav-toggle{
+  display: inline-flex;            /* NEW */
+  flex-direction: column;          /* NEW */
+  justify-content: center;         /* NEW */
+  gap: 5px;                        /* NEW */
+  width: 44px;                     /* NEW */
+  height: 44px;                    /* NEW */
+  border: 1px solid rgba(0,0,0,.10); /* NEW */
+  border-radius: 14px;             /* NEW */
+  background: rgba(255,255,255,.55); /* NEW */
+  box-shadow: var(--shadow-sm);    /* NEW */
+  cursor: pointer;                 /* NEW */
+  padding: 0;                      /* NEW */
+}
+
+.nav-toggle span{
+  display:block;                   /* NEW */
+  width: 20px;                     /* NEW */
+  height: 2px;                     /* NEW */
+  background: var(--text);         /* NEW */
+  border-radius: 999px;            /* NEW */
+  margin: 0 auto;                  /* NEW */
+  transition: transform .2s ease, opacity .2s ease; /* NEW */
+}
+
+/* =========================
+   Nav (desktop + mobile)
+   ========================= */
 .nav{
   display:none;
   gap: 6px;
 }
+
 .nav a{
   text-decoration:none;
   color:inherit;
@@ -193,6 +228,7 @@ a.btn, a.btn-primary, a.btn-ghost{ text-decoration:none; }
   border: 1px solid transparent;
   position: relative;
 }
+
 .nav a:hover{
   background: rgba(255,255,255,.6);
   border-color: rgba(0,0,0,.06);
@@ -226,8 +262,40 @@ body.page-contact .nav a[href="/contact/"]::after{
   border-radius: 999px;
 }
 
-/* Header CTA visibility */
+/* =========================
+   Mobile dropdown behavior
+   ========================= */
+@media (max-width: 767px){
+
+  /* show menu when toggled */
+  .site-header.menu-open .nav{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: var(--pad-x);
+    right: var(--pad-x);
+    padding: 12px;
+    background: rgba(251,250,247,.92);
+    border: 1px solid rgba(0,0,0,.10);
+    border-radius: 18px;
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(10px);
+  }
+
+  .site-header.menu-open .nav a{
+    padding: 12px 12px;
+  }
+
+  /* keep desktop CTA hidden on mobile */
+  .cta-desktop{ display:none; }
+}
+
+/* =========================
+   Header CTA visibility
+   ========================= */
 .cta-desktop{ display:none; }
+
 .cta-mobile a{
   font-size:.72rem;
   text-transform: uppercase;
@@ -237,8 +305,12 @@ body.page-contact .nav a[href="/contact/"]::after{
   text-decoration:none;
 }
 
+/* =========================
+   Desktop layout
+   ========================= */
 @media (min-width: 768px){
   .nav{ display:flex; }
+  .nav-toggle{ display:none; }      /* NEW: hide hamburger on desktop */
   .cta-desktop{ display:inline-flex; }
   .cta-mobile{ display:none; }
 }
@@ -1661,6 +1733,7 @@ body.page-contact .nav a[href="/contact/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
 
 
