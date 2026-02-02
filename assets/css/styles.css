@@ -238,7 +238,7 @@ a.btn, a.btn-primary, a.btn-ghost{ text-decoration:none; }
 /* Active nav state (per-page body class) */
 body.page-home .nav a[href="/"],
 body.page-about .nav a[href="/about/"],
-body.page-use-cases .nav a[href="/use-cases/"],
+body.page-use-cases .nav a[href="/how-i-work/"],
 body.page-resume .nav a[href="/resume/"],
 body.page-contact .nav a[href="/contact/"]{
   background: rgba(255,255,255,.70);
@@ -248,7 +248,7 @@ body.page-contact .nav a[href="/contact/"]{
 
 body.page-home .nav a[href="/"]::after,
 body.page-about .nav a[href="/about/"]::after,
-body.page-use-cases .nav a[href="/use-cases/"]::after,
+body.page-use-cases .nav a[href="/how-i-work/"]::after,
 body.page-resume .nav a[href="/resume/"]::after,
 body.page-contact .nav a[href="/contact/"]::after{
   content:"";
@@ -1733,6 +1733,7 @@ body.page-contact .nav a[href="/contact/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
 
 
