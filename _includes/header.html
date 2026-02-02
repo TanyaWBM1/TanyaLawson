@@ -7,7 +7,7 @@
     </a>
 
     <!-- Hamburger (mobile only) -->
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
       <span></span>
       <span></span>
       <span></span>
@@ -17,29 +17,27 @@
       <a href="/about/">About</a>
       <a href="/her-story/">Her Story</a>
       <a href="/resume/">Résumé</a>
-      <a href="/how-i-work/">How I Work</a>
+
+      <!-- How I Work (link + dropdown) -->
+      <div class="nav-item has-subnav">
+        <a class="nav-parent" href="/how-i-work/">How I Work</a>
+
+        <button class="nav-subtoggle"
+                type="button"
+                aria-label="Open How I Work submenu"
+                aria-expanded="false"
+                aria-controls="how-i-work-subnav">
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+
+        <div class="subnav" id="how-i-work-subnav">
+          <a href="/how-i-work/how-i-think/">Ex 1 — How I Think</a>
+          <a href="/how-i-work/how-i-research/">Ex 2 — How I Research</a>
+          <a href="/how-i-work/how-i-build-systems/">Ex 3 — How I Build Systems</a>
+          <a href="/how-i-work/how-i-use-ai/">Ex 4 — How I Use AI</a>
+        </div>
+      </div>
     </nav>
-
-    <div class="nav-item has-subnav">
-  <!-- This is the actual link -->
-  <a class="nav-parent" href="/how-i-work/">How I Work</a>
-
-  <!-- This only controls the dropdown (mainly for mobile) -->
-  <button class="nav-subtoggle"
-          type="button"
-          aria-label="Open How I Work submenu"
-          aria-expanded="false"
-          aria-controls="how-i-work-subnav">
-    <span class="chev" aria-hidden="true"></span>
-  </button>
-
-  <div class="subnav" id="how-i-work-subnav">
-    <a href="/how-i-work/how-i-think/">Ex 1 — How I Think</a>
-    <a href="/how-i-work/how-i-research/">Ex 2 — How I Research</a>
-    <a href="/how-i-work/how-i-build-systems/">Ex 3 — How I Build Systems</a>
-    <a href="/how-i-work/how-i-use-ai/">Ex 4 — How I Use AI</a>
-  </div>
-</div>
 
     <a class="btn btn-primary cta-desktop" href="/contact/">Work With Me</a>
 
@@ -50,13 +48,26 @@
   const header = document.querySelector('.site-header');
   const toggle = document.querySelector('.nav-toggle');
 
+  const subWrap = document.querySelector('.has-subnav');
+  const subToggle = document.querySelector('.nav-subtoggle');
+
   if (header && toggle) {
     toggle.addEventListener('click', () => {
       const isOpen = header.classList.toggle('menu-open');
       toggle.setAttribute('aria-expanded', isOpen);
+
+      // optional: close submenu when closing hamburger
+      if (!isOpen && subWrap && subToggle) {
+        subWrap.classList.remove('open');
+        subToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  if (subWrap && subToggle) {
+    subToggle.addEventListener('click', () => {
+      const isOpen = subWrap.classList.toggle('open');
+      subToggle.setAttribute('aria-expanded', isOpen);
     });
   }
 </script>
-
-
-
