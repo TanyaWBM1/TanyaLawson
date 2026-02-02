@@ -287,6 +287,10 @@ body.page-contact .nav a[href="/contact/"]::after{
     padding: 12px 12px;
   }
 
+  .site-header.menu-open .subnav a{
+  padding: 12px 12px;
+}
+   
   /* keep desktop CTA hidden on mobile */
   .cta-desktop{ display:none; }
 }
@@ -1856,3 +1860,4 @@ body.page-contact .nav a[href="/contact/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
