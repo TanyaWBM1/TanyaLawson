@@ -238,9 +238,15 @@ a.btn, a.btn-primary, a.btn-ghost{ text-decoration:none; }
 /* Active nav state (per-page body class) */
 body.page-home .nav a[href="/"],
 body.page-about .nav a[href="/about/"],
-body.page-how-i-work .nav a[href="/how-i-work/"],
 body.page-resume .nav a[href="/resume/"],
-body.page-contact .nav a[href="/contact/"]{
+body.page-contact .nav a[href="/contact/"],
+
+/* How I Work + all child pages */
+body.page-how-i-work .nav a[href="/how-i-work/"],
+body.page-how-i-think .nav a[href="/how-i-work/"],
+body.page-how-i-research .nav a[href="/how-i-work/"],
+body.page-how-i-build-systems .nav a[href="/how-i-work/"],
+body.page-how-i-use-ai .nav a[href="/how-i-work/"]{
   background: rgba(255,255,255,.70);
   border-color: rgba(201,178,124,.35);
   box-shadow: 0 10px 24px rgba(0,0,0,.10);
@@ -248,16 +254,27 @@ body.page-contact .nav a[href="/contact/"]{
 
 body.page-home .nav a[href="/"]::after,
 body.page-about .nav a[href="/about/"]::after,
-body.page-how-i-work .nav a[href="/how-i-work/"]::after,
 body.page-resume .nav a[href="/resume/"]::after,
-body.page-contact .nav a[href="/contact/"]::after{
+body.page-contact .nav a[href="/contact/"]::after,
+
+/* How I Work + all child pages */
+body.page-how-i-work .nav a[href="/how-i-work/"]::after,
+body.page-how-i-think .nav a[href="/how-i-work/"]::after,
+body.page-how-i-research .nav a[href="/how-i-work/"]::after,
+body.page-how-i-build-systems .nav a[href="/how-i-work/"]::after,
+body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
   content:"";
   position:absolute;
   left: 14px;
   right: 14px;
   bottom: 8px;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(201,178,124,.85), transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(201,178,124,.85),
+    transparent
+  );
   opacity: .95;
   border-radius: 999px;
 }
@@ -1860,5 +1877,6 @@ body.page-contact .nav a[href="/contact/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
 
