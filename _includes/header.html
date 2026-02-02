@@ -20,6 +20,27 @@
       <a href="/how-i-work/">How I Work</a>
     </nav>
 
+    <div class="nav-item has-subnav">
+  <!-- This is the actual link -->
+  <a class="nav-parent" href="/how-i-work/">How I Work</a>
+
+  <!-- This only controls the dropdown (mainly for mobile) -->
+  <button class="nav-subtoggle"
+          type="button"
+          aria-label="Open How I Work submenu"
+          aria-expanded="false"
+          aria-controls="how-i-work-subnav">
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+
+  <div class="subnav" id="how-i-work-subnav">
+    <a href="/how-i-work/how-i-think/">Ex 1 — How I Think</a>
+    <a href="/how-i-work/how-i-research/">Ex 2 — How I Research</a>
+    <a href="/how-i-work/how-i-build-systems/">Ex 3 — How I Build Systems</a>
+    <a href="/how-i-work/how-i-use-ai/">Ex 4 — How I Use AI</a>
+  </div>
+</div>
+
     <a class="btn btn-primary cta-desktop" href="/contact/">Work With Me</a>
 
   </div>
@@ -36,8 +57,6 @@
     });
   }
 </script>
-
-
 
 
 
