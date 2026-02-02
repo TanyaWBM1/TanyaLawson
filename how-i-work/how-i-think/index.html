@@ -1,3 +1,4 @@
+```html
 ---
 layout: default
 title: How I Think — How I Work — Tanya M. Lawson
@@ -8,301 +9,374 @@ permalink: /how-i-work/how-i-think/
 show_ticker: true
 ---
 
-<!-- Page-scoped styling: subtle “stand out” treatment (turquoise wash + grid accent) -->
+<!-- Page-scoped styling: make this page feel distinct (subtle turquoise + “diagram” vibe) -->
 <style>
-  .howthink-hero{
+  .think-hero{
     position: relative;
     overflow: hidden;
   }
-  .howthink-hero::before{
+  .think-hero::before{
     content:"";
     position:absolute;
-    inset:-18%;
+    inset:-20%;
     background:
-      radial-gradient(760px 420px at 12% 18%, rgba(47,183,179,.18), transparent 60%),
-      radial-gradient(620px 360px at 88% 16%, rgba(201,178,124,.10), transparent 58%),
-      radial-gradient(760px 520px at 55% 92%, rgba(47,183,179,.10), transparent 62%);
+      radial-gradient(720px 420px at 16% 18%, rgba(47,183,179,.18), transparent 60%),
+      radial-gradient(620px 360px at 82% 12%, rgba(47,183,179,.12), transparent 58%),
+      radial-gradient(760px 520px at 55% 88%, rgba(47,183,179,.10), transparent 62%);
     pointer-events:none;
   }
-  .howthink-hero .container{ position: relative; z-index: 1; }
+  .think-hero .container{ position: relative; z-index: 1; }
 
-  /* Soft “blueprint” panel to differentiate this page from others */
-  .blueprint{
+  /* A distinct “signal strip” card look for this page */
+  .signal-card{
     border: 1px solid rgba(47,183,179,.18);
     background:
-      linear-gradient(180deg, rgba(255,255,255,.72), rgba(255,255,255,.56)),
-      radial-gradient(900px 380px at 10% 0%, rgba(47,183,179,.10), transparent 60%);
-    position: relative;
-    overflow: hidden;
+      radial-gradient(520px 220px at 10% 15%, rgba(47,183,179,.10), transparent 55%),
+      rgba(255,255,255,.62);
   }
-  .blueprint::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background-image:
-      linear-gradient(rgba(47,183,179,.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(47,183,179,.08) 1px, transparent 1px);
-    background-size: 28px 28px;
-    opacity: .25;
-    pointer-events:none;
-  }
-  .blueprint > *{ position: relative; z-index: 1; }
 
-  /* A small callout pill style, page-only */
-  .callout-pill{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding: 8px 12px;
-    border-radius: 999px;
-    border: 1px solid rgba(47,183,179,.22);
-    background: rgba(47,183,179,.08);
-    color: rgba(11,11,12,.82);
-    font-weight: 700;
-    font-size: .92rem;
+  /* Inset panel that reads like a system diagram */
+  .inset{
+    margin-top: 14px;
+    padding: 14px 16px;
+    border-radius: var(--r-lg);
+    border: 1px solid rgba(0,0,0,.08);
+    background: rgba(255,255,255,.62);
+    box-shadow: var(--shadow-sm);
+  }
+  .step-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
     margin-top: 12px;
   }
-
-  /* Keep list spacing consistent with your site rhythm */
-  .thinking-list{
-    margin: 0;
-    padding-left: 20px;
+  @media (min-width: 768px){
+    .step-grid{ grid-template-columns: 1fr 1fr; }
   }
-  .thinking-list li{
-    margin: 10px 0;
+  .step{
+    border-radius: var(--r-lg);
+    border: 1px solid rgba(0,0,0,.08);
+    background: rgba(255,255,255,.62);
+    padding: 12px 14px;
+  }
+  .step .step-n{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    border: 1px solid rgba(47,183,179,.28);
+    background: rgba(47,183,179,.10);
+    font-weight: 800;
+    margin-right: 10px;
+  }
+  .step .step-t{
+    font-weight: 800;
+  }
+  .step p{ margin: 8px 0 0; color: var(--muted); }
+
+  /* Proof pills for this page only (slight turquoise tint) */
+  .think-proof .proof-pill{
+    border-color: rgba(47,183,179,.20);
+    background: rgba(47,183,179,.06);
   }
 
-  /* CTA gets a slightly different edge so it feels special */
-  .howthink-cta .usecases-cta-inner{
-    border: 1px solid rgba(47,183,179,.18);
-    background:
-      radial-gradient(700px 260px at 12% 25%, rgba(47,183,179,.12), transparent 55%),
-      rgba(255,255,255,.60);
+  /* Example “status” */
+  .status-pill{
+    display:inline-flex;
+    gap: 8px;
+    align-items:center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,.10);
+    background: rgba(255,255,255,.62);
+    font-size: .92rem;
+  }
+  .dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 99px;
+    background: rgba(47,183,179,.9);
+    box-shadow: 0 0 0 4px rgba(47,183,179,.12);
   }
 </style>
 
-<!-- HERO (matches home page rhythm: container + headline + lead + actions) -->
-<section class="hero howthink-hero" aria-label="How I Think — intro">
+<!-- HERO (match home page layout rhythm: hero-grid + proof pills) -->
+<section class="hero think-hero" aria-label="Example #1: How I Think">
   <div class="container hero-grid">
-
     <div class="hero-copy">
-      <div class="eyebrow">Example #1 • How I Work</div>
+      <div class="eyebrow">Example #1</div>
 
       <h1 class="hero-title">
-        How I Think:<br>
-        from complexity to clean execution.
+        How I Think<br>
+        under pressure.
       </h1>
 
-      <p class="hero-lead" style="max-width: 90ch;">
-        Before tools. Before tech. Before “quick fixes.”
-        I start by finding the real problem, naming the constraint, and designing a path that works inside the rules —
-        and for real humans.
+      <p class="hero-lead">
+        Before tools, before tech, before “solutions” — I get clarity.
+        I identify the real constraint, define the stakes, and build a path people can follow
+        inside the rules.
       </p>
 
-      <p class="hero-sub" style="max-width: 90ch;">
-        This page shows my thinking pattern in motion: how I frame decisions, reduce risk, and convert confusion into
-        practical steps that hold up later.
+      <p class="hero-sub">
+        The goal isn’t activity. It’s decision quality — and clean execution that holds up later.
       </p>
 
       <div class="hero-cta">
         <a class="btn btn-primary" href="/contact/">Contact Tanya</a>
         <a class="btn btn-ghost" href="/how-i-work/">Back to How I Work</a>
       </div>
-
-      <div class="callout-pill" aria-label="Signature approach">
-        Constraint-first • compliance-aware • decision-ready
-      </div>
     </div>
 
-    <!-- Right panel: visual + quick summary (same aesthetic as home hero-panel) -->
-    <aside class="hero-panel" aria-label="How I Think summary panel">
-      <img
-        src="/assets/img/tml-website1.png"
-        class="hero-img"
-        alt="How I Think — strategic decision-making visual"
-        loading="eager"
-      />
+    <!-- Right panel: distinct “diagram” visual instead of portrait -->
+    <aside class="hero-panel" aria-label="Thinking pattern overview">
+      <div class="card signal-card" style="height:100%; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div class="eyebrow">Thinking pattern</div>
+          <strong>Chaos → clarity → compliant execution</strong>
+          <p style="margin-top:10px;">
+            When things feel messy, I don’t speed up.
+            I slow down long enough to locate the true blocker — then move with precision.
+          </p>
+
+          <div class="inset" aria-label="Micro steps">
+            <div class="eyebrow">5-step loop</div>
+            <p class="bullets" style="margin-top:10px;">
+              • Step back<br>
+              • Find the constraint<br>
+              • Convert to a path<br>
+              • Build inside rules<br>
+              • Execute + document
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <div class="eyebrow">Outcome</div>
+          <p style="margin:6px 0 0;">
+            Fewer wrong turns. Less rework. Clear records. Lower risk.
+          </p>
+        </div>
+      </div>
+
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-scan" aria-hidden="true"></div>
-
-      <div class="hero-card">
-        <div class="hero-card-name">Thinking Pattern</div>
-        <div class="hero-card-desc">Chaos → constraint → path → compliant system → documentation.</div>
-      </div>
     </aside>
-
   </div>
 
-  <!-- Proof pills, same as home -->
-  <div class="container">
+  <!-- Proof pills row (page-specific) -->
+  <div class="container think-proof">
     <div class="proof" aria-label="What this example demonstrates">
-      <div class="proof-row" role="list" aria-label="Core strengths shown here">
-        <span role="listitem" class="proof-pill">Problem Framing</span>
-        <span role="listitem" class="proof-pill">Constraint Identification</span>
-        <span role="listitem" class="proof-pill">Compliance-First Design</span>
+      <div class="proof-row" role="list" aria-label="Core strengths in this example">
+        <span role="listitem" class="proof-pill">Problem Framing • Decision Clarity</span>
+        <span role="listitem" class="proof-pill">Compliance-First • Risk Aware</span>
+        <span role="listitem" class="proof-pill">Calm Execution • Documentation Strong</span>
       </div>
-
-      <div class="proof-row proof-row--soft" role="list" aria-label="Working style">
-        <span role="listitem" class="proof-pill">Calm Under Pressure</span>
-        <span role="listitem" class="proof-pill">Clear Documentation</span>
-        <span role="listitem" class="proof-pill">Practical Next Steps</span>
+      <div class="proof-row proof-row--soft" role="list" aria-label="Working behaviors">
+        <span role="listitem" class="proof-pill">Stakeholder-aware</span>
+        <span role="listitem" class="proof-pill">Constraint-driven</span>
+        <span role="listitem" class="proof-pill">Low drama</span>
+        <span role="listitem" class="proof-pill">Clear next steps</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION: The Pattern (bento + cards like home) -->
+<!-- SECTION: Core method (match home page: section-rule + section-head + bento) -->
 <section class="section" aria-label="How I frame problems">
   <div class="section-rule" aria-hidden="true"></div>
 
   <div class="container">
     <div class="section-head">
-      <h2>The Pattern</h2>
-      <div class="cta-kicker">Clarity before action — strategy before tools.</div>
+      <h2>My Method</h2>
+      <div class="cta-kicker">Clarity first. Strategy second. Tools last.</div>
     </div>
 
     <div class="bento">
-
-      <article class="card span-8 blueprint">
+      <article class="card span-8 reveal">
         <div class="eyebrow">How I frame problems</div>
-        <strong>Start wide. Then narrow.</strong>
-        <p style="margin-top:10px;">
-          I begin with context: what’s happening, what’s at stake, and who gets impacted.
-          Then I locate the constraint — the real blocker that makes “simple fixes” fail.
+        <strong>Clarity before action.</strong>
+        <p>
+          I start wide: context, stakes, stakeholders, and definitions.
+          If the problem statement is wrong, everything built on top of it will be wrong —
+          even if it’s “efficient.”
         </p>
         <p style="margin-top:14px;">
-          Only after the constraint is clear do I design a plan that’s actionable, compliant, and easy for people to
-          follow under pressure.
+          Only after I identify the real constraint and the rule-boundaries do I move into
+          strategy design: what must be true, what can change, and what “done” actually means.
         </p>
       </article>
 
-      <article class="card span-4">
-        <div class="eyebrow">What I look for</div>
-        <strong>Where risk lives.</strong>
-        <p class="bullets" style="margin-top:10px;">
-          • ambiguous ownership<br>
-          • missing definitions<br>
-          • compliance constraints<br>
-          • timeline pressure<br>
-          • “tribal knowledge” workflows
+      <article class="card span-4 reveal">
+        <div class="eyebrow">What I’m watching for</div>
+        <strong>Signal over noise.</strong>
+        <p class="bullets">
+          • hidden constraints (rules, time, money)<br>
+          • unclear ownership / accountability<br>
+          • risk points that will surface later<br>
+          • “solutions” chasing symptoms<br>
+          • missing documentation / proof
         </p>
       </article>
-
-      <article class="card span-12">
-        <div class="eyebrow">Core thinking steps</div>
-        <strong>The sequence I rely on — consistently.</strong>
-        <ol class="thinking-list" style="margin-top:12px;">
-          <li><strong>Step back.</strong> Pause the noise and get the full picture.</li>
-          <li><strong>Find the real constraint.</strong> Identify what’s truly blocking progress (rules, time, structure, risk).</li>
-          <li><strong>Turn confusion into a path.</strong> Translate complexity into clear steps people can execute.</li>
-          <li><strong>Design inside the rules.</strong> Build a compliant strategy that doesn’t depend on heroics.</li>
-          <li><strong>Execute + document.</strong> Follow through with records that hold up later.</li>
-        </ol>
-      </article>
-
     </div>
+
+    <!-- Distinct “diagram” section to break monotony -->
+    <article class="card signal-card reveal" style="margin-top: 14px;">
+      <div class="eyebrow">Core thinking steps</div>
+      <h3 class="usecase-title">The 5-step loop I use to move from chaos to clean execution</h3>
+
+      <div class="step-grid" aria-label="Thinking steps grid">
+        <div class="step">
+          <div><span class="step-n">1</span><span class="step-t">Step back</span></div>
+          <p>Pause the noise. Get the full picture before acting.</p>
+        </div>
+        <div class="step">
+          <div><span class="step-n">2</span><span class="step-t">Find the real constraint</span></div>
+          <p>Locate the true blocker (risk, rules, time, structure).</p>
+        </div>
+        <div class="step">
+          <div><span class="step-n">3</span><span class="step-t">Turn confusion into a path</span></div>
+          <p>Convert complexity into next steps people can follow.</p>
+        </div>
+        <div class="step">
+          <div><span class="step-n">4</span><span class="step-t">Build inside the rules</span></div>
+          <p>Design the strategy so it works with compliance, not around it.</p>
+        </div>
+        <div class="step" style="grid-column: 1 / -1;">
+          <div><span class="step-n">5</span><span class="step-t">Execute + document</span></div>
+          <p>Follow through with records that hold up later — so the outcome is durable.</p>
+        </div>
+      </div>
+    </article>
   </div>
 </section>
 
-<!-- SECTION: Examples -->
-<section class="section" aria-label="Examples in practice">
+<!-- SECTION: Examples (two cards, bento rhythm) -->
+<section class="section" aria-label="Examples inside this use case">
   <div class="section-rule" aria-hidden="true"></div>
 
   <div class="container">
     <div class="section-head">
-      <h2>Examples</h2>
-      <div class="cta-kicker">Two real scenarios that show the thinking pattern in action.</div>
+      <h2>Two Real Examples</h2>
+      <div class="cta-kicker">Same thinking method — two different environments.</div>
     </div>
 
     <div class="bento">
+      <!-- Example 1A -->
+      <article class="card span-4 reveal">
+        <div style="display:flex; justify-content:space-between; gap:12px; align-items:flex-start;">
+          <div>
+            <div class="eyebrow">Example 1A</div>
+            <strong>Pro Se Handbook</strong>
+          </div>
+          <span class="status-pill" aria-label="Status: in progress">
+            <span class="dot" aria-hidden="true"></span>In progress
+          </span>
+        </div>
 
-      <!-- EXAMPLE 1A -->
-      <article class="card span-6">
-        <div class="eyebrow">Example 1A</div>
-        <strong>Pro Se Handbook</strong>
-        <p style="margin-top:10px;">
-          A structured guide designed to reduce legal confusion by translating complex steps into clear, usable
-          decisions for people and small businesses.
+        <p style="margin-top:12px;">
+          A guide designed to turn legal confusion into clear next steps for people and small businesses —
+          without requiring expensive counsel.
         </p>
 
-        <div class="inset" style="margin-top:14px;">
-          <div class="usecase-k">Status</div>
-          <p style="margin-top:8px; margin-bottom:0;">
-            In development. This will publish as a complete system (not scattered advice).
-          </p>
-        </div>
+        <p style="margin-top:10px; color: var(--muted);">
+          This example is being built now. When published, it will show how I translate complex systems into
+          practical steps, with guardrails and plain language.
+        </p>
       </article>
 
-      <!-- EXAMPLE 1B -->
-      <article class="card span-6">
+      <!-- Example 1B -->
+      <article class="card span-8 reveal">
         <div class="eyebrow">Example 1B</div>
         <strong>Used Car Dealership Overhaul</strong>
-        <p style="margin-top:10px;">
-          A licensing requirement stalled operations. Instead of scrambling, we reframed the blocker, verified the
-          requirements, and designed a compliant workspace solution that matched real workflow needs.
+        <p style="margin-top:10px; max-width: 95ch;">
+          A licensing requirement stalled operations. Instead of panicking or patching symptoms,
+          I reframed the blocker, confirmed the real regulatory requirement, and designed a compliant workspace
+          solution that fit real workflow needs.
         </p>
 
-        <div class="usecase-details" style="margin-top:14px;">
+        <div class="usecase-details" style="margin-top: 14px;">
           <div class="usecase-col">
             <div class="usecase-k">Challenge</div>
             <ul class="uc-list">
-              <li>No compliant office on the property</li>
-              <li>Regulator deadlines tightening</li>
-              <li>Staff productivity dropping</li>
+              <li><strong>No compliant office on the property</strong></li>
+              <li><strong>Regulator deadlines tightening</strong></li>
+              <li><strong>Productivity dropping under uncertainty</strong></li>
             </ul>
           </div>
 
           <div class="usecase-col">
             <div class="usecase-k">My approach</div>
             <ul class="uc-list">
-              <li>Confirmed regulatory workspace requirements</li>
-              <li>Reframed the constraint into a design problem</li>
-              <li>Designed a practical office solution aligned to both rules and daily operations</li>
+              <li><strong>Confirmed workspace requirements</strong> (what the rule actually demanded)</li>
+              <li><strong>Reframed the constraint</strong> into a design + compliance problem</li>
+              <li><strong>Implemented a practical “office trailer” strategy</strong> that met rules + workflow</li>
             </ul>
           </div>
         </div>
 
-        <div class="inset" style="margin-top:14px;">
-          <div class="usecase-k">Result</div>
-          <p style="margin-top:8px; margin-bottom:0;">
-            A compliant, functional workspace that let operations move forward — with clean documentation and reduced
-            regulatory friction.
+        <div class="inset" aria-label="Result">
+          <div class="eyebrow">Result</div>
+          <p style="margin:6px 0 0;">
+            A compliant, functional workspace that allowed operations to resume — with clear documentation
+            and reduced regulatory friction.
           </p>
         </div>
       </article>
-
     </div>
   </div>
 </section>
 
-<!-- CTA (matches home CTA rhythm) -->
-<section class="section howthink-cta" aria-label="Work with Tanya">
+<!-- CTA (match home page CTA style) -->
+<section class="cta" aria-label="Apply this thinking to your environment">
   <div class="section-rule" aria-hidden="true"></div>
 
-  <div class="container">
-    <div class="usecases-cta reveal">
-      <div class="usecases-cta-inner">
-        <div>
-          <div class="cta-kicker">Want this kind of thinking applied to your environment?</div>
-          <h2 class="usecases-cta-title">I’ll map the constraint and design the system.</h2>
-          <p class="usecases-cta-text">
-            Tell me where the workflow breaks and where the risk lives. I’ll build a clear operational blueprint
-            that works inside your rules — and holds up under pressure.
-          </p>
-        </div>
-        <div class="usecases-cta-actions">
-          <a class="btn btn-primary" href="/contact/">Work With Me</a>
-          <a class="btn btn-ghost" href="/resume/">Download Full CV</a>
-          <a class="btn btn-ghost" href="/how-i-work/">Back to How I Work</a>
-        </div>
+  <div class="container cta-grid">
+    <div class="cta-copy">
+      <div class="cta-head">
+        <h2>Want this applied to your process?</h2>
+        <p class="cta-kicker">I’ll identify the blocker, map the path, and build the system.</p>
+      </div>
+
+      <p class="cta-text">
+        Tell me where the workflow breaks and where the risk lives. I’ll design a clear operational blueprint
+        that works in your environment — with AI where it helps and guardrails where it matters.
+      </p>
+
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="/contact/">Work With Me</a>
+        <a class="btn btn-ghost" href="/resume/">Download Full CV</a>
+        <a class="btn btn-ghost" href="/how-i-work/">Back to How I Work</a>
       </div>
     </div>
+
+    <!-- Right: subtle distinct visual panel (no image required) -->
+    <aside class="cta-panel" aria-label="Thinking to execution panel">
+      <div class="card signal-card" style="height:100%;">
+        <div class="eyebrow">What you get</div>
+        <strong>Decision clarity + execution you can trust.</strong>
+        <p style="margin-top:10px;" class="bullets">
+          • fewer wrong turns<br>
+          • cleaner documentation<br>
+          • compliance-aligned systems<br>
+          • calmer execution under pressure
+        </p>
+        <div class="inset" style="margin-top:14px;">
+          <div class="eyebrow">My default</div>
+          <p style="margin:6px 0 0;">
+            High standards. Low noise. Real follow-through.
+          </p>
+        </div>
+      </div>
+      <div class="cta-overlay" aria-hidden="true"></div>
+    </aside>
   </div>
 </section>
 
 <script>
 (() => {
-  // Scroll reveal (same as your other pages)
+  // Scroll reveal (clean + subtle)
   const items = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -315,3 +389,5 @@ show_ticker: true
   items.forEach(el => io.observe(el));
 })();
 </script>
+```
+
