@@ -292,6 +292,129 @@ body.page-contact .nav a[href="/contact/"]::after{
 }
 
 /* =========================
+   Dropdown nav (link + chevron)
+   ========================= */
+.nav-item{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Make parent link match your existing .nav a styling */
+.nav-parent{
+  text-decoration:none;
+  color:inherit;
+  padding:10px 12px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  position: relative;
+}
+.nav-parent:hover{
+  background: rgba(255,255,255,.6);
+  border-color: rgba(0,0,0,.06);
+  text-decoration:none;
+}
+
+/* Chevron toggle button */
+.nav-subtoggle{
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+}
+.nav-subtoggle:hover{
+  background: rgba(255,255,255,.6);
+  border-color: rgba(0,0,0,.06);
+}
+
+.chev{
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  opacity: .75;
+}
+
+/* Dropdown panel */
+.subnav{
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 260px;
+  padding: 10px;
+  background: rgba(251,250,247,.95);
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(10px);
+  z-index: 60;
+}
+
+.subnav a{
+  display:block;
+  padding:10px 12px;
+  border-radius: 14px;
+  text-decoration:none;
+  color:inherit;
+}
+.subnav a:hover{
+  background: rgba(255,255,255,.6);
+  border-color: rgba(0,0,0,.06);
+}
+
+/* Desktop: open on hover/focus */
+@media (min-width: 768px){
+  .has-subnav:hover .subnav,
+  .has-subnav:focus-within .subnav{
+    display:block;
+  }
+}
+
+/* Mobile: submenu becomes inline inside hamburger menu */
+@media (max-width: 767px){
+  .nav-item{
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .nav-parent{
+    flex: 1;
+  }
+
+  .subnav{
+    position: static;
+    min-width: auto;
+    padding: 6px 0 0;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    backdrop-filter: none;
+    width: 100%;
+  }
+
+  .has-subnav.open .subnav{
+    display:block;
+  }
+
+  .has-subnav.open .nav-subtoggle .chev{
+    transform: rotate(-135deg);
+  }
+
+  .subnav a{
+    padding-left: 18px; /* small indent */
+  }
+}
+
+/* =========================
    Header CTA visibility
    ========================= */
 .cta-desktop{ display:none; }
@@ -1733,15 +1856,3 @@ body.page-contact .nav a[href="/contact/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
-
-
-
-
-
-
-
-
-
-
-
-
