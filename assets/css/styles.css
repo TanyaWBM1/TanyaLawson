@@ -1000,6 +1000,18 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
   background: linear-gradient(to top, rgba(0,0,0,.22), transparent 62%);
 }
 
+/* Tighten space around the gold rule for CTA sections */
+.cta.section--ruled{
+  padding-top: clamp(18px, 2.2vw, 32px);
+  padding-bottom: clamp(34px, 4.8vw, 72px); /* optional: reduce bottom too */
+}
+
+/* Remove extra top margin from the first block inside */
+.cta.section--ruled .cta-head{
+  margin-top: 0;
+}
+
+
 /* =========================
    Footer
    ========================= */
@@ -1896,19 +1908,4 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
-
-/* Tighten space around the gold rule for CTA sections */
-.cta.section--ruled{
-  padding-top: clamp(18px, 2.2vw, 32px);
-  padding-bottom: clamp(34px, 4.8vw, 72px); /* optional: reduce bottom too */
-}
-
-/* Remove extra top margin from the first block inside */
-.cta.section--ruled .cta-head{
-  margin-top: 0;
-}
-
-
-
-
 
