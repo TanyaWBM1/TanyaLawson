@@ -725,8 +725,12 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
   line-height: 1.65;
 }
 
-.callout-strip{
-  margin-bottom: clamp(36px, 4.8vw, 64px);
+.callout-strip.tight{
+  margin-bottom: clamp(16px, 2.2vw, 32px);
+}
+
+.callout-strip.loose{
+  margin-bottom: clamp(32px, 4.8vw, 64px);
 }
 
 /* =========================
@@ -1921,6 +1925,7 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
 
 
