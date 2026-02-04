@@ -637,6 +637,7 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
 /* Fully override .section padding when a section opts into the ruled layout */
 .section.section--ruled{
   padding-top: clamp(22px, 2.8vw, 40px);
+  padding-bottom: clamp(34px, 4.5vw, 72px); /* balanced default */
 }
 
 /* Keep the first element from adding extra gap under the divider */
@@ -644,7 +645,7 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
   margin-top: 0;
 }
 
-/* Utility: tighten bottom padding of a section */
+/* Utility: bottom spacing variants */
 .tight-bottom{
   padding-bottom: clamp(28px, 3.6vw, 56px);
 }
@@ -1916,6 +1917,7 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
 
 
