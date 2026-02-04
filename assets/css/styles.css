@@ -631,23 +631,25 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
 .section-hint{ color: rgba(11,11,12,.60); }
 
 /* =========================
-   Gold divider spacing control
+   Gold divider spacing control (canonical)
    ========================= */
 
-/* Tighten space below the gold rule on ruled sections + CTAs */
-.section--ruled{
-  padding-top: clamp(24px, 3.2vw, 44px);
+/* Fully override .section padding when a section opts into the ruled layout */
+.section.section--ruled{
+  padding-top: clamp(22px, 2.8vw, 40px);
+  padding-bottom: clamp(34px, 4.5vw, 72px); /* adjust down if you want tighter */
 }
 
-/* Optional: keep bottom spacing unchanged */
-.section--ruled{
-  padding-bottom: var(--section-y);
-}
-
-/* Prevent extra top margin right after divider */
-.section--ruled > .container > :first-child{
+/* Keep the first element from adding extra gap under the divider */
+.section.section--ruled > .container > :first-child{
   margin-top: 0;
 }
+
+/* Utility: tighten bottom padding of a section */
+.tight-bottom{
+  padding-bottom: clamp(18px, 2.5vw, 36px);
+}
+
 
 /* =========================
    Cards / Bento grid
@@ -1908,4 +1910,5 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
