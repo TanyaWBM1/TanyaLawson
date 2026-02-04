@@ -651,7 +651,7 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
 }
 
 .medium-bottom{
-  padding-bottom: clamp(36px, 4.8vw, 72px);
+  padding-bottom: clamp(36px, 4.8vw, 64px);
 }
 
 /* =========================
@@ -1913,6 +1913,7 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
 
 
