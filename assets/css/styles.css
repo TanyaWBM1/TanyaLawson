@@ -634,17 +634,17 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
    Gold divider spacing control
    ========================= */
 
-/* Tighten space BELOW the gold line (top padding) */
+/* Tighten space below the gold rule on ruled sections + CTAs */
 .section--ruled{
-  padding-top: clamp(24px, 3.2vw, 44px); /* was up to 96px */
+  padding-top: clamp(24px, 3.2vw, 44px);
 }
 
-/* Keep bottom padding as your normal rhythm */
+/* Optional: keep bottom spacing unchanged */
 .section--ruled{
   padding-bottom: var(--section-y);
 }
 
-/* Prevent first child inside container from adding extra top spacing */
+/* Prevent extra top margin right after divider */
 .section--ruled > .container > :first-child{
   margin-top: 0;
 }
@@ -1896,6 +1896,7 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
 
 
