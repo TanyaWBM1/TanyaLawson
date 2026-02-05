@@ -1028,6 +1028,9 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
   margin-top: 0;
 }
 
+.usecase-cta.section--ruled{
+  padding-top: clamp(32px, 4.2vw, 56px);
+}
 
 /* =========================
    Footer
@@ -1925,6 +1928,7 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
 
 
