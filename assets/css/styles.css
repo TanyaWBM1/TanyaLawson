@@ -1368,7 +1368,7 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
 .thinking-list strong{ color: rgba(11,11,12,.86); }
 
 /* CTA block at bottom of use-cases */
-.usecases-cta{ margin-top: 22px; }
+.usecases-cta{ margin-top: 64px; }
 .usecases-cta-inner{
   display:flex;
   flex-direction: column;
@@ -1924,4 +1924,5 @@ body.page-how-i-use-ai .nav a[href="/how-i-work/"]::after{
 .rl-close:hover{
   background: rgba(255,255,255,.20);
 }
+
 
