@@ -4,7 +4,7 @@
 If you discover a security issue related to this website or repository, please report it responsibly.
 
 **Preferred contact:**  
-- Email: hello@tanyamlawson.com
+- Email: support@tanyamlawson.com
 
 ## What to include
 - A clear description of the issue
