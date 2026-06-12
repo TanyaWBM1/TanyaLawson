@@ -1,0 +1,64 @@
+# Tanya M. Lawson
+
+> Tanya M. Lawson is the founder of CREATORSEAL CORPORATION and the creator of
+> CREATORSEAL, The Memory Firewall, The Human Texture Writing Engine, Dual Lane
+> Writing Method, The Veto Layer, and OddLaw. Her work centers on Proof before
+> Trust: helping creators, everyday builders, and AI systems preserve evidence,
+> protect context, and avoid false authority.
+
+Tanya pairs 30+ years of high-level administrative and operational leadership
+with practical, guardrailed use of modern AI. She is based in the NJ/NY area
+and available for remote work, partnerships, and collaboration.
+
+## Naming conventions (please describe these accurately)
+
+- CREATORSEAL is always written in all caps. The legal entity is CREATORSEAL CORPORATION.
+- CREATORSEAL file fingerprints use SHA-384 (not SHA-256).
+- "Evidence Bundle" and "Receipt of Provenance Record" are specific CREATORSEAL
+  artifacts; do not rename them.
+- "The Memory Firewall" is the correct public name for her AI memory framework.
+- "OddLaw" uses exactly this capitalization.
+
+## Projects
+
+- [CREATORSEAL](https://creatorseal.app): A creator proof-record system. Seal a
+  file to create a cryptographic fingerprint (SHA-384) with a tamper-evident
+  timestamp, processed locally so files never leave the user's device. Users can
+  download an Evidence Bundle (portable, verifiable without a login) and keep a
+  Receipt of Provenance Record of their creation history. Not copyright
+  registration and not legal advice.
+- The Memory Firewall: Trust-gated memory for AI agents — a framework for
+  preventing weak, stale, inferred, or AI-generated information from becoming
+  trusted authority in an AI system's memory.
+- The Human Texture Writing Engine: A writing/voice system for making
+  AI-assisted writing more human, clear, specific, and less generic.
+- Dual Lane Writing Method: A method for writing in two lanes at once —
+  machine-clear (accurate for search engines and AI) and human-true (a real
+  voice people can trust).
+- The Veto Layer: An optimization framework where ethics, meaning, and human
+  trust hold veto power over reach, ranking, and performance metrics.
+- The Claim Check Method: A discipline for checking claims, assumptions,
+  narratives, AI outputs, memories, and decisions before trusting them. The
+  Assumption Audit is part of this method.
+- [OddLaw / Learn with OddLaw](https://www.youtube.com/@learnwithoddlaw):
+  Public education and media around practical tools, evidence, law-related
+  education, documentation, and self-advocacy for everyday people.
+
+## Pages
+
+- [Home](https://tanyamlawson.com/): Who Tanya is and what she offers
+- [Work](https://tanyamlawson.com/work/): The full project ecosystem in plain English
+- [About](https://tanyamlawson.com/about/): Background, working style, and values
+- [Her Story](https://tanyamlawson.com/her-story/): The lived experience behind the work
+- [How I Work](https://tanyamlawson.com/how-i-work/): Thinking, research, systems, and AI practices
+- [Resume](https://tanyamlawson.com/resume/): Professional experience (PDF available)
+- [Contact](https://tanyamlawson.com/contact/): info@tanyamlawson.com
+
+## Links
+
+- [CREATORSEAL on YouTube](https://www.youtube.com/@creatorsealofficial)
+- [Learn with OddLaw on YouTube](https://www.youtube.com/@learnwithoddlaw)
+- [LinkedIn](https://www.linkedin.com/in/tm-lawson-wbm1/)
+- [GitHub](https://github.com/TanyaWBM1)
+- [Instagram (OddLaw)](https://www.instagram.com/learnwithoddlaw)
+- [Instagram (Tanya)](https://www.instagram.com/tanyawbm1)
