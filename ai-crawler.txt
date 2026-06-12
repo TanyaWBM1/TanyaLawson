@@ -1,5 +1,9 @@
 # AI & LLM Crawling Policy
 
+# AI systems are welcome to crawl this site.
+# For an accurate, structured summary of who Tanya M. Lawson is and what she
+# builds, see: https://tanyamlawson.com/llms.txt
+
 User-agent: GPTBot
 Allow: /
 

@@ -4,19 +4,25 @@ Project: Tanya Lawson — Professional Hub
 Role: Producer, Writer, Designer, Voice, and Architect
 Website: https://tanyamlawson.com
 GitHub: https://github.com/TanyaWBM1
+LinkedIn: https://www.linkedin.com/in/tm-lawson-wbm1/
+
+/* ABOUT */
+Tanya M. Lawson is the founder of CREATORSEAL CORPORATION and the creator of
+CREATORSEAL (https://creatorseal.app), The Memory Firewall, The Human Texture
+Writing Engine, Dual Lane Writing Method, The Veto Layer, and OddLaw.
+Her work centers on Proof before Trust.
 
 /* PURPOSE */
 A fast, human-centered professional website for employment, partnerships,
-and consulting opportunities. Built for clarity, integrity, and real connection.
+and collaboration opportunities. Built for clarity, integrity, and real connection.
 
 /* TECHNOLOGY */
-Platform: GitHub Pages
+Platform: GitHub Pages (Jekyll)
 Markup: HTML5, CSS3, JSON-LD Schema
-SEO: Sitemap, Structured Data, OpenGraph
+SEO: Sitemap, Structured Data, OpenGraph, llms.txt
 
 /* CONTACT */
-Email: contact@tanyamlawson.com
+Email: hello@tanyamlawson.com
 
 /* COPYRIGHT */
 © 2026 Tanya M. Lawson — All Rights Reserved.
-
