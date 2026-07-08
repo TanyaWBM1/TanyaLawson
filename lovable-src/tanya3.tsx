@@ -8,7 +8,7 @@ export const Route = createFileRoute("/tanya3")({
       { title: "Tanya M. Lawson — Operations, Bookkeeping & AI" },
       { name: "description", content: "30+ years running back offices. Now building AI tools. Remote or on-site near NJ." },
       { property: "og:title", content: "Tanya M. Lawson — Operations & AI" },
-      { property: "og:description", content: "Do the work. Keep your word. Let results speak." },
+      { property: "og:description", content: "Do the work. Keep your word. Let the results speak." },
     ],
   }),
   component: Tanya3Home,
@@ -132,15 +132,15 @@ const themeCss = `
 /* ------------------------------- data ---------------------------------- */
 
 const skills = [
-  { i: "i.",   t: "Taking care of people",       d: "Most of my work has been customer- and client-facing — answering calls and emails, scheduling, and solving problems with patience. I listen first, explain things clearly, and follow through so people feel taken care of." },
-  { i: "ii.",  t: "Keeping an office organized", d: "Files, schedules, and systems that other people can actually follow. I set things up so nothing slips through the cracks — and so the next person can pick it right up." },
-  { i: "iii.", t: "Handling money carefully",    d: "Accounts payable and receivable, payroll, bank reconciliations, and cash-flow tracking. I've supported CFOs and controllers for years and kept the numbers right and on time." },
-  { i: "iv.",  t: "Supporting busy leaders",     d: "I've been the right hand to executives for most of my career. I protect their time, keep things private, and stay calm and steady when everyone else is in a rush." },
-  { i: "v.",   t: "Putting AI to real work",     d: "I use AI to handle the slow, repetitive parts faster — drafting, cleanup, and routine tasks — without letting the quality drop. I also build my own AI tools (more on that below)." },
+  { i: "i.",   t: "Taking care of people",       d: "Most of my work has been customer- and client-facing — answering calls and emails, scheduling, and solving problems with patience. I listen first, explain things clearly, and follow through so people feel taken care of.", hl: "" },
+  { i: "ii.",  t: "Keeping an office organized", d: "Files, schedules, and systems that other people can actually follow. I set things up so nothing slips through the cracks — and so the next person can pick it right up.", hl: "" },
+  { i: "iii.", t: "Handling money carefully",    d: "Accounts payable and receivable, payroll, bank reconciliations, and cash-flow tracking. I've supported CFOs and controllers for years and kept the numbers right and on time.", hl: "" },
+  { i: "iv.",  t: "Supporting busy leaders",     d: "I've been the right hand to executives for most of my career. I protect their time, keep things private, and stay calm and steady when everyone else is in a rush.", hl: "" },
+  { i: "v.",   t: "Putting AI to real work",     d: "I use AI to handle the slow, repetitive parts faster — drafting, cleanup, and routine tasks — without letting the quality drop.", hl: "I also build my own AI tools (more on that below)." },
 ];
 
 const tickerItems = [
-  "Do the work. Keep your word. Let results speak.",
+  "Do the work. Keep your word. Let the results speak.",
   "Calm is a strategy.",
   "Consistency beats intensity.",
   "Do the right thing, even when no one is watching.",
@@ -386,7 +386,7 @@ function StickySkills() {
                   <span className="eyebrow" style={{ color: "var(--gold)", fontSize: "clamp(18px,1.5vw,24px)" }}>{s.i}</span>
                 </div>
                 <h3 className="h-card mb-4" style={{ maxWidth: "18ch" }}>{s.t}:</h3>
-                <p className="body max-w-[54ch]">{s.d}</p>
+                <p className="body max-w-[54ch]">{s.d}{s.hl && <> <span style={{ color: "var(--sky)" }}>{s.hl}</span></>}</p>
               </div>
             ))}
           </div>
@@ -640,7 +640,7 @@ function QuoteBand() {
     <section className="py-24 border-y" style={{ borderColor: "var(--line)" }}>
       <div className="max-w-[1000px] mx-auto px-8 text-center">
         <blockquote className="h-section" style={{ fontStyle: "italic" }}>
-          Do the work. Keep your word. <span className="grad-italic">Let results speak.</span>
+          Do the work. Keep your word. <span className="grad-italic">Let the results speak.</span>
         </blockquote>
         <div className="lead mt-8">— the rule I've followed my whole career</div>
       </div>
@@ -719,11 +719,11 @@ function FooterCard({ title, items }: { title: string; items: FooterItem[] }) {
 function Foot() {
   return (
     <footer className="max-w-[1400px] mx-auto px-8 py-16 border-t" style={{ borderColor: "var(--line)" }}>
-      <div className="mb-12 max-w-[640px]">
-        <div className="brandmark mb-4">Tanya M. Lawson</div>
-        <p className="body-sm">30+ years in operations and administration, now founder of CREATORSEAL CORPORATION — building AI tools around one idea: proof before trust.</p>
-      </div>
-      <div className="grid md:grid-cols-3 gap-6 items-start">
+      <div className="grid md:grid-cols-4 gap-10 items-start">
+        <div>
+          <div className="brandmark mb-4">Tanya M. Lawson</div>
+          <p className="body-sm">30+ years in operations and administration, now founder of CREATORSEAL CORPORATION — building AI tools around one idea: proof before trust.</p>
+        </div>
         <FooterCard
           title="Site"
           items={[
