@@ -119,6 +119,15 @@
 
   /* hero */
   .hero { padding-top: 64px; padding-bottom: 48px; }
+  @keyframes hero-reveal {
+    from { opacity: 0; transform: translateY(26px); }
+    to   { opacity: 1; transform: none; }
+  }
+  .hero .h-display { opacity: 0; animation: hero-reveal .9s cubic-bezier(.22,1,.36,1) .1s forwards; }
+  .hero .h-display .grad-italic { display: inline-block; opacity: 0; animation: hero-reveal .9s cubic-bezier(.22,1,.36,1) .65s forwards; }
+  @media (prefers-reduced-motion: reduce) {
+    .hero .h-display, .hero .h-display .grad-italic { opacity: 1; animation: none; }
+  }
   .hero .eyebrow { display: block; text-align: right; margin-bottom: 40px; }
   .hero-lead { margin-top: 40px; max-width: 68ch; margin-left: auto; }
 
