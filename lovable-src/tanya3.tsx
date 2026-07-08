@@ -723,7 +723,7 @@ function Foot() {
       <div className="grid md:grid-cols-4 gap-10 items-start">
         <div>
           <div className="brandmark mb-4">Tanya M. Lawson</div>
-          <p className="body-sm">30+ years in operations and administration, now founder of CREATORSEAL CORPORATION — building AI tools around one idea: proof before trust.</p>
+          <p className="body-sm">30+ years of operations, administration, and people skills — now poured into CREATORSEAL CORPORATION, building AI tools around one idea: proof before trust.</p>
         </div>
         <FooterCard
           title="Site"
