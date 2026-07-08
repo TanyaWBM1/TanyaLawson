@@ -182,7 +182,6 @@ const buildCards = [
 
 const education = [
   { t: "Certified Executive Secretary",  s: "American Business Institute — New York, NY" },
-  { t: "Diploma, Marketing",             s: "Murray Bergtraum High School for Business Careers — New York, NY" },
   { t: "Clinical Massage Therapy",       s: "Academy of Massage Therapy — certificate" },
 ];
 
@@ -652,10 +651,7 @@ function Education() {
             <h4 className="h-card" style={{ fontSize: "clamp(20px, 1.6vw, 26px)" }}>{c.t}</h4>
             <p className="body mt-3">{c.s}</p>
             <p className="mt-4">
-              <a href={c.img} onClick={(e) => { e.preventDefault(); setCertImg(c.img); }} style={{ color: "var(--sky)", fontWeight: 600 }}>View Certificate →</a>
-            </p>
-            <p className="body-sm mt-2">
-              <a href={c.verify} target="_blank" rel="noopener noreferrer">Verify on Coursera</a>
+              <a href={c.img} onClick={(e) => { e.preventDefault(); setCertImg(c.img); }} style={{ color: "var(--sky)", fontWeight: 600 }}>Verify Cert on Coursera →</a>
             </p>
           </div>
         ))}
