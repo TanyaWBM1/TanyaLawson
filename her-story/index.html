@@ -1,246 +1,419 @@
----
-layout: default
-title: Her Story — Tanya M. Lawson
-description: A grounded, real-life story of resilience, judgment, and building decision-ready systems under pressure.
-og_title: Her Story — Tanya M. Lawson
-og_description: Life experience translated into operational clarity, calm execution, and high-trust systems.
-show_ticker: true
----
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Her Story — Tanya M. Lawson</title>
+<meta name="description" content="A grounded, real-life story of resilience, judgment, and building decision-ready systems under pressure.">
+<meta property="og:title" content="Her Story — Tanya M. Lawson">
+<meta property="og:description" content="Life experience translated into operational clarity, calm execution, and high-trust systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-deep:  #0F1210;
+    --navy:       #1F2621;
+    --navy-elev:  #2A322C;
+    --platinum:   #EFEBE2;
+    --platinum-2: #C7C4B9;
+    --platinum-d: #8A8A80;
+    --gold:       #C9BFA3;
+    --gold-soft:  #DDD4B8;
+    --sky:        #87A878;
+    --sky-soft:   #A8C0A0;
+    --line:       rgba(239,235,226,0.09);
+    --serif:      'Libre Baskerville', Georgia, serif;
+    --sans:       'IBM Plex Sans', system-ui, sans-serif;
+    --mono:       'JetBrains Mono', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--navy-deep);
+    color: var(--platinum);
+    font-family: var(--sans);
+    font-size: clamp(18px, 1.15vw, 20px);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  ::selection { background: var(--sky); color: var(--navy-deep); }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
 
-<section class="section usecases-hero tight-bottom" aria-label="Her story intro">
-  <div class="section-rule" aria-hidden="true"></div>
-  <div class="container">
-    <div class="section-head">
-      <h2>Her Story</h2>
-      <div class="cta-kicker">Backbone → clarity → follow-through</div>
+  .navy-glow {
+    position: fixed; inset: 0; z-index: -1;
+    background:
+      radial-gradient(ellipse at 20% 0%, #1F2621 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 20%, rgba(135,168,120,0.18) 0%, transparent 50%),
+      var(--navy-deep);
+  }
+  .lattice-bg {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image:
+      linear-gradient(to right, rgba(239,235,226,0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(239,235,226,0.06) 1px, transparent 1px),
+      linear-gradient(to right, rgba(135,168,120,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(135,168,120,0.04) 1px, transparent 1px);
+    background-size: 88px 88px, 88px 88px, 22px 22px, 22px 22px;
+    mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, #000 0%, rgba(0,0,0,0.55) 65%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, #000 0%, rgba(0,0,0,0.55) 65%, transparent 100%);
+  }
+  .page { position: relative; z-index: 1; }
+  .wrap { max-width: 1400px; margin: 0 auto; padding-left: 32px; padding-right: 32px; }
+
+  .h-display { font-family: var(--serif); font-weight: 700; font-size: clamp(48px, 6.4vw, 96px); line-height: 1.02; letter-spacing: -0.025em; }
+  .h-section { font-family: var(--serif); font-weight: 700; font-size: clamp(36px, 4.6vw, 64px); line-height: 1.08; letter-spacing: -0.02em; }
+  .h-card    { font-family: var(--serif); font-weight: 700; font-size: clamp(24px, 2.2vw, 34px); line-height: 1.2; letter-spacing: -0.01em; }
+  .lead      { font-family: var(--sans); font-size: clamp(20px, 1.7vw, 26px); line-height: 1.5; color: var(--platinum-2); }
+  .body      { font-family: var(--sans); font-size: clamp(17px, 1.2vw, 21px); line-height: 1.65; color: var(--platinum-2); }
+  .body-sm   { font-family: var(--sans); font-size: clamp(15px, 1vw, 17px); line-height: 1.55; color: var(--platinum-d); }
+  .eyebrow   { font-family: var(--mono); font-size: clamp(13px, 0.95vw, 15px); letter-spacing: 0.32em; text-transform: uppercase; color: var(--sky); font-weight: 500; }
+  .grad-italic {
+    font-style: italic;
+    background: linear-gradient(135deg, var(--sky) 0%, var(--gold-soft) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hl { font-style: italic; color: var(--gold); }
+  .brandmark { font-family: var(--serif); font-weight: 700; font-size: clamp(20px, 1.5vw, 24px); letter-spacing: -0.01em; }
+  .navlink { font-family: var(--sans); font-weight: 500; font-size: clamp(15px, 1vw, 17px); color: var(--platinum-2); transition: color .2s ease; }
+  .navlink:hover { color: var(--sky); }
+
+  .card-3d {
+    position: relative; overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    background-image:
+      linear-gradient(hsl(40 10% 14% / 0.7), hsl(40 10% 14% / 0.5)),
+      linear-gradient(160deg, hsl(42 29% 91% / 0.22) 0%, hsl(40 12% 22% / 0.4) 45%, hsl(0 0% 0% / 0.7) 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow:
+      18px 18px 40px hsl(0 0% 0% / 0.6),
+      0 22px 44px hsl(0 0% 0% / 0.55),
+      -10px -10px 28px hsl(42 29% 91% / 0.05),
+      inset 0 1px 0 hsl(42 29% 91% / 0.14),
+      inset 0 -1px 0 hsl(0 0% 0% / 0.6);
+    transition: transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s ease;
+  }
+  .card-3d:hover { transform: translateY(-6px); }
+
+  .btn { display: inline-flex; align-items: center; gap: 12px; font-family: var(--sans); font-weight: 600; font-size: clamp(16px, 1.15vw, 19px); padding: 16px 30px; border-radius: 999px; transition: all .25s ease; border: 0; cursor: pointer; }
+  .btn-sky   { background: var(--sky); color: var(--navy-deep); box-shadow: 0 12px 30px -12px rgba(135,168,120,0.6); }
+  .btn-sky:hover { transform: translateY(-2px); }
+  .btn-gold  { background: var(--gold); color: var(--navy-deep); box-shadow: 0 14px 34px -14px rgba(201,191,163,0.7); }
+  .btn-gold:hover { transform: translateY(-2px); }
+  .btn-ghost { color: var(--sky); border: 2px solid var(--sky); background: rgba(135,168,120,0.06); }
+  .btn-ghost:hover { background: rgba(135,168,120,0.12); }
+
+  /* nav */
+  .nav { display: flex; align-items: center; justify-content: space-between; padding-top: 40px; padding-bottom: 24px; }
+  .nav-brand { display: flex; align-items: center; gap: 16px; }
+  .nav-mono {
+    width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center;
+    font-size: 16px; font-family: var(--serif); font-weight: 700; color: var(--navy-deep);
+    background: linear-gradient(135deg, var(--sky) 0%, var(--gold) 100%);
+  }
+  .nav-links { display: none; align-items: center; gap: 32px; }
+  @media (min-width: 768px) { .nav-links { display: flex; } }
+
+  /* hero */
+  .hero { padding-top: 64px; padding-bottom: 48px; }
+  .hero .eyebrow { display: block; text-align: right; margin-bottom: 40px; }
+  .hero-lead { margin-top: 40px; max-width: 68ch; }
+
+  /* pills */
+  .pills { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+  .pill {
+    font-family: var(--sans); font-size: clamp(17px, 1.2vw, 21px); color: var(--platinum-2);
+    padding: 8px 16px; border-radius: 999px;
+    border: 1px solid var(--sky); background: rgba(135,168,120,0.08);
+  }
+
+  /* story cards */
+  .story { padding-top: 32px; padding-bottom: 48px; display: flex; flex-direction: column; gap: 32px; }
+  .story-card { padding: 40px; }
+  @media (min-width: 900px) { .story-card { padding: 56px; } }
+  .story-card .eyebrow { margin-bottom: 20px; display: block; }
+  .story-card h2 { margin-bottom: 24px; }
+  .story-card p + p { margin-top: 16px; }
+  .cols { display: grid; gap: 24px; margin-top: 28px; }
+  @media (min-width: 900px) { .cols { grid-template-columns: 1fr 1fr; gap: 40px; } }
+  .col-k { font-family: var(--mono); font-size: clamp(13px, 0.95vw, 15px); letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+  .list { list-style: none; }
+  .list li { padding-left: 22px; position: relative; }
+  .list li + li { margin-top: 8px; }
+  .list li::before { content: "•"; color: var(--sky); position: absolute; left: 0; }
+
+  /* photos */
+  .photos { padding-top: 16px; padding-bottom: 48px; }
+  .photo-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 40px; }
+  .photo-grid figure {
+    position: relative; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 32px 64px -16px rgba(0,0,0,0.55), 0 16px 32px -12px rgba(0,0,0,0.4), 0 0 0 1px rgba(239,235,226,0.08);
+  }
+  .photo-grid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+  .photo-grid figure::after {
+    content: ""; position: absolute; inset: 0; border-radius: 16px; pointer-events: none;
+    border: 2px solid rgba(219,209,181,0.55);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(0,0,0,0.45);
+  }
+
+  /* cta */
+  .cta { padding-top: 32px; padding-bottom: 96px; }
+  .cta-card { padding: 48px 40px; text-align: center; max-width: 900px; margin: 0 auto; }
+  .cta-actions { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+
+  /* footer */
+  footer { border-top: 1px solid var(--line); padding-top: 64px; padding-bottom: 64px; }
+  .foot-grid { display: grid; gap: 40px; align-items: start; }
+  @media (min-width: 768px) { .foot-grid { grid-template-columns: repeat(4, 1fr); } }
+  .fcard { cursor: pointer; user-select: none; border-radius: 12px; }
+  @media (min-width: 768px) { .fcard { margin-top: 3vh; } }
+  .fcard-title { padding: 32px 16px 8px; text-align: center; font-family: var(--sans); font-weight: 700; color: var(--platinum); font-size: 1.14rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .fcard-btnrow { display: flex; justify-content: center; padding: 20px 0; }
+  .fcard-btn {
+    width: 28px; height: 28px; border-radius: 999px; border: 0;
+    background: var(--gold); color: var(--navy-deep);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.45); cursor: pointer;
+    font-weight: 700; font-size: 18px; line-height: 1;
+  }
+  .fcard-btn span { display: block; transition: transform .25s ease; }
+  .fcard-body { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .35s cubic-bezier(.4,0,.2,1), opacity .3s ease; }
+  .fcard-links { padding: 4px 12px 20px; }
+  .fcard-links a { display: block; text-align: center; padding: 7px 8px; border-radius: 8px; }
+  .foot-bottom { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+
+  /* reveal */
+  [data-reveal] { opacity: 1; transform: none; transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2,0.8,0.2,1); will-change: opacity, transform; }
+</style>
+</head>
+<body>
+<div class="navy-glow"></div>
+<div class="lattice-bg" aria-hidden="true"></div>
+<div class="page">
+
+  <nav class="wrap nav">
+    <a href="/" class="nav-brand">
+      <span class="nav-mono" aria-hidden="true">TL</span>
+      <span class="brandmark">Tanya M. Lawson</span>
+    </a>
+    <div class="nav-links">
+      <a href="/" class="navlink">Home</a>
+      <a href="/#skills" class="navlink">What I do</a>
+      <a href="/#experience" class="navlink">Experience</a>
+      <a href="/#build" class="navlink">What I've Built</a>
+      <a href="/#education" class="navlink">Education</a>
     </div>
+    <a href="/#contact" class="btn btn-sky">Work with Me</a>
+  </nav>
 
-    <p class="hero-lead" style="max-width: 150ch;">
-      I learned how to manage complexity by navigating real pressure, real responsibility, and situations where getting it wrong wasn’t an option. That experience taught me how to slow things down, see what actually matters, and help people make clear decisions when everything feels urgent.
-      When things are unclear or overwhelming, I focus on creating order people can work with — practical steps, clear priorities, and systems that make it easier to move forward instead of harder.
+  <header class="wrap hero">
+    <span class="eyebrow">Her Story · Backbone · Clarity · Follow-through</span>
+    <h1 class="h-display">Life tested me. <span class="grad-italic">That's why I'm reliable.</span></h1>
+    <p class="lead hero-lead">
+      I learned how to manage complexity by navigating real pressure, real responsibility, and situations where getting it wrong wasn't an option. That experience taught me how to slow things down, see what actually matters, and help people make clear decisions when everything feels urgent. When things are unclear or overwhelming, I focus on creating order people can work with — practical steps, clear priorities, and systems that make it easier to move forward instead of harder.
     </p>
-
-   <div class="eyebrow">Quick summary</div>
-        <h3 class="usecase-title">What this story explains</h3>
-        <p class="usecase-summary">
-          Why I’m calm in pressure, strict about documentation, and focused on decisions that hold up later.
-        </p>
-
-        <div class="mini-flow" aria-label="Story flow">
-          <div class="mini-step"><span class="mini-dot"></span><span>Pressure → clarity</span></div>
-          <div class="mini-step"><span class="mini-dot"></span><span>Confusion → structure</span></div>
-          <div class="mini-step"><span class="mini-dot"></span><span>Chaos → execution</span></div>
-   </div>
-    
-    <div class="usecases-filters" role="group" aria-label="Quick links">
-      <a class="btn btn-primary" href="/how-i-work/">View My Work</a>
-      <a class="btn btn-ghost" href="/">Home</a>
+    <div class="pills" aria-label="Story flow">
+      <span class="pill">Pressure → clarity</span>
+      <span class="pill">Confusion → structure</span>
+      <span class="pill">Chaos → execution</span>
     </div>
-    <br><br>
-  </div>
-</section>
+  </header>
 
-<section class="section section--ruled" aria-label="Her story content">
-  <div class="section-rule" aria-hidden="true"></div>
+  <main class="wrap story">
 
-  <div class="container">
-    <div class="bento" style="margin-top: 14px;">
-
-      <!-- Main story -->
-      <article class="card span-8 reveal" aria-label="Story narrative">
-        <div class="eyebrow">Life tested me — and that’s why I’m reliable</div>
-
-        <p class="hero-lead" style="max-width: 90ch;">
-          I didn’t learn how to manage complexity from a textbook or a corporate training program.
-          I learned it by navigating real pressure, real consequences, and real responsibility —
-          long before titles or job descriptions came into play.
-        </p>
-
-        <p class="hero-sub" style="max-width: 90ch;">
-          My background isn’t a corporate fairy tale. It’s a working blueprint for resilience, judgment,
-          and follow-through. When things are unclear, high-stakes, or messy, I’m the person who knows how
-          to slow things down, see what actually matters, and move forward without creating new problems.
-        </p>
-
-        <div class="usecase-details" style="margin-top: 16px;">
-          <div class="usecase-col">
-            <div class="usecase-k">The backbone</div>
-            <div class="usecase-v">
-              I’m a Foundational Black American woman married to a Haitian immigrant. My life sits at the
-              intersection of multiple cultures, systems, and expectations — which means I learned early how
-              to translate, adapt, and operate across environments.
-            </div>
-          </div>
-          <div class="usecase-col">
-            <div class="usecase-k">What that became professionally</div>
-            <div class="usecase-v">
-              Over time, that turned into a practical skill: turning confusion into structure, and pressure
-              into clean execution. I’m not theoretical. I’m practiced.
-            </div>
-          </div>
+    <article class="card-3d story-card" data-reveal>
+      <span class="eyebrow">The beginning</span>
+      <h2 class="h-card">Not from a textbook.</h2>
+      <p class="body">I didn't learn how to manage complexity from a textbook or a corporate training program. I learned it by navigating real pressure, real consequences, and real responsibility — long before titles or job descriptions came into play.</p>
+      <p class="body">My background isn't a corporate fairy tale. It's a working blueprint for resilience, judgment, and follow-through. When things are unclear, high-stakes, or messy, I'm the person who knows how to slow things down, see what actually matters, and move forward without creating new problems.</p>
+      <div class="cols">
+        <div>
+          <div class="col-k">The backbone</div>
+          <p class="body">I'm a Foundational Black American woman married to a Haitian immigrant. My life sits at the intersection of multiple cultures, systems, and expectations — which means I learned early how to translate, adapt, and operate across environments.</p>
         </div>
-
-        <div class="card" style="margin-top: 14px;" aria-label="Professional grounding">
-          <div class="eyebrow">Professional grounding</div>
-          <p class="usecase-summary" style="max-width: 92ch;">
-            I’ve spent over 20 years supporting executives, managing operations, and keeping organizations moving
-            when the details mattered and the margin for error was thin. I’ve been trusted to “clean it up” when
-            things drifted — and to keep it steady after the cleanup.
-          </p>
-
-          <div class="usecase-details" style="margin-top: 12px;">
-            <div class="usecase-col">
-              <div class="usecase-k">I’ve done work like</div>
-              <div class="usecase-v">
-                • executive support in high-trust environments<br>
-                • finance + documentation that has to hold up later<br>
-                • operations cleanup when the system is inconsistent<br>
-                • building workflows that reduce mistakes and rework
-              </div>
-            </div>
-            <div class="usecase-col">
-              <div class="usecase-k">What I optimize for</div>
-              <div class="usecase-v">
-                Clarity, accountability, documentation, and decisions that don’t fall apart under stress.
-              </div>
-            </div>
-          </div>
+        <div>
+          <div class="col-k">What that became professionally</div>
+          <p class="body">Over time, that turned into a practical skill: turning confusion into structure, and pressure into clean execution. <span class="hl">I'm not theoretical. I'm practiced.</span></p>
         </div>
+      </div>
+    </article>
 
-        <div class="card" style="margin-top: 14px;" aria-label="Fire and perspective">
-          <div class="eyebrow">The fire</div>
-          <p class="usecase-summary" style="max-width: 92ch;">
-            Life tested me in ways that don’t show up on a résumé. I’ve lost two brothers — one who went missing
-            as a teenager, and another who was killed before meeting his child. Experiences like that either
-            overwhelm you or force you to develop clarity, discipline, and perspective.
-          </p>
-          <p class="usecase-summary" style="max-width: 92ch; margin-top: 10px;">
-            I chose clarity. That lived experience is why I care deeply about legal clarity, fair systems that work
-            in practice, and mental wellness — because no system functions well when people are overwhelmed or ignored.
-          </p>
-          <p class="usecase-summary" style="max-width: 92ch; margin-top: 10px;">
-            This isn’t ideology. It’s pattern recognition.
-          </p>
-          <p class="usecase-summary" style="max-width: 92ch; margin-top: 10px;">
-            It’s also why my work now centers on proof before trust. I learned the hard way that
-            people without resources often need better records, clearer thinking, and stronger
-            evidence trails. Today I build tools and education for exactly that — starting with
-            <a href="/work/">CREATORSEAL</a>, which helps creators keep proof of their work.
-          </p>
+    <article class="card-3d story-card" data-reveal>
+      <span class="eyebrow">Professional grounding</span>
+      <h2 class="h-card">Trusted to clean it up — and keep it steady.</h2>
+      <p class="body">I've spent over 20 years supporting executives, managing operations, and keeping organizations moving when the details mattered and the margin for error was thin. I've been trusted to "clean it up" when things drifted — and to keep it steady after the cleanup.</p>
+      <div class="cols">
+        <div>
+          <div class="col-k">I've done work like</div>
+          <ul class="list body">
+            <li>executive support in high-trust environments</li>
+            <li>finance + documentation that has to hold up later</li>
+            <li>operations cleanup when the system is inconsistent</li>
+            <li>building workflows that reduce mistakes and rework</li>
+          </ul>
         </div>
-
-        <div class="card" style="margin-top: 14px;" aria-label="Balance and approach">
-          <div class="eyebrow">The balance</div>
-          <p class="usecase-summary" style="max-width: 92ch;">
-            My career blends two worlds that rarely get combined — and that’s my advantage.
-          </p>
-
-          <div class="usecase-details" style="margin-top: 12px;">
-            <div class="usecase-col">
-              <div class="usecase-k">Logic + structure</div>
-              <div class="usecase-v">
-                I understand structure, compliance, and why details matter. I build systems that reduce risk,
-                support clear decisions, and hold up when somebody asks “prove it.”
-              </div>
-            </div>
-            <div class="usecase-col">
-              <div class="usecase-k">Human awareness</div>
-              <div class="usecase-v">
-                I spent over a decade as a clinical massage therapist. That work trained me to listen — not just
-                to what people say, but to what they avoid, rush past, or can’t yet articulate.
-              </div>
-            </div>
-          </div>
-
-          <p class="usecase-summary" style="max-width: 92ch; margin-top: 12px;">
-            I bring that same awareness into operations and systems work. I don’t just fix what’s broken.
-            I identify why it broke — and design systems that don’t rely on constant supervision to hold together.
-          </p>
+        <div>
+          <div class="col-k">What I optimize for</div>
+          <p class="body">Clarity, accountability, documentation, and decisions that don't fall apart under stress.</p>
         </div>
+      </div>
+    </article>
 
-        <div class="card" style="margin-top: 14px;" aria-label="The long view">
-          <div class="eyebrow">The long view</div>
-          <p class="usecase-summary" style="max-width: 92ch;">
-            I don’t approach work as a series of tasks. I approach it as stewardship — building structure that reduces
-            confusion, increases trust, and supports long-term stability.
-          </p>
+    <article class="card-3d story-card" data-reveal>
+      <span class="eyebrow">The fire</span>
+      <h2 class="h-card">Clarity was a choice.</h2>
+      <p class="body">Life tested me in ways that don't show up on a resume. I've lost two brothers — one who went missing as a teenager, and another who was killed before meeting his child. Experiences like that either overwhelm you or force you to develop clarity, discipline, and perspective.</p>
+      <p class="body">I chose clarity. That lived experience is why I care deeply about legal clarity, fair systems that work in practice, and mental wellness — because no system functions well when people are overwhelmed or ignored.</p>
+      <p class="body"><span class="hl">This isn't ideology. It's pattern recognition.</span></p>
+      <p class="body">It's also why my work now centers on proof before trust. I learned the hard way that people without resources often need better records, clearer thinking, and stronger evidence trails. Today I build tools and education for exactly that — starting with <a href="/#build" style="color:var(--sky);font-weight:600">CREATORSEAL</a>, which helps creators keep proof of their work.</p>
+    </article>
 
-          <div class="usecase-details" style="margin-top: 12px;">
-            <div class="usecase-col">
-              <div class="usecase-k">What I build toward</div>
-              <div class="usecase-v">
-                • community-based systems and education<br>
-                • evidence tools that protect people’s work and words<br>
-                • tools that help people make better decisions — not just faster ones
-              </div>
-            </div>
-            <div class="usecase-col">
-              <div class="usecase-k">Bottom line</div>
-              <div class="usecase-v">
-                If you’re looking for someone steady, precise, and human — who can handle ambiguity and still deliver —
-                that’s what my story produced.
-              </div>
-            </div>
-          </div>
+    <article class="card-3d story-card" data-reveal>
+      <span class="eyebrow">The balance</span>
+      <h2 class="h-card">Two worlds that rarely get combined.</h2>
+      <p class="body">My career blends two worlds that rarely get combined — and that's my advantage.</p>
+      <div class="cols">
+        <div>
+          <div class="col-k">Logic + structure</div>
+          <p class="body">I understand structure, compliance, and why details matter. I build systems that reduce risk, support clear decisions, and hold up when somebody asks "prove it."</p>
         </div>
-
-        <div class="usecase-actions" style="margin-top: 18px;">
-          <a class="btn btn-primary" href="/how-i-work/">See My Work</a>
-          <a class="btn btn-ghost" href="/contact/">Contact</a>
-          <a class="btn btn-ghost" href="/">Home</a>
+        <div>
+          <div class="col-k">Human awareness</div>
+          <p class="body">I spent over a decade as a clinical massage therapist. That work trained me to listen — not just to what people say, but to what they avoid, rush past, or can't yet articulate.</p>
         </div>
-      </article>
+      </div>
+      <p class="body" style="margin-top:28px">I bring that same awareness into operations and systems work. I don't just fix what's broken. I identify why it broke — and design systems that don't rely on constant supervision to hold together.</p>
+    </article>
 
-      <!-- Sidebar -->
-      <aside class="card span-4 reveal" aria-label="Story sidebar">
-      
-      <!-- Personal image stack -->
-        <div class="personal-image-stack" aria-label="Personal moments">
-          <div class="personal-image-card">
-            <img src="/assets/img/1imagetanyafrontviewoceanandmountainbackground.jpg" alt="Tanya Lawson candid moment" />
-          </div>
-          <div class="personal-image-card">
-            <img src="/assets/img/TanyaBusinessVideo.jpg" alt="Tanya Lawson working" />
-          </div>
-          <div class="personal-image-card">
-            <img src="/assets/img/tanya5.jpg" alt="Tanya Lawson speaking" />
-          </div>
-          <div class="personal-image-card">
-            <img src="/assets/img/aladokunvabeach1.jpg" alt="Tanya Lawson reflective portrait" />
-          </div>
-          <div class="personal-image-card">
-            <img src="/assets/img/aladokun nyc.jpg" alt="Tanya Lawson in New York City" />
-          </div>
+    <article class="card-3d story-card" data-reveal>
+      <span class="eyebrow">The long view</span>
+      <h2 class="h-card">Work as stewardship.</h2>
+      <p class="body">I don't approach work as a series of tasks. I approach it as stewardship — building structure that reduces confusion, increases trust, and supports long-term stability.</p>
+      <div class="cols">
+        <div>
+          <div class="col-k">What I build toward</div>
+          <ul class="list body">
+            <li>community-based systems and education</li>
+            <li>evidence tools that protect people's work and words</li>
+            <li>tools that help people make better decisions — not just faster ones</li>
+          </ul>
         </div>
-
-        <div class="card" style="margin-top: 14px;" aria-label="Where to go next">
-          <div class="eyebrow">Next</div>
-          <p class="usecase-summary" style="margin-bottom: 12px;">
-            If you want a professional view of how I approach projects, the How I Work section shows it step by step.
-          </p>
-          <div class="usecase-actions">
-            <a class="btn btn-primary" href="/how-i-work/">Go to How I Work</a>
-          </div>
+        <div>
+          <div class="col-k">Bottom line</div>
+          <p class="body">If you're looking for someone steady, precise, and human — who can handle ambiguity and still deliver — <span class="hl">that's what my story produced.</span></p>
         </div>
-      </aside>
+      </div>
+    </article>
 
+  </main>
+
+  <section class="wrap photos">
+    <span class="eyebrow">Personal moments</span>
+    <div class="photo-grid">
+      <figure><img src="/assets/img/1imagetanyafrontviewoceanandmountainbackground.jpg" alt="Tanya Lawson candid moment" loading="lazy"></figure>
+      <figure><img src="/assets/img/TanyaBusinessVideo.jpg" alt="Tanya Lawson working" loading="lazy"></figure>
+      <figure><img src="/assets/img/tanya5.jpg" alt="Tanya Lawson speaking" loading="lazy"></figure>
+      <figure><img src="/assets/img/aladokunvabeach1.jpg" alt="Tanya Lawson reflective portrait" loading="lazy"></figure>
+      <figure><img src="/assets/img/aladokun nyc.jpg" alt="Tanya Lawson in New York City" loading="lazy"></figure>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section class="wrap cta">
+    <div class="card-3d cta-card" data-reveal>
+      <span class="eyebrow" style="display:block;margin-bottom:24px">Next</span>
+      <h2 class="h-section">Let's <span class="grad-italic">work together.</span></h2>
+      <p class="lead" style="margin-top:24px;max-width:56ch;margin-left:auto;margin-right:auto">This is the story behind the steadiness. If it sounds like what your team needs, tell me what you're working on.</p>
+      <div class="cta-actions">
+        <a href="/#contact" class="btn btn-gold">Work with Me →</a>
+        <a href="/" class="btn btn-ghost">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="brandmark" style="margin-bottom:16px">Tanya M. Lawson</div>
+          <p class="body-sm">30+ years of operations, administration, and people skills — now poured into CREATORSEAL CORPORATION, building AI tools around one idea: proof before trust.</p>
+        </div>
+        <div class="card-3d fcard">
+          <div class="fcard-title">Site</div>
+          <div class="fcard-btnrow"><button type="button" class="fcard-btn" aria-expanded="false" aria-label="Toggle Site menu"><span>+</span></button></div>
+          <div class="fcard-body"><div class="fcard-links">
+            <a href="/#skills" class="navlink">What I do</a>
+            <a href="/#experience" class="navlink">Experience</a>
+            <a href="/#build" class="navlink">What I've Built</a>
+            <a href="/#education" class="navlink">Education</a>
+            <a href="/her-story/" class="navlink">Her Story</a>
+          </div></div>
+        </div>
+        <div class="card-3d fcard">
+          <div class="fcard-title">Built</div>
+          <div class="fcard-btnrow"><button type="button" class="fcard-btn" aria-expanded="false" aria-label="Toggle Built menu"><span>+</span></button></div>
+          <div class="fcard-body"><div class="fcard-links">
+            <a href="https://creatorseal.app" target="_blank" rel="noopener noreferrer" class="navlink">CREATORSEAL</a>
+            <a href="/#build" class="navlink">Human Texture Engine</a>
+            <a href="/#build" class="navlink">Memory Firewall</a>
+            <a href="/#build" class="navlink">OddLaw</a>
+          </div></div>
+        </div>
+        <div class="card-3d fcard">
+          <div class="fcard-title">Connect</div>
+          <div class="fcard-btnrow"><button type="button" class="fcard-btn" aria-expanded="false" aria-label="Toggle Connect menu"><span>+</span></button></div>
+          <div class="fcard-body"><div class="fcard-links">
+            <a href="mailto:support@tanyamlawson.com" class="navlink">Email</a>
+            <a href="https://www.linkedin.com/in/tm-lawson-wbm1/" target="_blank" rel="noopener noreferrer" class="navlink">LinkedIn</a>
+            <a href="https://www.youtube.com/@creatorsealofficial" target="_blank" rel="noopener noreferrer" class="navlink">YouTube</a>
+          </div></div>
+        </div>
+      </div>
+      <div class="foot-bottom body-sm">
+        <span>© 2026 Tanya M. Lawson</span>
+        <span><a href="/privacy/" class="navlink">Privacy</a> &nbsp;·&nbsp; <a href="/terms/" class="navlink">Terms</a> &nbsp;·&nbsp; support@tanyamlawson.com</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
 <script>
-(() => {
-  // Scroll reveal (same behavior as how i work page)
-  const items = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
+(function(){
+  // footer cards
+  document.querySelectorAll(".fcard").forEach(function(card){
+    var body = card.querySelector(".fcard-body");
+    var btn = card.querySelector(".fcard-btn");
+    var icon = btn.querySelector("span");
+    function setOpen(open){
+      card.dataset.open = open ? "1" : "";
+      body.style.maxHeight = open ? body.scrollHeight + "px" : "0";
+      body.style.opacity = open ? "1" : "0";
+      icon.textContent = open ? "−" : "+";
+      icon.style.transform = open ? "rotate(180deg)" : "rotate(0deg)";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+    card.addEventListener("click", function(e){
+      if (e.target.closest("a")) return;
+      setOpen(!card.dataset.open);
+    });
+  });
+  // scroll reveal (no-JS safe: cards are visible by default)
+  var els = document.querySelectorAll("[data-reveal]");
+  if (!("IntersectionObserver" in window)) return;
+  els.forEach(function(el){ el.style.opacity = "0"; el.style.transform = "translateY(60px) scale(0.96)"; });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
       if (e.isIntersecting) {
-        e.target.classList.add('is-visible');
+        e.target.style.opacity = "1";
+        e.target.style.transform = "none";
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12 });
-  items.forEach(el => io.observe(el));
+  }, { threshold: 0.15 });
+  els.forEach(function(el){ io.observe(el); });
 })();
 </script>
-
+</body>
+</html>

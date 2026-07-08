@@ -732,12 +732,7 @@ function Foot() {
             { label: "Experience", href: "#experience" },
             { label: "What I've Built", href: "#build" },
             { label: "Education", href: "#education" },
-            { label: "About", href: "/about/" },
-            { label: "Work", href: "/work/" },
-            { label: "Resume", href: "/resume/" },
-            { label: "How I Work", href: "/how-i-work/" },
             { label: "Her Story", href: "/her-story/" },
-            { label: "Contact", href: "/contact/" },
           ]}
         />
         <FooterCard
