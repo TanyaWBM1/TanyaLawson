@@ -43,6 +43,11 @@ and available for remote work, partnerships, and collaboration.
 - [OddLaw / Learn with OddLaw](https://www.youtube.com/@learnwithoddlaw):
   Public education and media around practical tools, evidence, law-related
   education, documentation, and self-advocacy for everyday people.
+- [The Hard Win](https://www.instagram.com/thehardwin/): A faceless Instagram
+  channel run by a mostly-automated pipeline Tanya built (custom Python
+  renderer, Supabase, n8n, Instagram Graph API) with a human approval gate.
+  It posts real historical figures who did the hard version of something,
+  each paired with a checkable source line.
 
 ## Pages
 
@@ -52,7 +57,7 @@ and available for remote work, partnerships, and collaboration.
 - [Her Story](https://tanyamlawson.com/her-story/): The lived experience behind the work
 - [How I Work](https://tanyamlawson.com/how-i-work/): Thinking, research, systems, and AI practices
 - [Resume](https://tanyamlawson.com/resume/): Professional experience (PDF available)
-- [Contact](https://tanyamlawson.com/contact/): info@tanyamlawson.com
+- [Contact](https://tanyamlawson.com/contact/): support@tanyamlawson.com
 
 ## Links
 
@@ -62,3 +67,4 @@ and available for remote work, partnerships, and collaboration.
 - [GitHub](https://github.com/TanyaWBM1)
 - [Instagram (OddLaw)](https://www.instagram.com/learnwithoddlaw)
 - [Instagram (Tanya)](https://www.instagram.com/tanyawbm1)
+- [Instagram (The Hard Win)](https://www.instagram.com/thehardwin/)
