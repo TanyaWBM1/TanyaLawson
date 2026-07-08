@@ -227,7 +227,7 @@ function Nav() {
         <span className="brandmark">Tanya M. Lawson</span>
       </a>
       <div className="hidden md:flex items-center gap-8">
-        <a href="#skills" className="navlink transition-colors">What I do</a>
+        <a href="#skills" className="navlink transition-colors">What I've Done</a>
         <a href="#experience" className="navlink transition-colors">Experience</a>
         <a href="#build" className="navlink transition-colors">What I've Built</a>
         <a href="#education" className="navlink transition-colors">Education</a>
@@ -739,7 +739,7 @@ function Foot() {
         <FooterCard
           title="Site"
           items={[
-            { label: "What I do", href: "#skills" },
+            { label: "What I've Done", href: "#skills" },
             { label: "Experience", href: "#experience" },
             { label: "What I've Built", href: "#build" },
             { label: "Education", href: "#education" },
