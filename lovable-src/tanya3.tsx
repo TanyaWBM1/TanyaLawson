@@ -229,7 +229,7 @@ function Nav() {
       <div className="hidden md:flex items-center gap-8">
         <a href="#skills" className="navlink transition-colors">What I do</a>
         <a href="#experience" className="navlink transition-colors">Experience</a>
-        <a href="#build" className="navlink transition-colors">What I build</a>
+        <a href="#build" className="navlink transition-colors">What I've Built</a>
         <a href="#education" className="navlink transition-colors">Education</a>
         <a href="/her-story/" className="navlink transition-colors">Her Story</a>
       </div>
@@ -359,7 +359,7 @@ function StickySkills() {
   return (
     <section id="skills" className="relative">
       <div className="lg:hidden max-w-[1400px] mx-auto px-8 pt-24 pb-8">
-        <div className="eyebrow mb-6">What I do</div>
+        <div className="eyebrow mb-6">What I've Done</div>
         <h2 className="h-section" style={{ lineHeight: 1.2 }}>
           What I'm <span className="grad-italic good-heading-word">good at.</span>
         </h2>
@@ -373,7 +373,7 @@ function StickySkills() {
           <div className="hidden lg:block">
             <div className="sticky top-24">
               <div className="card-3d rounded-2xl p-10 lg:p-12 min-h-[50vh] flex flex-col justify-center">
-                <div className="eyebrow mb-6">What I do</div>
+                <div className="eyebrow mb-6">What I've Done</div>
                 <h2 className="h-section" style={{ lineHeight: 1.2 }}>
                   What I'm <span className="grad-italic good-heading-word">good at.</span>
                 </h2>
