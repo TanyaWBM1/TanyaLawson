@@ -105,6 +105,9 @@ const themeCss = `
       var(--navy-deep);
   }
   @keyframes t3-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes t3-slow-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.035); } }
+  [data-tanya3] #contact .h-section { animation: t3-slow-pulse 3.5s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) { [data-tanya3] #contact .h-section { animation: none; } }
 
   [data-tanya3] .hl { font-style: italic; color: var(--gold); }
   [data-tanya3] .grad-italic {
@@ -754,9 +757,9 @@ function Foot() {
         />
       </div>
       <div className="mt-12 pt-8 flex flex-wrap justify-between gap-4 body-sm" style={{ borderTop: "1px solid var(--line)" }}>
-        <span>© 2026 Tanya M. Lawson</span>
+        <span>© 2026 Tanya M. Lawson &nbsp;·&nbsp; Designed &amp; built by me</span>
         <span>
-          <a href="/privacy/" className="navlink">Privacy</a> &nbsp;·&nbsp; <a href="/terms/" className="navlink">Terms</a> &nbsp;·&nbsp; support@tanyamlawson.com
+          <a href="/privacy/" className="navlink">Privacy</a> &nbsp;·&nbsp; <a href="/terms/" className="navlink">Terms</a> &nbsp;·&nbsp; <a href="/disclaimer/" className="navlink">Disclaimer</a> &nbsp;·&nbsp; <a href="/acceptable-use/" className="navlink">Acceptable Use</a>
         </span>
       </div>
     </footer>

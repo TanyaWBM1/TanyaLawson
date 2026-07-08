@@ -22,7 +22,7 @@ Markup: HTML5, CSS3, JSON-LD Schema
 SEO: Sitemap, Structured Data, OpenGraph, llms.txt
 
 /* CONTACT */
-Email: info@tanyamlawson.com
+Email: support@tanyamlawson.com
 
 /* COPYRIGHT */
 © 2026 Tanya M. Lawson — All Rights Reserved.
