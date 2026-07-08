@@ -120,6 +120,8 @@
   }
   .nav-links { display: none; align-items: center; gap: 32px; }
   @media (min-width: 768px) { .nav-links { display: flex; } }
+  .sticky-nav { position: sticky; top: 0; z-index: 100; background: rgba(15,18,16,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+  .sticky-nav .nav { padding-top: 14px; padding-bottom: 14px; }
 
   /* hero */
   .hero { padding-top: 64px; padding-bottom: 48px; }
@@ -221,7 +223,7 @@
 <div class="lattice-bg" aria-hidden="true"></div>
 <div class="page">
 
-  <nav class="wrap nav">
+  <div class="sticky-nav"><nav class="wrap nav">
     <a href="/" class="nav-brand">
       <span class="nav-mono" aria-hidden="true">TL</span>
       <span class="brandmark">Tanya M. Lawson</span>
@@ -235,7 +237,7 @@
       <a href="/her-story/" class="navlink" style="color:var(--sky)" aria-current="page">Her Story</a>
     </div>
     <a href="/#contact" class="btn btn-sky">Work with Me</a>
-  </nav>
+  </nav></div>
 
   <header class="wrap hero">
     <span class="eyebrow">Her Story · Backbone · Clarity · Follow-through</span>

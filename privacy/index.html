@@ -70,6 +70,8 @@
   .nav-mono { width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; font-size: 16px; font-family: var(--serif); font-weight: 700; color: var(--navy-deep); background: linear-gradient(135deg, var(--sky) 0%, var(--gold) 100%); }
   .nav-links { display: none; align-items: center; gap: 32px; }
   @media (min-width: 768px) { .nav-links { display: flex; } }
+  .sticky-nav { position: sticky; top: 0; z-index: 100; background: rgba(15,18,16,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+  .sticky-nav .nav { padding-top: 14px; padding-bottom: 14px; }
   .hero { padding-top: 56px; padding-bottom: 40px; }
   .hero .eyebrow { display: block; margin-bottom: 32px; }
   .content { padding-top: 16px; padding-bottom: 64px; display: flex; flex-direction: column; gap: 28px; }
@@ -106,7 +108,7 @@
 <div class="lattice-bg" aria-hidden="true"></div>
 <div class="page">
 
-  <nav class="wrap nav">
+  <div class="sticky-nav"><nav class="wrap nav">
     <a href="/" class="nav-brand">
       <span class="nav-mono" aria-hidden="true">TL</span>
       <span class="brandmark">Tanya M. Lawson</span>
@@ -120,7 +122,7 @@
       <a href="/her-story/" class="navlink">Her Story</a>
     </div>
     <a href="/#contact" class="btn btn-sky">Work with Me</a>
-  </nav>
+  </nav></div>
 
   <header class="wrap hero">
     <span class="eyebrow">Privacy</span>

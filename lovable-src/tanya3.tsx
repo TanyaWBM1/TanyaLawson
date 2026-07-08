@@ -105,6 +105,12 @@ const themeCss = `
       var(--navy-deep);
   }
   @keyframes t3-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  [data-tanya3] .t3-sticky-nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,18,16,0.82);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
   @keyframes t3-slow-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.035); } }
   [data-tanya3] #contact .h-section { animation: t3-slow-pulse 3.5s ease-in-out infinite; }
   @media (prefers-reduced-motion: reduce) { [data-tanya3] #contact .h-section { animation: none; } }
@@ -210,7 +216,8 @@ function Tanya3Home() {
 
 function Nav() {
   return (
-    <nav className="max-w-[1400px] mx-auto px-8 pt-10 pb-6 flex items-center justify-between">
+    <div className="t3-sticky-nav">
+    <nav className="max-w-[1400px] mx-auto px-8 flex items-center justify-between" style={{ paddingTop: 14, paddingBottom: 14 }}>
       <a href="#top" className="flex items-center gap-4">
         <span
           aria-hidden
@@ -228,6 +235,7 @@ function Nav() {
       </div>
       <a href="#contact" className="btn btn-sky">Work with Me</a>
     </nav>
+    </div>
   );
 }
 
