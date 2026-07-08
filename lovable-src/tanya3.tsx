@@ -181,9 +181,9 @@ const buildCards = [
 ];
 
 const education = [
-  { yr: "1986", t: "Certified Executive Secretary",  s: "American Business Institute — New York, NY" },
-  { yr: "1985", t: "Diploma, Marketing",             s: "Murray Bergtraum High School for Business Careers — New York, NY" },
-  { yr: "2010", t: "Clinical Massage Therapy",       s: "Academy of Massage Therapy — certificate" },
+  { t: "Certified Executive Secretary",  s: "American Business Institute — New York, NY" },
+  { t: "Diploma, Marketing",             s: "Murray Bergtraum High School for Business Careers — New York, NY" },
+  { t: "Clinical Massage Therapy",       s: "Academy of Massage Therapy — certificate" },
 ];
 
 /* ---------------------------------- page --------------------------------- */
@@ -635,8 +635,7 @@ function Education() {
       <div className="grid md:grid-cols-3 gap-8">
         {education.map(e => (
           <div key={e.t} className="card-3d rounded-2xl p-8">
-            <div className="h-card" style={{ color: "var(--sky)", fontSize: "clamp(22px, 1.8vw, 28px)" }}>{e.yr}</div>
-            <h4 className="h-card mt-4" style={{ fontSize: "clamp(20px, 1.6vw, 26px)" }}>{e.t}</h4>
+            <h4 className="h-card" style={{ fontSize: "clamp(20px, 1.6vw, 26px)" }}>{e.t}</h4>
             <p className="body mt-3">{e.s}</p>
           </div>
         ))}
