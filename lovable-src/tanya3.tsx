@@ -532,7 +532,7 @@ function BuildSection() {
     <section id="build" className="max-w-[1400px] mx-auto px-8 py-24">
       <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 mb-16">
         <div>
-          <div className="eyebrow mb-6">What I build</div>
+          <div className="eyebrow mb-6">What I've Built</div>
           <h2 className="h-section">I also build <span className="grad-italic">AI tools.</span></h2>
         </div>
         <div className="body space-y-5 max-w-[60ch]">
@@ -674,46 +674,88 @@ function ContactCTA() {
 
 /* -------------------------------- footer -------------------------------- */
 
+type FooterItem = { label: string; href: string; external?: boolean };
+
+function FooterCard({ title, items }: { title: string; items: FooterItem[] }) {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div
+      className="card-3d rounded-xl overflow-hidden cursor-pointer select-none flex flex-col w-full"
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <div className="px-4 pt-8 pb-2 text-center">
+        <h4 style={{ fontFamily: "var(--sans)", fontWeight: 700, color: "var(--platinum)", fontSize: "1.14rem", letterSpacing: "0.08em", textTransform: "uppercase" }}>{title}</h4>
+      </div>
+      <div className="flex justify-center py-5">
+        <button
+          type="button"
+          aria-expanded={isOpen}
+          aria-label={`Toggle ${title} menu`}
+          style={{ width: 28, height: 28, borderRadius: 999, background: "var(--gold)", color: "var(--navy-deep)", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 4px 10px rgba(0,0,0,0.45)", cursor: "pointer", fontWeight: 700, fontSize: 18, lineHeight: 1 }}
+        >
+          <span style={{ display: "block", transition: "transform .25s ease", transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}>{isOpen ? "−" : "+"}</span>
+        </button>
+      </div>
+      <div style={{ overflow: "hidden", maxHeight: isOpen ? 500 : 0, opacity: isOpen ? 1 : 0, transition: "max-height .35s cubic-bezier(.4,0,.2,1), opacity .3s ease" }}>
+        <div className="px-3 pb-5 pt-1">
+          {items.map((it) => (
+            <a
+              key={it.label}
+              href={it.href}
+              {...(it.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              className="navlink"
+              style={{ display: "block", textAlign: "center", padding: "7px 8px", borderRadius: 8 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {it.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Foot() {
   return (
     <footer className="max-w-[1400px] mx-auto px-8 py-16 border-t" style={{ borderColor: "var(--line)" }}>
-      <div className="grid md:grid-cols-4 gap-10">
-        <div>
-          <div className="brandmark mb-4">Tanya M. Lawson</div>
-          <p className="body-sm">30+ years in operations and administration, now founder of CREATORSEAL CORPORATION — building AI tools around one idea: proof before trust.</p>
-        </div>
-        <div>
-          <h4 className="eyebrow mb-4">Site</h4>
-          <div className="flex flex-col gap-2">
-            <a href="#skills" className="navlink">What I do</a>
-            <a href="#experience" className="navlink">Experience</a>
-            <a href="#build" className="navlink">What I build</a>
-            <a href="#education" className="navlink">Education</a>
-            <a href="/about/" className="navlink">About</a>
-            <a href="/work/" className="navlink">Work</a>
-            <a href="/resume/" className="navlink">Resume</a>
-            <a href="/how-i-work/" className="navlink">How I Work</a>
-            <a href="/her-story/" className="navlink">Her Story</a>
-            <a href="/contact/" className="navlink">Contact</a>
-          </div>
-        </div>
-        <div>
-          <h4 className="eyebrow mb-4">Build</h4>
-          <div className="flex flex-col gap-2">
-            <a href="https://creatorseal.app" target="_blank" rel="noopener noreferrer" className="navlink">CREATORSEAL</a>
-            <a href="#build" className="navlink">Human Texture Engine</a>
-            <a href="#build" className="navlink">Memory Firewall</a>
-            <a href="#build" className="navlink">OddLaw</a>
-          </div>
-        </div>
-        <div>
-          <h4 className="eyebrow mb-4">Connect</h4>
-          <div className="flex flex-col gap-2">
-            <a href="mailto:support@tanyamlawson.com" className="navlink">Email</a>
-            <a href="https://www.linkedin.com/in/tm-lawson-wbm1/" target="_blank" rel="noopener noreferrer" className="navlink">LinkedIn</a>
-            <a href="https://www.youtube.com/@creatorsealofficial" target="_blank" rel="noopener noreferrer" className="navlink">YouTube</a>
-          </div>
-        </div>
+      <div className="mb-12 max-w-[640px]">
+        <div className="brandmark mb-4">Tanya M. Lawson</div>
+        <p className="body-sm">30+ years in operations and administration, now founder of CREATORSEAL CORPORATION — building AI tools around one idea: proof before trust.</p>
+      </div>
+      <div className="grid md:grid-cols-3 gap-6 items-start">
+        <FooterCard
+          title="Site"
+          items={[
+            { label: "What I do", href: "#skills" },
+            { label: "Experience", href: "#experience" },
+            { label: "What I've Built", href: "#build" },
+            { label: "Education", href: "#education" },
+            { label: "About", href: "/about/" },
+            { label: "Work", href: "/work/" },
+            { label: "Resume", href: "/resume/" },
+            { label: "How I Work", href: "/how-i-work/" },
+            { label: "Her Story", href: "/her-story/" },
+            { label: "Contact", href: "/contact/" },
+          ]}
+        />
+        <FooterCard
+          title="Built"
+          items={[
+            { label: "CREATORSEAL", href: "https://creatorseal.app", external: true },
+            { label: "Human Texture Engine", href: "#build" },
+            { label: "Memory Firewall", href: "#build" },
+            { label: "OddLaw", href: "#build" },
+          ]}
+        />
+        <FooterCard
+          title="Connect"
+          items={[
+            { label: "Email", href: "mailto:support@tanyamlawson.com" },
+            { label: "LinkedIn", href: "https://www.linkedin.com/in/tm-lawson-wbm1/", external: true },
+            { label: "YouTube", href: "https://www.youtube.com/@creatorsealofficial", external: true },
+          ]}
+        />
       </div>
       <div className="mt-12 pt-8 flex flex-wrap justify-between gap-4 body-sm" style={{ borderTop: "1px solid var(--line)" }}>
         <span>© 2026 Tanya M. Lawson</span>
