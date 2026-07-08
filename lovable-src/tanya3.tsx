@@ -745,6 +745,7 @@ function Foot() {
             { label: "Human Texture Engine", href: "#build" },
             { label: "Memory Firewall", href: "#build" },
             { label: "OddLaw", href: "#build" },
+            { label: "I Built This Site", href: "/colophon/" },
           ]}
         />
         <FooterCard
