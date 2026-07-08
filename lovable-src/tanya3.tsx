@@ -239,7 +239,7 @@ function Hero() {
         style={{ backgroundImage: "radial-gradient(var(--gold) 2px, transparent 0)", backgroundSize: "16px 16px" }}
       />
       <div className="flex items-center justify-end gap-6 mb-10">
-        <span className="eyebrow">Customer service · Operations · AI</span>
+        <span className="eyebrow">Customer service · Operations · AI Tools</span>
       </div>
 
       <motion.h1
