@@ -1,80 +1,249 @@
----
-layout: default
-title: Privacy — Tanya M. Lawson
-description: How this website handles your information — in plain language.
-og_title: Privacy — Tanya M. Lawson
-og_description: No tracking, no databases, no selling data. Here's how this site works.
-show_ticker: false
----
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — Tanya M. Lawson</title>
+<meta name="description" content="How this website handles your information — in plain language.">
+<meta property="og:title" content="Privacy — Tanya M. Lawson">
+<meta property="og:description" content="No tracking, no databases, no selling data. Here's how this site works.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-deep:  #0F1210;
+    --navy:       #1F2621;
+    --platinum:   #EFEBE2;
+    --platinum-2: #C7C4B9;
+    --platinum-d: #8A8A80;
+    --gold:       #C9BFA3;
+    --gold-soft:  #DDD4B8;
+    --sky:        #87A878;
+    --line:       rgba(239,235,226,0.09);
+    --serif:      'Libre Baskerville', Georgia, serif;
+    --sans:       'IBM Plex Sans', system-ui, sans-serif;
+    --mono:       'JetBrains Mono', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--navy-deep); color: var(--platinum); font-family: var(--sans); font-size: clamp(18px, 1.15vw, 20px); line-height: 1.6; min-height: 100vh; }
+  ::selection { background: var(--sky); color: var(--navy-deep); }
+  a { color: inherit; text-decoration: none; }
+  .navy-glow { position: fixed; inset: 0; z-index: -1; background: radial-gradient(ellipse at 20% 0%, #1F2621 0%, transparent 55%), radial-gradient(ellipse at 80% 20%, rgba(135,168,120,0.18) 0%, transparent 50%), var(--navy-deep); }
+  .lattice-bg { position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image: linear-gradient(to right, rgba(239,235,226,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(239,235,226,0.06) 1px, transparent 1px), linear-gradient(to right, rgba(135,168,120,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(135,168,120,0.04) 1px, transparent 1px);
+    background-size: 88px 88px, 88px 88px, 22px 22px, 22px 22px;
+    mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, #000 0%, rgba(0,0,0,0.55) 65%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, #000 0%, rgba(0,0,0,0.55) 65%, transparent 100%); }
+  .page { position: relative; z-index: 1; }
+  .wrap { max-width: 1400px; margin: 0 auto; padding-left: 32px; padding-right: 32px; }
+  .h-display { font-family: var(--serif); font-weight: 700; font-size: clamp(40px, 5.6vw, 84px); line-height: 1.05; letter-spacing: -0.025em; }
+  .h-card { font-family: var(--serif); font-weight: 700; font-size: clamp(22px, 2vw, 30px); line-height: 1.2; letter-spacing: -0.01em; }
+  .lead { font-family: var(--sans); font-size: clamp(20px, 1.7vw, 26px); line-height: 1.5; color: var(--platinum-2); }
+  .body { font-family: var(--sans); font-size: clamp(17px, 1.2vw, 21px); line-height: 1.65; color: var(--platinum-2); }
+  .body-sm { font-family: var(--sans); font-size: clamp(15px, 1vw, 17px); line-height: 1.55; color: var(--platinum-d); }
+  .eyebrow { font-family: var(--mono); font-size: clamp(13px, 0.95vw, 15px); letter-spacing: 0.32em; text-transform: uppercase; color: var(--sky); font-weight: 500; }
+  .grad-italic { font-style: italic; background: linear-gradient(135deg, var(--sky) 0%, var(--gold-soft) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .brandmark { font-family: var(--serif); font-weight: 700; font-size: clamp(20px, 1.5vw, 24px); letter-spacing: -0.01em; }
+  .navlink { font-family: var(--sans); font-weight: 500; font-size: clamp(15px, 1vw, 17px); color: var(--platinum-2); transition: color .2s ease; }
+  .navlink:hover { color: var(--sky); }
+  .card-3d { position: relative; overflow: hidden; border: 1px solid transparent; border-radius: 16px;
+    background-image: linear-gradient(hsl(40 10% 14% / 0.7), hsl(40 10% 14% / 0.5)), linear-gradient(160deg, hsl(42 29% 91% / 0.22) 0%, hsl(40 12% 22% / 0.4) 45%, hsl(0 0% 0% / 0.7) 100%);
+    background-origin: border-box; background-clip: padding-box, border-box;
+    box-shadow: 18px 18px 40px hsl(0 0% 0% / 0.6), 0 22px 44px hsl(0 0% 0% / 0.55), -10px -10px 28px hsl(42 29% 91% / 0.05), inset 0 1px 0 hsl(42 29% 91% / 0.14), inset 0 -1px 0 hsl(0 0% 0% / 0.6);
+    transition: transform .4s cubic-bezier(.22,1,.36,1); }
+  .card-3d:hover { transform: translateY(-6px); }
+  .btn { display: inline-flex; align-items: center; gap: 12px; font-family: var(--sans); font-weight: 600; font-size: clamp(16px, 1.15vw, 19px); padding: 16px 30px; border-radius: 999px; transition: all .25s ease; border: 0; cursor: pointer; }
+  .btn-sky { background: var(--sky); color: var(--navy-deep); box-shadow: 0 12px 30px -12px rgba(135,168,120,0.6); }
+  .btn-sky:hover { transform: translateY(-2px); }
+  .btn-gold { background: var(--gold); color: var(--navy-deep); box-shadow: 0 14px 34px -14px rgba(201,191,163,0.7); }
+  .btn-gold:hover { transform: translateY(-2px); }
+  .btn-ghost { color: var(--sky); border: 2px solid var(--sky); background: rgba(135,168,120,0.06); }
+  .btn-ghost:hover { background: rgba(135,168,120,0.12); }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding-top: 40px; padding-bottom: 24px; }
+  .nav-brand { display: flex; align-items: center; gap: 16px; }
+  .nav-mono { width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; font-size: 16px; font-family: var(--serif); font-weight: 700; color: var(--navy-deep); background: linear-gradient(135deg, var(--sky) 0%, var(--gold) 100%); }
+  .nav-links { display: none; align-items: center; gap: 32px; }
+  @media (min-width: 768px) { .nav-links { display: flex; } }
+  .hero { padding-top: 56px; padding-bottom: 40px; }
+  .hero .eyebrow { display: block; margin-bottom: 32px; }
+  .content { padding-top: 16px; padding-bottom: 64px; display: flex; flex-direction: column; gap: 28px; }
+  .content-card { padding: 40px; }
+  @media (min-width: 900px) { .content-card { padding: 48px 56px; } }
+  .content-card .eyebrow { display: block; margin-bottom: 16px; }
+  .content-card h2 { margin-bottom: 16px; }
+  .content-card p + p { margin-top: 14px; }
+  .grid-cards { display: grid; gap: 28px; }
+  @media (min-width: 900px) { .grid-cards { grid-template-columns: 1fr 1fr; } }
+  .list { list-style: none; }
+  .list li { padding-left: 22px; position: relative; }
+  .list li + li { margin-top: 8px; }
+  .list li::before { content: "•"; color: var(--sky); position: absolute; left: 0; }
+  .actions { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 12px; }
+  footer { border-top: 1px solid var(--line); padding-top: 64px; padding-bottom: 64px; }
+  .foot-grid { display: grid; gap: 40px; align-items: start; }
+  @media (min-width: 768px) { .foot-grid { grid-template-columns: repeat(4, 1fr); } }
+  .fcard { cursor: pointer; user-select: none; border-radius: 12px; }
+  @media (min-width: 768px) { .fcard { margin-top: 3vh; } }
+  .fcard-title { padding: 32px 16px 8px; text-align: center; font-family: var(--sans); font-weight: 700; color: var(--platinum); font-size: 1.14rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .fcard-btnrow { display: flex; justify-content: center; padding: 20px 0; }
+  .fcard-btn { width: 28px; height: 28px; border-radius: 999px; border: 0; background: var(--gold); color: var(--navy-deep); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.45); cursor: pointer; font-weight: 700; font-size: 18px; line-height: 1; }
+  .fcard-btn span { display: block; transition: transform .25s ease; }
+  .fcard-body { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .35s cubic-bezier(.4,0,.2,1), opacity .3s ease; }
+  .fcard-links { padding: 4px 12px 20px; }
+  .fcard-links a { display: block; text-align: center; padding: 7px 8px; border-radius: 8px; }
+  .foot-bottom { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+  [data-reveal] { opacity: 1; transform: none; transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2,0.8,0.2,1); will-change: opacity, transform; }
+</style>
+</head>
+<body>
+<div class="navy-glow"></div>
+<div class="lattice-bg" aria-hidden="true"></div>
+<div class="page">
 
-<section class="section section--ruled" aria-label="Privacy policy">
-  <div class="section-rule" aria-hidden="true"></div>
+  <nav class="wrap nav">
+    <a href="/" class="nav-brand">
+      <span class="nav-mono" aria-hidden="true">TL</span>
+      <span class="brandmark">Tanya M. Lawson</span>
+    </a>
+    <div class="nav-links">
+      <a href="/" class="navlink">Home</a>
+      <a href="/#skills" class="navlink">What I do</a>
+      <a href="/#experience" class="navlink">Experience</a>
+      <a href="/#build" class="navlink">What I've Built</a>
+      <a href="/#education" class="navlink">Education</a>
+      <a href="/her-story/" class="navlink">Her Story</a>
+    </div>
+    <a href="/#contact" class="btn btn-sky">Work with Me</a>
+  </nav>
 
-  <div class="container">
-    <div class="section-head">
-      <h2>Privacy</h2>
-      <div class="cta-kicker">Plain language, no fine-print games.</div>
+  <header class="wrap hero">
+    <span class="eyebrow">Privacy</span>
+    <h1 class="h-display">Plain language. <span class="grad-italic">No fine-print games.</span></h1>
+  </header>
+
+  <main class="wrap content">
+
+    <article class="card-3d content-card" data-reveal>
+      <span class="eyebrow">The short version</span>
+      <h2 class="h-card">This site doesn't track you.</h2>
+      <p class="body">This is a static website. It has no analytics scripts, no advertising trackers, no cookies set by me, and no database collecting information about your visit.</p>
+      <p class="body">If you contact me, your message reaches me at support@tanyamlawson.com — either through your own email app, or through the contact form, which is delivered by FormSubmit (a form-to-email relay service with its own privacy policy). I use what you send only to respond to you and understand your request. I do not sell, rent, or share your information with third parties, and I do not use it for marketing without your consent.</p>
+    </article>
+
+    <div class="grid-cards">
+      <article class="card-3d content-card" data-reveal>
+        <span class="eyebrow">What I receive</span>
+        <h2 class="h-card">Only what you choose to send.</h2>
+        <ul class="list body">
+          <li>your name and email, if you write to me</li>
+          <li>whatever you include in your message</li>
+          <li>nothing else — no visit logs kept by me</li>
+        </ul>
+      </article>
+
+      <article class="card-3d content-card" data-reveal>
+        <span class="eyebrow">Hosting</span>
+        <h2 class="h-card">GitHub Pages serves this site.</h2>
+        <p class="body">Like most web hosts, GitHub may keep standard server logs (such as IP addresses) to run and secure the service. That logging is governed by GitHub's own privacy policies, not by me.</p>
+      </article>
+
+      <article class="card-3d content-card" data-reveal>
+        <span class="eyebrow">Your choices</span>
+        <h2 class="h-card">You stay in control.</h2>
+        <p class="body">Want something you sent me corrected or deleted? Just ask — see the <a href="/data-deletion/" style="color:var(--sky);font-weight:600">Data Deletion</a> page. No forms, no hoops.</p>
+      </article>
+
+      <article class="card-3d content-card" data-reveal>
+        <span class="eyebrow">Updated</span>
+        <h2 class="h-card">July 2026</h2>
+        <p class="body">If how this site works ever changes in a way that affects your privacy, this page will change with it.</p>
+      </article>
     </div>
 
-    <div class="bento">
-      <article class="card span-8">
-        <div class="eyebrow">The short version</div>
-        <strong>This site doesn't track you.</strong>
-        <p>
-          This is a static website. It has no analytics scripts, no advertising trackers,
-          no cookies set by me, and no database collecting information about your visit.
-        </p>
-        <p style="margin-top:14px;">
-          If you contact me, your message reaches me at info@tanyamlawson.com — either through
-          your own email app, or through the contact form, which is delivered by FormSubmit
-          (a form-to-email relay service with its own privacy policy). I use what you send only
-          to respond to you and understand your request. I do not sell, rent, or share your
-          information with third parties, and I do not use it for marketing without your consent.
-        </p>
-      </article>
-
-      <article class="card span-4">
-        <div class="eyebrow">What I receive</div>
-        <strong>Only what you choose to send.</strong>
-        <p class="bullets">
-          • your name and email, if you write to me<br>
-          • whatever you include in your message<br>
-          • nothing else — no visit logs kept by me
-        </p>
-      </article>
-
-      <article class="card span-4">
-        <div class="eyebrow">Hosting</div>
-        <strong>GitHub Pages serves this site.</strong>
-        <p>
-          Like most web hosts, GitHub may keep standard server logs (such as IP addresses)
-          to run and secure the service. That logging is governed by
-          GitHub's own privacy policies, not by me.
-        </p>
-      </article>
-
-      <article class="card span-4">
-        <div class="eyebrow">Your choices</div>
-        <strong>You stay in control.</strong>
-        <p>
-          Want something you sent me corrected or deleted? Just ask — see the
-          <a href="/data-deletion/">Data Deletion</a> page. No forms, no hoops.
-        </p>
-      </article>
-
-      <article class="card span-4">
-        <div class="eyebrow">Updated</div>
-        <strong>June 2026</strong>
-        <p>
-          If how this site works ever changes in a way that affects your privacy,
-          this page will change with it.
-        </p>
-      </article>
+    <div class="actions">
+      <a href="/#contact" class="btn btn-gold">Work with Me →</a>
+      <a href="/" class="btn btn-ghost">Back to Home</a>
     </div>
 
-    <div class="cta-actions" style="margin-top: 22px;">
-      <a class="btn btn-primary" href="/contact/">Contact</a>
-      <a class="btn btn-ghost" href="/">Home</a>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="brandmark" style="margin-bottom:16px">Tanya M. Lawson</div>
+          <p class="body-sm">30+ years of operations, administration, and people skills — now poured into CREATORSEAL CORPORATION, building AI tools around one idea: proof before trust.</p>
+        </div>
+        <div class="card-3d fcard">
+          <div class="fcard-title">Site</div>
+          <div class="fcard-btnrow"><button type="button" class="fcard-btn" aria-expanded="false" aria-label="Toggle Site menu"><span>+</span></button></div>
+          <div class="fcard-body"><div class="fcard-links">
+            <a href="/#skills" class="navlink">What I do</a>
+            <a href="/#experience" class="navlink">Experience</a>
+            <a href="/#build" class="navlink">What I've Built</a>
+            <a href="/#education" class="navlink">Education</a>
+            <a href="/her-story/" class="navlink">Her Story</a>
+          </div></div>
+        </div>
+        <div class="card-3d fcard">
+          <div class="fcard-title">Built</div>
+          <div class="fcard-btnrow"><button type="button" class="fcard-btn" aria-expanded="false" aria-label="Toggle Built menu"><span>+</span></button></div>
+          <div class="fcard-body"><div class="fcard-links">
+            <a href="https://creatorseal.app" target="_blank" rel="noopener noreferrer" class="navlink">CREATORSEAL</a>
+            <a href="/#build" class="navlink">Human Texture Engine</a>
+            <a href="/#build" class="navlink">Memory Firewall</a>
+            <a href="/#build" class="navlink">OddLaw</a>
+          </div></div>
+        </div>
+        <div class="card-3d fcard">
+          <div class="fcard-title">Connect</div>
+          <div class="fcard-btnrow"><button type="button" class="fcard-btn" aria-expanded="false" aria-label="Toggle Connect menu"><span>+</span></button></div>
+          <div class="fcard-body"><div class="fcard-links">
+            <a href="mailto:support@tanyamlawson.com" class="navlink">Email</a>
+            <a href="https://www.linkedin.com/in/tm-lawson-wbm1/" target="_blank" rel="noopener noreferrer" class="navlink">LinkedIn</a>
+            <a href="https://www.youtube.com/@creatorsealofficial" target="_blank" rel="noopener noreferrer" class="navlink">YouTube</a>
+          </div></div>
+        </div>
+      </div>
+      <div class="foot-bottom body-sm">
+        <span>© 2026 Tanya M. Lawson</span>
+        <span><a href="/privacy/" class="navlink" style="color:var(--sky)">Privacy</a> &nbsp;·&nbsp; <a href="/terms/" class="navlink">Terms</a></span>
+      </div>
     </div>
-  </div>
-</section>
+  </footer>
+
+</div>
+<script>
+(function(){
+  document.querySelectorAll(".fcard").forEach(function(card){
+    var body = card.querySelector(".fcard-body");
+    var btn = card.querySelector(".fcard-btn");
+    var icon = btn.querySelector("span");
+    function setOpen(open){
+      card.dataset.open = open ? "1" : "";
+      body.style.maxHeight = open ? body.scrollHeight + "px" : "0";
+      body.style.opacity = open ? "1" : "0";
+      icon.textContent = open ? "−" : "+";
+      icon.style.transform = open ? "rotate(180deg)" : "rotate(0deg)";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+    card.addEventListener("click", function(e){
+      if (e.target.closest("a")) return;
+      setOpen(!card.dataset.open);
+    });
+  });
+  var els = document.querySelectorAll("[data-reveal]");
+  if (!("IntersectionObserver" in window)) return;
+  els.forEach(function(el){ el.style.opacity = "0"; el.style.transform = "translateY(60px) scale(0.96)"; });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.style.opacity = "1"; e.target.style.transform = "none"; io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
