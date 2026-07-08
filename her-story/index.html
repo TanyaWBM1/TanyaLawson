@@ -135,7 +135,7 @@
     .hero .h-display { opacity: 1; animation: none; }
   }
   .hero .eyebrow { display: block; text-align: right; margin-bottom: 40px; }
-  .hero-lead { margin-top: 40px; max-width: 68ch; }
+  .hero-lead { margin-top: 40px; max-width: 68ch; margin-left: auto; margin-right: auto; text-align: center; }
 
   /* pills */
   .pills { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; justify-content: center; }
@@ -177,6 +177,14 @@
   /* cta */
   .cta { padding-top: 32px; padding-bottom: 96px; }
   .cta-card { padding: 48px 40px; text-align: center; max-width: 900px; margin: 0 auto; }
+  @keyframes slow-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.035); }
+  }
+  .cta-card .h-section { animation: slow-pulse 3.5s ease-in-out infinite; transform-origin: center; }
+  @media (prefers-reduced-motion: reduce) {
+    .cta-card .h-section { animation: none; }
+  }
   .cta-actions { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
 
   /* footer */
