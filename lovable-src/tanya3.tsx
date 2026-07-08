@@ -250,7 +250,7 @@ function Hero() {
       </motion.h1>
 
       <div className="grid lg:grid-cols-[1.4fr_0.9fr] gap-12 items-center" style={{ marginTop: "-10vh" }}>
-        <div>
+        <div style={{ marginTop: "3vh" }}>
           <motion.p
             initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.15 }}
