@@ -147,10 +147,10 @@ const tickerItems = [
 ];
 
 const stats = [
-  { n: "30+",     label: "Years running back offices", center: false },
-  { n: "40,000",  label: "People at the largest company I supported", center: false },
+  { n: "30+",     label: "Years running back offices", center: true },
+  { n: "40,000",  label: "People at the largest company I supported", center: true },
   { n: "6",       label: "Software tools I use daily", center: true },
-  { n: "100%",    label: "Remote-ready, or on-site near NJ", center: false },
+  { n: "100%",    label: "Remote-ready, or on-site near NJ", center: true },
 ];
 
 const roles = [
@@ -485,7 +485,7 @@ function Ties() {
       </div>
       <div className="mt-10 flex flex-wrap gap-3 justify-center">
         {["Patience","Clear communication","Empathy","Emotional intelligence","Active listening","Discretion","Problem-solving","Calm under pressure","Follow-through","Dependability","Confidentiality"].map(t => (
-          <span key={t} className="body-sm" style={{ padding: "8px 16px", borderRadius: 999, border: "1px solid var(--line)", color: "var(--platinum-2)" }}>{t}</span>
+          <span key={t} className="body-sm" style={{ padding: "8px 16px", borderRadius: 999, border: "1px solid var(--sky)", background: "rgba(135,168,120,0.08)", color: "var(--platinum-2)" }}>{t}</span>
         ))}
       </div>
     </section>
@@ -658,14 +658,14 @@ function ContactCTA() {
         <div className="eyebrow mb-8">Let's work</div>
         <h2 className="h-section">Let's <span className="grad-italic">work together.</span></h2>
         <p className="lead mt-8 max-w-[56ch] mx-auto">
-          I'm open to operations, administrative, and AI roles — on-site near NJ/NY or fully remote. Tell me what you need and I'll tell me how I can help.
+          I'm open to operations, administrative, and AI roles — on-site near NJ/NY or fully remote. Tell me what you need and I'll tell you how I can help.
         </p>
         <div className="mt-12 flex flex-col sm:flex-row gap-5 justify-center">
-          <a href="mailto:lawsontm67@gmail.com" className="btn btn-sky">Email Me →</a>
-          <a href="#" className="btn btn-ghost">Download My Résumé</a>
+          <a href="mailto:support@tanyamlawson.com" className="btn btn-sky">Email Me →</a>
+          <a href="/assets/pdf/lawson_tanya_resume_2025.pdf" target="_blank" rel="noopener" className="btn btn-ghost">Download My Résumé</a>
         </div>
         <div className="body-sm mt-10">
-          lawsontm67@gmail.com &nbsp;·&nbsp; 732-309-2625 &nbsp;·&nbsp; Swedesboro, NJ &nbsp;·&nbsp; Open to remote &nbsp;·&nbsp;{" "}
+          support@tanyamlawson.com &nbsp;·&nbsp; 732-309-2625 &nbsp;·&nbsp; Swedesboro, NJ &nbsp;·&nbsp; Open to remote &nbsp;·&nbsp;{" "}
           <a href="https://www.linkedin.com/in/tm-lawson-wbm1/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--sky)", fontWeight: 600 }}>LinkedIn</a>
         </div>
       </div>
@@ -690,6 +690,12 @@ function Foot() {
             <a href="#experience" className="navlink">Experience</a>
             <a href="#build" className="navlink">What I build</a>
             <a href="#education" className="navlink">Education</a>
+            <a href="/about/" className="navlink">About</a>
+            <a href="/work/" className="navlink">Work</a>
+            <a href="/resume/" className="navlink">Résumé</a>
+            <a href="/how-i-work/" className="navlink">How I Work</a>
+            <a href="/her-story/" className="navlink">Her Story</a>
+            <a href="/contact/" className="navlink">Contact</a>
           </div>
         </div>
         <div>
@@ -704,7 +710,7 @@ function Foot() {
         <div>
           <h4 className="eyebrow mb-4">Connect</h4>
           <div className="flex flex-col gap-2">
-            <a href="mailto:lawsontm67@gmail.com" className="navlink">Email</a>
+            <a href="mailto:support@tanyamlawson.com" className="navlink">Email</a>
             <a href="https://www.linkedin.com/in/tm-lawson-wbm1/" target="_blank" rel="noopener noreferrer" className="navlink">LinkedIn</a>
             <a href="https://www.youtube.com/@creatorsealofficial" target="_blank" rel="noopener noreferrer" className="navlink">YouTube</a>
           </div>
@@ -712,7 +718,9 @@ function Foot() {
       </div>
       <div className="mt-12 pt-8 flex flex-wrap justify-between gap-4 body-sm" style={{ borderTop: "1px solid var(--line)" }}>
         <span>© 2026 Tanya M. Lawson</span>
-        <span>lawsontm67@gmail.com</span>
+        <span>
+          <a href="/privacy/" className="navlink">Privacy</a> &nbsp;·&nbsp; <a href="/terms/" className="navlink">Terms</a> &nbsp;·&nbsp; support@tanyamlawson.com
+        </span>
       </div>
     </footer>
   );
