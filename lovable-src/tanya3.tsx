@@ -681,6 +681,7 @@ function FooterCard({ title, items }: { title: string; items: FooterItem[] }) {
   return (
     <div
       className="card-3d rounded-xl overflow-hidden cursor-pointer select-none flex flex-col w-full"
+      style={{ marginTop: "3vh" }}
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="px-4 pt-8 pb-2 text-center">
