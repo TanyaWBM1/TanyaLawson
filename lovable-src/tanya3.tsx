@@ -186,6 +186,13 @@ const education = [
   { t: "Clinical Massage Therapy",       s: "Academy of Massage Therapy — certificate" },
 ];
 
+const certs = [
+  { t: "Trustworthy Generative AI", s: "Vanderbilt University — Coursera", img: "/assets/img/certs/cert-trustworthy-generative-ai.jpg", verify: "https://coursera.org/verify/LWAUK28Z0VT6" },
+  { t: "OpenAI GPTs: Creating Your Own Custom AI Assistants", s: "Vanderbilt University — Coursera", img: "/assets/img/certs/cert-openai-gpts.jpg", verify: "https://coursera.org/verify/VGQXL1EA7BS9" },
+  { t: "GenAI for Social Media Marketing Specialists", s: "Coursera", img: "/assets/img/certs/cert-genai-social-media.jpg", verify: "https://coursera.org/verify/Q3G39LYKRQ6S" },
+  { t: "Programming for Everybody (Getting Started with Python)", s: "University of Michigan — Coursera", img: "/assets/img/certs/cert-python-everybody.jpg", verify: "https://coursera.org/verify/D3NR2G87EAE4" },
+];
+
 /* ---------------------------------- page --------------------------------- */
 
 function Tanya3Home() {
@@ -628,6 +635,7 @@ function BuildSection() {
 /* ------------------------------ education ----------------------------- */
 
 function Education() {
+  const [certImg, setCertImg] = useState<string | null>(null);
   return (
     <section id="education" className="max-w-[1400px] mx-auto px-8 py-24">
       <div className="eyebrow mb-6">Training</div>
@@ -639,7 +647,28 @@ function Education() {
             <p className="body mt-3">{e.s}</p>
           </div>
         ))}
+        {certs.map(c => (
+          <div key={c.t} className="card-3d rounded-2xl p-8">
+            <h4 className="h-card" style={{ fontSize: "clamp(20px, 1.6vw, 26px)" }}>{c.t}</h4>
+            <p className="body mt-3">{c.s}</p>
+            <p className="mt-4">
+              <a href={c.img} onClick={(e) => { e.preventDefault(); setCertImg(c.img); }} style={{ color: "var(--sky)", fontWeight: 600 }}>View Certificate →</a>
+            </p>
+            <p className="body-sm mt-2">
+              <a href={c.verify} target="_blank" rel="noopener noreferrer">Verify on Coursera</a>
+            </p>
+          </div>
+        ))}
       </div>
+      {certImg && (
+        <div
+          onClick={() => setCertImg(null)}
+          style={{ position: "fixed", inset: 0, zIndex: 200, background: "rgba(15,18,16,0.93)", display: "flex", alignItems: "center", justifyContent: "center", padding: 28, cursor: "zoom-out" }}
+        >
+          <button type="button" aria-label="Close" style={{ position: "absolute", top: 18, right: 26, fontSize: 34, lineHeight: 1, color: "#EFEBE2", background: "none", border: 0, cursor: "pointer" }}>×</button>
+          <img src={certImg} alt="Course certificate" style={{ maxWidth: "min(1100px, 94vw)", maxHeight: "88vh", borderRadius: 12, boxShadow: "0 40px 80px rgba(0,0,0,0.7)", border: "1px solid rgba(239,235,226,0.18)" }} />
+        </div>
+      )}
     </section>
   );
 }
