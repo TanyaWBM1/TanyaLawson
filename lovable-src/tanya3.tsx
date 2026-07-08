@@ -757,7 +757,7 @@ function Foot() {
         />
       </div>
       <div className="mt-12 pt-8 flex flex-wrap justify-between gap-4 body-sm" style={{ borderTop: "1px solid var(--line)" }}>
-        <span>© 2026 Tanya M. Lawson. All Rights Reserved. &nbsp;·&nbsp; Designed &amp; built by me</span>
+        <span>© 2026 Tanya M. Lawson. All Rights Reserved. &nbsp;·&nbsp; <a href="/colophon/" className="navlink">Built by Me</a></span>
         <span>
           <a href="/privacy/" className="navlink">Privacy</a> &nbsp;·&nbsp; <a href="/terms/" className="navlink">Terms</a> &nbsp;·&nbsp; <a href="/disclaimer/" className="navlink">Disclaimer</a> &nbsp;·&nbsp; <a href="/acceptable-use/" className="navlink">Acceptable Use</a>
         </span>
