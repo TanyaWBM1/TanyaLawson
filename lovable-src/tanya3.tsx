@@ -222,7 +222,7 @@ function Nav() {
         <a href="#build" className="navlink transition-colors">What I build</a>
         <a href="#education" className="navlink transition-colors">Education</a>
       </div>
-      <a href="#contact" className="btn btn-sky">Hire me</a>
+      <a href="#contact" className="btn btn-sky">Work with Me</a>
     </nav>
   );
 }
@@ -249,7 +249,7 @@ function Hero() {
         I keep the back office <span className="grad-italic hero-running">running.</span>
       </motion.h1>
 
-      <div className="grid lg:grid-cols-[1.4fr_0.9fr] gap-12 items-center">
+      <div className="grid lg:grid-cols-[1.4fr_0.9fr] gap-12 items-center" style={{ marginTop: "-10vh" }}>
         <div>
           <motion.p
             initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
@@ -259,7 +259,7 @@ function Hero() {
             I'm Tanya Lawson. For more than 30 years I've kept offices organized, records clean, and money tracked — from a small startup all the way to a company with over 40,000 people. I work well under pressure, I keep my word, and I let the results speak. Today I'm also the founder of <strong style={{ color: "var(--platinum)" }}>CREATORSEAL CORPORATION</strong>, where I build AI tools I stand behind.
           </motion.p>
           <div className="mt-10 flex flex-col sm:flex-row items-start gap-5">
-            <a href="#contact" className="btn btn-gold min-w-[220px] justify-center">Hire Me →</a>
+            <a href="#contact" className="btn btn-gold min-w-[220px] justify-center">Work with Me →</a>
             <a href="#experience" className="btn btn-ghost min-w-[220px] justify-center">See My Experience</a>
           </div>
         </div>
@@ -310,7 +310,7 @@ function Hero() {
 function Ticker() {
   const line = [...tickerItems, ...tickerItems, ...tickerItems];
   return (
-    <section className="py-10 overflow-hidden border-y" style={{ borderColor: "var(--line)" }}>
+    <section className="py-10 overflow-hidden border-y max-w-[1400px] mx-auto" style={{ borderColor: "var(--line)" }}>
       <div className="flex whitespace-nowrap" style={{ animation: "t3-marquee 70s linear infinite", width: "max-content" }}>
         {line.map((p, i) => (
           <span key={i} className="px-10" style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: "clamp(28px, 3.4vw, 48px)", color: "var(--platinum)" }}>
@@ -485,7 +485,7 @@ function Ties() {
       </div>
       <div className="mt-10 flex flex-wrap gap-3 justify-center">
         {["Patience","Clear communication","Empathy","Emotional intelligence","Active listening","Discretion","Problem-solving","Calm under pressure","Follow-through","Dependability","Confidentiality"].map(t => (
-          <span key={t} className="body-sm" style={{ padding: "8px 16px", borderRadius: 999, border: "1px solid var(--sky)", background: "rgba(135,168,120,0.08)", color: "var(--platinum-2)" }}>{t}</span>
+          <span key={t} className="body" style={{ padding: "8px 16px", borderRadius: 999, border: "1px solid var(--sky)", background: "rgba(135,168,120,0.08)", color: "var(--platinum-2)" }}>{t}</span>
         ))}
       </div>
     </section>
@@ -620,7 +620,7 @@ function Education() {
   return (
     <section id="education" className="max-w-[1400px] mx-auto px-8 py-24">
       <div className="eyebrow mb-6">Training</div>
-      <h2 className="h-section mb-16">Education & <span className="grad-italic">certifications.</span></h2>
+      <h2 className="h-section mb-16">Education & <span className="grad-italic">Certifications.</span></h2>
       <div className="grid md:grid-cols-3 gap-8">
         {education.map(e => (
           <div key={e.t} className="card-3d rounded-2xl p-8">
@@ -643,7 +643,7 @@ function QuoteBand() {
         <blockquote className="h-section" style={{ fontStyle: "italic" }}>
           Do the work. Keep your word. <span className="grad-italic">Let results speak.</span>
         </blockquote>
-        <div className="body-sm mt-8">— the rule I've followed my whole career</div>
+        <div className="lead mt-8">— the rule I've followed my whole career</div>
       </div>
     </section>
   );
@@ -662,7 +662,7 @@ function ContactCTA() {
         </p>
         <div className="mt-12 flex flex-col sm:flex-row gap-5 justify-center">
           <a href="mailto:support@tanyamlawson.com" className="btn btn-sky">Email Me →</a>
-          <a href="/assets/pdf/lawson_tanya_resume_2025.pdf" target="_blank" rel="noopener" className="btn btn-ghost">Download My Résumé</a>
+          <a href="/assets/pdf/lawson_tanya_resume_2025.pdf" target="_blank" rel="noopener" className="btn btn-ghost">Download My Resume</a>
         </div>
         <div className="body-sm mt-10">
           support@tanyamlawson.com &nbsp;·&nbsp; 732-309-2625 &nbsp;·&nbsp; Swedesboro, NJ &nbsp;·&nbsp; Open to remote &nbsp;·&nbsp;{" "}
@@ -692,7 +692,7 @@ function Foot() {
             <a href="#education" className="navlink">Education</a>
             <a href="/about/" className="navlink">About</a>
             <a href="/work/" className="navlink">Work</a>
-            <a href="/resume/" className="navlink">Résumé</a>
+            <a href="/resume/" className="navlink">Resume</a>
             <a href="/how-i-work/" className="navlink">How I Work</a>
             <a href="/her-story/" className="navlink">Her Story</a>
             <a href="/contact/" className="navlink">Contact</a>
