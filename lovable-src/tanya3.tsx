@@ -221,6 +221,7 @@ function Nav() {
         <a href="#experience" className="navlink transition-colors">Experience</a>
         <a href="#build" className="navlink transition-colors">What I build</a>
         <a href="#education" className="navlink transition-colors">Education</a>
+        <a href="/her-story/" className="navlink transition-colors">Her Story</a>
       </div>
       <a href="#contact" className="btn btn-sky">Work with Me</a>
     </nav>
