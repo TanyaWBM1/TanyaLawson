@@ -660,12 +660,11 @@ function ContactCTA() {
         <p className="lead mt-8 max-w-[56ch] mx-auto">
           I'm open to operations, administrative, and AI roles — on-site near NJ/NY or fully remote. Tell me what you need and I'll tell you how I can help.
         </p>
-        <div className="mt-12 flex flex-col sm:flex-row gap-5 justify-center">
+        <div className="mt-12 flex flex-col sm:flex-row gap-5 justify-center items-center">
           <a href="mailto:support@tanyamlawson.com" className="btn btn-sky">Email Me →</a>
-          <a href="/assets/pdf/lawson_tanya_resume_2025.pdf" target="_blank" rel="noopener" className="btn btn-ghost">Download My Resume</a>
         </div>
         <div className="body-sm mt-10">
-          support@tanyamlawson.com &nbsp;·&nbsp; 732-309-2625 &nbsp;·&nbsp; Swedesboro, NJ &nbsp;·&nbsp; Open to remote &nbsp;·&nbsp;{" "}
+          Swedesboro, NJ &nbsp;·&nbsp; Open to Remote &nbsp;·&nbsp;{" "}
           <a href="https://www.linkedin.com/in/tm-lawson-wbm1/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--sky)", fontWeight: 600 }}>LinkedIn</a>
         </div>
       </div>
