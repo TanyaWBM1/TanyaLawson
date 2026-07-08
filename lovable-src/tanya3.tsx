@@ -140,7 +140,7 @@ const skills = [
 ];
 
 const tickerItems = [
-  "Do the work. Keep your word. Let the results speak.",
+  "Proof before trust.",
   "Calm is a strategy.",
   "Consistency beats intensity.",
   "Do the right thing, even when no one is watching.",
