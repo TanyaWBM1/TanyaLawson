@@ -383,10 +383,9 @@ function StickySkills() {
                 className="card-3d rounded-2xl p-8 lg:p-10 min-h-[45vh] flex flex-col justify-center"
               >
                 <div className="flex items-center gap-6 mb-4">
-                  <span className="eyebrow" style={{ color: "var(--gold)" }}>{s.i}</span>
-                  <span className="body-sm">0{i + 1} / 0{skills.length}</span>
+                  <span className="eyebrow" style={{ color: "var(--gold)", fontSize: "clamp(18px,1.5vw,24px)" }}>{s.i}</span>
                 </div>
-                <h3 className="h-card mb-4" style={{ maxWidth: "18ch" }}>{s.t}</h3>
+                <h3 className="h-card mb-4" style={{ maxWidth: "18ch" }}>{s.t}:</h3>
                 <p className="body max-w-[54ch]">{s.d}</p>
               </div>
             ))}
