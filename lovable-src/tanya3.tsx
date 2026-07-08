@@ -654,7 +654,7 @@ function Education() {
               <a href={c.img} onClick={(e) => { e.preventDefault(); setCertImg(c.img); }} style={{ color: "var(--sky)", fontWeight: 600 }}>View Certificate →</a>
             </p>
             <p className="body-sm mt-2">
-              <a href={c.verify} target="_blank" rel="noopener noreferrer">Verify on Coursera</a>
+              <a href={c.verify} target="_blank" rel="noopener noreferrer">Verify on <span style={{ textDecoration: "underline" }}>Coursera</span> →</a>
             </p>
           </div>
         ))}
