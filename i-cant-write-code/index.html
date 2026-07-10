@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Her Story — Tanya M. Lawson</title>
-<meta name="description" content="A grounded, real-life story of resilience, judgment, and building decision-ready systems under pressure.">
-<meta property="og:title" content="Her Story — Tanya M. Lawson">
-<meta property="og:description" content="Life experience translated into operational clarity, calm execution, and high-trust systems.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://tanyamlawson.com/her-story/">
-<link rel="canonical" href="https://tanyamlawson.com/her-story/">
+<title>I Can't Write Code. I Built It Anyway. — Tanya M. Lawson</title>
+<meta name="description" content="I shipped tested AI security software without writing a line of code. What actually made it possible: refusing to accept 'done' without proof.">
+<meta property="og:title" content="I Can't Write Code. I Built It Anyway. — Tanya M. Lawson">
+<meta property="og:description" content="The skill was never coding. It was knowing what good looks like — and making the machine prove it got there.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tanyamlawson.com/i-cant-write-code/">
+<link rel="canonical" href="https://tanyamlawson.com/i-cant-write-code/">
 <link rel="icon" href="/assets/img/logo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -143,54 +143,17 @@
   .hero .eyebrow { display: block; text-align: right; margin-bottom: 40px; }
   .hero-lead { margin-top: 40px; max-width: 68ch; margin-left: auto; margin-right: auto; text-align: center; }
 
-  /* pills */
-  .pills { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; justify-content: center; }
-  .pill {
-    font-family: var(--sans); font-size: clamp(17px, 1.2vw, 21px); color: var(--platinum-2);
-    padding: 8px 16px; border-radius: 999px;
-    border: 1px solid var(--sky); background: rgba(135,168,120,0.08);
-  }
-
-  /* story cards */
-  .story { padding-top: 32px; padding-bottom: 48px; display: flex; flex-direction: column; gap: 32px; }
+  /* essay cards */
+  .story { padding-top: 32px; padding-bottom: 48px; display: flex; flex-direction: column; gap: 32px; max-width: 980px; margin: 0 auto; }
   .story-card { padding: 40px; }
   @media (min-width: 900px) { .story-card { padding: 56px; } }
   .story-card .eyebrow { margin-bottom: 20px; display: block; }
   .story-card h2 { margin-bottom: 24px; }
   .story-card p + p { margin-top: 16px; }
-  .cols { display: grid; gap: 24px; margin-top: 28px; }
-  @media (min-width: 900px) { .cols { grid-template-columns: 1fr 1fr; gap: 40px; } }
-  .col-k { font-family: var(--mono); font-size: clamp(13px, 0.95vw, 15px); letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
-  .list { list-style: none; }
-  .list li { padding-left: 22px; position: relative; }
-  .list li + li { margin-top: 8px; }
-  .list li::before { content: "•"; color: var(--sky); position: absolute; left: 0; }
-
-  /* photos */
-  .photos { padding-top: 16px; padding-bottom: 48px; }
-  .photo-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 40px; }
-  .photo-grid figure {
-    position: relative; border-radius: 16px; overflow: hidden;
-    box-shadow: 0 32px 64px -16px rgba(0,0,0,0.55), 0 16px 32px -12px rgba(0,0,0,0.4), 0 0 0 1px rgba(239,235,226,0.08);
-  }
-  .photo-grid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
-  .photo-grid figure::after {
-    content: ""; position: absolute; inset: 0; border-radius: 16px; pointer-events: none;
-    border: 2px solid rgba(219,209,181,0.55);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(0,0,0,0.45);
-  }
 
   /* cta */
   .cta { padding-top: 32px; padding-bottom: 96px; }
   .cta-card { padding: 48px 40px; text-align: center; max-width: 900px; margin: 0 auto; }
-  @keyframes slow-pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.035); }
-  }
-  .cta-card .h-section { animation: slow-pulse 3.5s ease-in-out infinite; transform-origin: center; }
-  @media (prefers-reduced-motion: reduce) {
-    .cta-card .h-section { animation: none; }
-  }
   .cta-actions { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
 
   /* footer */
@@ -235,152 +198,97 @@
       <a href="/#build" class="navlink">What I've Built</a>
       <a href="/#education" class="navlink">Education</a>
       <a href="/writing/" class="navlink">Writing</a>
-      <a href="/her-story/" class="navlink" style="color:var(--sky)" aria-current="page">Her Story</a>
+      <a href="/her-story/" class="navlink">Her Story</a>
     </div>
     <a href="/#contact" class="btn btn-sky">Work with Me</a>
   </nav></div>
 
   <header class="wrap hero">
-    <span class="eyebrow">Her Story · Backbone · Clarity · Follow-through</span>
-    <h1 class="h-display">Life tested me. <span class="grad-italic">That's why I'm reliable.</span></h1>
+    <span class="eyebrow">An essay · Proof before trust</span>
+    <h1 class="h-display">I can't write code. <span class="grad-italic">I built it anyway.</span></h1>
     <p class="lead hero-lead">
-      I learned how to manage complexity by navigating real pressure, real responsibility, and situations where getting it wrong wasn't an option. That experience taught me how to slow things down, see what actually matters, and help people make clear decisions when everything feels urgent. When things are unclear or overwhelming, I focus on creating order people can work with — practical steps, clear priorities, and systems that make it easier to move forward instead of harder.
+      This week I shipped a piece of AI security software. It has a test suite, a public benchmark, receipts no one can forge, and a server that developers can install today. I can't write a single line of the code it's made of.
     </p>
-    <div class="pills" aria-label="Story flow">
-      <span class="pill">Pressure → Clarity</span>
-      <span class="pill">Confusion → Structure</span>
-      <span class="pill">Chaos → Execution</span>
-      <span class="pill">Overwhelm → Order</span>
-      <span class="pill">Doubt → Proof</span>
-      <span class="pill">Urgency → Calm</span>
-    </div>
   </header>
 
   <main class="wrap story">
 
     <article class="card-3d story-card" data-reveal>
-      <span class="eyebrow">The beginning</span>
-      <h2 class="h-card">Not from a textbook.</h2>
-      <p class="body">I didn't learn how to manage complexity from a textbook or a corporate training program. I learned it by navigating real-life pressures, real-life consequences, and real responsibilities — long before titles or job descriptions came into play.</p>
-      <p class="body">I became an emancipated minor at 16 — paying my own rent as a teenager, and raising a child of my own by 18. I've been taking care of myself, and others, ever since. That's not something I share for sympathy; it's context. When responsibility isn't optional, you learn early how to budget, plan, solve problems, and follow through. <span class="hl">Every skill I offer today, I first learned because I had to.</span></p>
-      <p class="body">My background isn't a corporate fairy tale. It's a working blueprint for resilience, judgment, and follow-through. When things are unclear, high-stakes, or messy, I'm the person who knows how to slow things down, see what actually matters, and move forward without creating new problems.</p>
-      <div class="cols">
-        <div>
-          <div class="col-k">The backbone</div>
-          <p class="body">I'm a Foundational Black American woman married to a Haitian immigrant. My life sits at the intersection of multiple cultures, systems, and expectations — which means I learned early how to translate, adapt, and operate across environments.</p>
-        </div>
-        <div>
-          <div class="col-k">What that became professionally</div>
-          <p class="body">Over time, that turned into a practical skill: turning confusion into structure, and pressure into clean execution. <span class="hl">I'm not theoretical. I'm practiced.</span></p>
-        </div>
-      </div>
+      <span class="eyebrow">The wall</span>
+      <h2 class="h-card">For most of my life, that sentence would have been a confession.</h2>
+      <p class="body">I want to stay on that sentence a moment. Not knowing how to code meant you stood on the outside of the thing you wanted to build and waited for someone who did. Maybe you could describe your idea well enough that they'd build it for you. Maybe you couldn't afford them. Either way, the wall was real, and I lived on the wrong side of it for years. That wall is gone now. I'm proof it's gone — but not for the reason most people will assume.</p>
+      <p class="body">Here's the assumption. People hear "she built software without coding" and picture me typing a wish into a chatbot and receiving a finished product in return, gift-wrapped. That is not what happened. If you try it that way, you will get a confident mess back, and you will feel worse about yourself than when you started. I know, because producing that confident mess was most of the work. The finished thing came out of everything I did after it.</p>
     </article>
 
     <article class="card-3d story-card" data-reveal>
-      <span class="eyebrow">Professional grounding</span>
-      <h2 class="h-card">Trusted to clean it up — and keep it steady.</h2>
-      <p class="body">I've spent over 20 years supporting executives, managing operations, and keeping organizations moving when the details mattered and the margin for error was thin. I've been trusted to "clean it up" when things drifted — and to keep it steady after the cleanup.</p>
-      <div class="cols">
-        <div>
-          <div class="col-k">I've done work like</div>
-          <ul class="list body">
-            <li>executive support in high-trust environments</li>
-            <li>finance + documentation that has to hold up later</li>
-            <li>operations cleanup when the system is inconsistent</li>
-            <li>building workflows that reduce mistakes and rework</li>
-          </ul>
-        </div>
-        <div>
-          <div class="col-k">What I optimize for</div>
-          <p class="body">Clarity, accountability, documentation, and decisions that don't fall apart under stress.</p>
-        </div>
-      </div>
+      <span class="eyebrow">The skill</span>
+      <h2 class="h-card">A boss who can't type.</h2>
+      <p class="body">What actually happened is that I ran the project like a boss who can't type. I couldn't write the code, but I could tell when the work was wrong. So I made the AI prove every claim it handed me. When it gave me a number, I asked how it knew. When it wanted me to approve its own homework, I made it show the receipts. More than once, it told me — warmly, confidently, in complete sentences — that everything was finished and everything was fine. And it wasn't. And I caught it. Not because I'm technical. Because I refused to accept the words "it's done" as proof that it was done.</p>
+      <p class="body"><span class="hl">That refusal is the entire skill. Not coding.</span> Knowing what "good" looks like, and making the machine prove it got there before you believe it.</p>
     </article>
 
     <article class="card-3d story-card" data-reveal>
-      <span class="eyebrow">The fire</span>
-      <h2 class="h-card">Clarity was a choice.</h2>
-      <p class="body">Life tested me in ways that don't show up on a resume. I've lost two brothers. One went missing as a teenager. The other was killed before he could meet his own child.</p>
-      <p class="body">Loss like that leaves you two options: it swallows you, or it sharpens you. I chose clarity — on purpose, every day. It's why I care so deeply about legal clarity, fair systems that work in practice, and mental wellness. I know firsthand what it costs when people are overwhelmed or ignored.</p>
-      <p class="body"><span class="hl">This isn't ideology. It's pattern recognition.</span></p>
-      <p class="body">It's also why my work centers on proof before trust. I learned the hard way: people without resources need better records, clearer thinking, and stronger evidence trails. Today I build exactly that — starting with <a href="/#build" style="color:var(--sky);font-weight:600">CREATORSEAL</a>, which helps creators keep proof of their work.</p>
+      <span class="eyebrow">The tool</span>
+      <h2 class="h-card">One job: guesses can't act.</h2>
+      <p class="body">So let me tell you what the thing I built actually does, in plain words, because the plainness is the point. I call it <a href="https://github.com/TanyaWBM1/AI-Memory-Firewall" target="_blank" rel="noopener noreferrer" style="color:var(--sky);font-weight:600">the Memory Firewall</a>. It does one job. It stops an AI from treating its own guesses as facts. When an AI writes something down to remember later, the firewall makes it tag what that claim really is: something it verified, something it was merely told, or something it simply guessed. And here is the rule at the center of it — a guess is not allowed to drive an action. It can be stored. It can be discussed. But it cannot quietly become the reason something happens, until something real confirms it. <span class="hl">A guess written on Monday does not get to wake up on Wednesday wearing the costume of a fact.</span></p>
     </article>
 
     <article class="card-3d story-card" data-reveal>
-      <span class="eyebrow">The balance</span>
-      <h2 class="h-card">Two worlds that rarely get combined.</h2>
-      <p class="body">My career blends two worlds that rarely get combined — systems and people. That's my advantage.</p>
-      <div class="cols">
-        <div>
-          <div class="col-k">Logic + structure</div>
-          <p class="body">I understand structure, compliance, and why details matter. I've kept payroll, reconciliations, and contracts clean for CFOs and controllers — environments where a small mistake becomes an expensive one. I build systems that reduce risk, support clear decisions, and hold up when somebody asks "prove it."</p>
-        </div>
-        <div>
-          <div class="col-k">Human awareness</div>
-          <p class="body">I spent over a decade as a clinical massage therapist, and years supporting residents with disabilities in their daily lives. That work trained me to listen — not just to what people say, but to what they avoid, rush past, or can't yet articulate. Steady presence is a skill. I earned it.</p>
-        </div>
-      </div>
-      <p class="body" style="margin-top:28px">I bring both into operations and systems work. I don't just fix what's broken. I identify why it broke — and design systems that don't rely on constant supervision to hold together.</p>
+      <span class="eyebrow">The older word</span>
+      <h2 class="h-card">Hallucination has a human name.</h2>
+      <p class="body">There's a word for the habit I was building the machine out of. The popular one is <em>hallucination</em>. That's when an AI states something false with total confidence — not because it's lying, but because it genuinely cannot feel the difference between what it checked and what it filled in.</p>
+      <p class="body">The word I keep returning to is older, and it was never a computer word at all. <em>Confabulation.</em> Doctors used it long before any of this. It describes a person whose mind closes a gap with a confident, coherent story they completely believe. There's no intent to deceive. They are not lying. They simply cannot feel the seam between what happened and what they assembled, after the fact, to make the world make sense.</p>
+      <p class="body"><span class="hl">And that is where this stops being a story about machines.</span></p>
     </article>
 
     <article class="card-3d story-card" data-reveal>
-      <span class="eyebrow">The advantage</span>
-      <h2 class="h-card">Maturity is a feature.</h2>
-      <p class="body">Older workers get overlooked all the time. That's a costly mistake. Decades of working life build the things no training program can shortcut: judgment, wisdom, maturity, and the emotional intelligence to stay steady when everything around you isn't.</p>
-      <p class="body">I manage my own coping. I've lived through enough to know the difference between a crisis and an inconvenience — so I don't treat one like the other. I don't bring drama, I don't take feedback personally, and I don't need supervision to stay responsible.</p>
-      <div class="cols">
-        <div>
-          <div class="col-k">What the years build</div>
-          <p class="body">Experience, wisdom, and pattern recognition. I've seen enough cycles to know what matters, what can wait, and what will break if it's ignored.</p>
-        </div>
-        <div>
-          <div class="col-k">What that means for you</div>
-          <p class="body">A steady presence who self-regulates under stress, keeps composure so others can keep theirs, and treats responsibility as a default — not a stretch goal.</p>
-        </div>
-      </div>
-      <p class="body" style="margin-top:28px"><span class="hl">Experience doesn't expire. It compounds.</span></p>
+      <span class="eyebrow">The mirror</span>
+      <h2 class="h-card">We confabulate constantly.</h2>
+      <p class="body">We are fed information all day and we act on it as fact without ever checking it. Someone doesn't answer a message, and within seconds we've written the whole story of what it means about us. We're certain a plan will work — not because we tested it, but because we need it to. We repeat things "everyone knows" that we have never once verified. And underneath all of it runs the uncomfortable engine: a great deal of what we believe, we believe because it feels good, or because it protects us, not because it is true. We fill our own gaps with confident stories. Same as the machine. We just don't have anything standing between the guess and the action.</p>
+      <p class="body">Now hold those two things next to each other, because this is the part I can't stop thinking about. We are furious at AI for doing the exact thing we do all day long. We want the machine to check before it speaks. We want it to admit what it doesn't know. We want it to change its answer the moment the facts change. And we would very much like to be personally excused from all three.</p>
+      <p class="body">There's a blunt word for demanding a standard from someone else that you won't hold yourself to. It's <em>hypocrisy</em>, and I'm not aiming it at you — I'm including myself, because I've done every version of it. And there's a deeper word for why the machine's habit gets under our skin in the first place. It's <em>projection</em>. The confident guessing irritates us in the AI precisely because it is ours. We built the machine in our own image, and we handed it our worst habit right alongside our best ones, and now we flinch at the reflection.</p>
+      <p class="body">That's what the firewall really is, once you strip the software away. <span class="hl">It's a mirror we built for the machine and then had to look into ourselves.</span> The tool forces the AI to do the one thing almost none of us do without help. It has to separate what it knows from what it's only assuming, call the guess a guess out loud, and refuse to act until something real backs it up. Reading that sentence, most people feel a small sting of recognition. Good. That sting is the whole point.</p>
     </article>
 
     <article class="card-3d story-card" data-reveal>
-      <span class="eyebrow">The long view</span>
-      <h2 class="h-card">Work as stewardship.</h2>
-      <p class="body">I don't approach work as a series of tasks. I approach it as stewardship — building structure that reduces confusion, increases trust, and supports long-term stability.</p>
-      <div class="cols">
-        <div>
-          <div class="col-k">What I build toward</div>
-          <ul class="list body">
-            <li>community-based systems and education</li>
-            <li>evidence tools that protect people's work and words</li>
-            <li>tools that help people make better decisions — not just faster ones</li>
-          </ul>
-        </div>
-        <div>
-          <div class="col-k">Bottom line</div>
-          <p class="body">If you're looking for someone steady, precise, and human — who can handle ambiguity and still deliver — <span class="hl">that's what my story produced.</span></p>
-        </div>
-      </div>
+      <span class="eyebrow">The order</span>
+      <h2 class="h-card">I didn't set out to fix machines.</h2>
+      <p class="body">I'll be honest about the order I learned this in, because it matters. I did not set out to fix machines. I spent years trying to build this exact discipline for myself. I wanted to stop acting on comfortable stories, and to make my own beliefs earn their keep before I bet my time or money on them. The AI version came second. It turned out the machine and I had the very same problem, dressed in different clothes. I built the machine's fix first for one plain reason: a machine will hold still long enough to let you install one. A person won't. <span class="hl">The install in your own head is the harder job, and I am still in the middle of mine.</span></p>
+    </article>
+
+    <article class="card-3d story-card" data-reveal>
+      <span class="eyebrow">The second instrument</span>
+      <h2 class="h-card">The same fight, aimed at writing.</h2>
+      <p class="body">The firewall isn't the only thing I built out of this one idea, though. It's just the one aimed at what an AI treats as true. There's a second instrument, aimed at how an AI <em>writes</em> — and unlike the firewall, you can use it this minute, with no technical anything at all.</p>
+      <p class="body">I call it the <a href="https://tanyawbm1.github.io/dual-lane-writing-method/" target="_blank" rel="noopener noreferrer" style="color:var(--sky);font-weight:600">Dual Lane Writing Method</a>. Here's the problem it solves. AI writing has a signature failure: it comes out fluent. Smooth, confident, grammatically flawless, and completely hollow — paragraphs that carry the shape of meaning with none of the weight. You've read a thousand sentences like that. They have a shape where a point should be. And if that failure sounds familiar, it should. It's the same failure the firewall fights, aimed at a different target: a guess dressed as a fact, fluency dressed as substance — a confident surface with nothing underneath.</p>
+      <p class="body">Dual Lane is the check for the writing version. It scores a draft on two lanes at once. Lane One asks the machine's question: is this clear, is it ordered, does it actually say something? Lane Two asks the human one: does this sound like a person wrote it for a person, or like a brochure wrote it for nobody? The whole method fits on one line — <span class="hl">the structure must hold, and the human texture must breathe.</span> A draft isn't finished until it does both. You paste your writing in, and it tells you which lane is failing and shows you the exact phrases that gave it away. Nothing to install. Nothing to learn.</p>
+      <p class="body">I want to be clear about one thing, because it's the first place people's minds go: Dual Lane is not a trick for sneaking AI writing past a detector. It's the opposite. It's an instrument for making writing genuinely better — clearer, more grounded, more honestly yours — instead of merely smooth. And here's the proof, the kind I keep insisting on: the essay you are reading right now was run through it before you saw it. If a sentence in here reads like a brochure, I missed one. The standard is public, so you can check my work — which is the whole spirit of both these tools.</p>
+    </article>
+
+    <article class="card-3d story-card" data-reveal>
+      <span class="eyebrow">Who this is for</span>
+      <h2 class="h-card">Two kinds of builders.</h2>
+      <p class="body">If you're like me — you have something you care about getting right, and you've spent your life assuming the building part belonged to someone else — it doesn't anymore. You can start today, and you don't even have to start with code. Paste your next important email into Dual Lane. Put the firewall's habit on your own thinking. The only thing to learn is the one habit both tools are made of: don't trust the output, make it prove itself.</p>
+      <p class="body">And if you're one of the people who <em>can</em> code, who's been doing this for years and does it well — you can build on top of both of them. I made them to be foundations, not finish lines. The woman who built them couldn't write either one by hand, and that isn't a disclaimer. It's the point. <span class="hl">If the standard can come from someone who lived outside the wall, then the wall was never the thing that mattered.</span></p>
+    </article>
+
+    <article class="card-3d story-card" data-reveal>
+      <span class="eyebrow">What it isn't</span>
+      <h2 class="h-card">Only what I can prove.</h2>
+      <p class="body">Let me end by telling you what the firewall isn't, because refusing to oversell it is the only honest way to describe a tool like this. It isn't finished. Thousands of people are not using it yet. I am not going to call something true because it would sound good in a post. What I will tell you is only what I can prove. It exists, it's tested, the code and receipts are public, and the person who built it couldn't write a line of it herself.</p>
+      <p class="body">If that's possible — really sit with what you've been telling yourself you can't do. <span class="hl">Notice how confident that story was. And notice how little you ever checked it.</span></p>
     </article>
 
   </main>
 
-  <section class="wrap photos">
-    <span class="eyebrow">Personal moments</span>
-    <div class="photo-grid">
-      <figure><img src="/assets/img/1imagetanyafrontviewoceanandmountainbackground.jpg" alt="Tanya Lawson candid moment" loading="lazy"></figure>
-      <figure><img src="/assets/img/TanyaBusinessVideo.jpg" alt="Tanya Lawson working" loading="lazy"></figure>
-      <figure><img src="/assets/img/tanya5.jpg" alt="Tanya Lawson speaking" loading="lazy"></figure>
-      <figure><img src="/assets/img/aladokunvabeach1.jpg" alt="Tanya Lawson reflective portrait" loading="lazy"></figure>
-      <figure><img src="/assets/img/aladokun nyc.jpg" alt="Tanya Lawson in New York City" loading="lazy"></figure>
-    </div>
-  </section>
-
   <section class="wrap cta">
     <div class="card-3d cta-card" data-reveal>
-      <span class="eyebrow" style="display:block;margin-bottom:24px">Next</span>
-      <h2 class="h-section">Let's <span class="grad-italic">work together.</span></h2>
-      <p class="lead" style="margin-top:24px;max-width:56ch;margin-left:auto;margin-right:auto">This is the story behind the steadiness. If it sounds like what your team needs, tell me what you're working on.</p>
+      <span class="eyebrow" style="display:block;margin-bottom:24px">Check my work</span>
+      <h2 class="h-section">Don't trust it. <span class="grad-italic">Make it prove itself.</span></h2>
+      <p class="lead" style="margin-top:24px;max-width:56ch;margin-left:auto;margin-right:auto">Both tools are public — the code, the tests, and the receipts. Run them yourself.</p>
       <div class="cta-actions">
-        <a href="/#contact" class="btn btn-gold">Work with Me →</a>
+        <a href="https://github.com/TanyaWBM1/AI-Memory-Firewall" target="_blank" rel="noopener noreferrer" class="btn btn-gold">The Memory Firewall →</a>
+        <a href="https://tanyawbm1.github.io/dual-lane-writing-method/" target="_blank" rel="noopener noreferrer" class="btn btn-sky">Try Dual Lane →</a>
         <a href="/" class="btn btn-ghost">Back to Home</a>
       </div>
     </div>
@@ -401,7 +309,6 @@
             <a href="/#experience" class="navlink">Experience</a>
             <a href="/#build" class="navlink">What I've Built</a>
             <a href="/#education" class="navlink">Education</a>
-      <a href="/her-story/" class="navlink" style="color:var(--sky)" aria-current="page">Her Story</a>
             <a href="/writing/" class="navlink">Writing</a>
             <a href="/her-story/" class="navlink">Her Story</a>
           </div></div>
@@ -441,7 +348,7 @@
   var tw = document.querySelector(".hero .h-display .grad-italic");
   if (tw && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     var full = tw.textContent;
-    tw.textContent = " ";
+    tw.textContent = " ";
     tw.classList.add("typing");
     var i = 0;
     setTimeout(function type(){

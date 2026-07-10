@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Terms of Use — Tanya M. Lawson</title>
-<meta name="description" content="Simple terms for using this website.">
-<meta property="og:title" content="Terms of Use — Tanya M. Lawson">
-<meta property="og:description" content="Plain-language terms for tanyamlawson.com.">
+<title>Writing — Tanya M. Lawson</title>
+<meta name="description" content="Essays on building with AI, evidence discipline, and proof before trust — each one run through my own writing standard before you see it.">
+<meta property="og:title" content="Writing — Tanya M. Lawson">
+<meta property="og:description" content="Essays that show their work. Proof before trust, applied to my own writing.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://tanyamlawson.com/terms/">
-<link rel="canonical" href="https://tanyamlawson.com/terms/">
+<meta property="og:url" content="https://tanyamlawson.com/writing/">
+<link rel="canonical" href="https://tanyamlawson.com/writing/">
 <link rel="icon" href="/assets/img/logo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,12 +18,14 @@
   :root {
     --navy-deep:  #0F1210;
     --navy:       #1F2621;
+    --navy-elev:  #2A322C;
     --platinum:   #EFEBE2;
     --platinum-2: #C7C4B9;
     --platinum-d: #8A8A80;
     --gold:       #C9BFA3;
     --gold-soft:  #DDD4B8;
     --sky:        #87A878;
+    --sky-soft:   #A8C0A0;
     --line:       rgba(239,235,226,0.09);
     --serif:      'Libre Baskerville', Georgia, serif;
     --sans:       'IBM Plex Sans', system-ui, sans-serif;
@@ -31,62 +33,119 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body { background: var(--navy-deep); color: var(--platinum); font-family: var(--sans); font-size: clamp(18px, 1.15vw, 20px); line-height: 1.6; min-height: 100vh; }
+  body {
+    background: var(--navy-deep);
+    color: var(--platinum);
+    font-family: var(--sans);
+    font-size: clamp(18px, 1.15vw, 20px);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
   ::selection { background: var(--sky); color: var(--navy-deep); }
   a { color: inherit; text-decoration: none; }
-  .navy-glow { position: fixed; inset: 0; z-index: -1; background: radial-gradient(ellipse at 20% 0%, #1F2621 0%, transparent 55%), radial-gradient(ellipse at 80% 20%, rgba(135,168,120,0.18) 0%, transparent 50%), var(--navy-deep); }
-  .lattice-bg { position: fixed; inset: 0; pointer-events: none; z-index: 0;
-    background-image: linear-gradient(to right, rgba(239,235,226,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(239,235,226,0.06) 1px, transparent 1px), linear-gradient(to right, rgba(135,168,120,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(135,168,120,0.04) 1px, transparent 1px);
+  img { max-width: 100%; display: block; }
+
+  .navy-glow {
+    position: fixed; inset: 0; z-index: -1;
+    background:
+      radial-gradient(ellipse at 20% 0%, #1F2621 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 20%, rgba(135,168,120,0.18) 0%, transparent 50%),
+      var(--navy-deep);
+  }
+  .lattice-bg {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image:
+      linear-gradient(to right, rgba(239,235,226,0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(239,235,226,0.06) 1px, transparent 1px),
+      linear-gradient(to right, rgba(135,168,120,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(135,168,120,0.04) 1px, transparent 1px);
     background-size: 88px 88px, 88px 88px, 22px 22px, 22px 22px;
     mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, #000 0%, rgba(0,0,0,0.55) 65%, transparent 100%);
-    -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, #000 0%, rgba(0,0,0,0.55) 65%, transparent 100%); }
+    -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, #000 0%, rgba(0,0,0,0.55) 65%, transparent 100%);
+  }
   .page { position: relative; z-index: 1; }
   .wrap { max-width: 1400px; margin: 0 auto; padding-left: 32px; padding-right: 32px; }
-  .h-display { font-family: var(--serif); font-weight: 700; font-size: clamp(40px, 5.6vw, 84px); line-height: 1.05; letter-spacing: -0.025em; }
-  .h-card { font-family: var(--serif); font-weight: 700; font-size: clamp(22px, 2vw, 30px); line-height: 1.2; letter-spacing: -0.01em; }
-  .lead { font-family: var(--sans); font-size: clamp(20px, 1.7vw, 26px); line-height: 1.5; color: var(--platinum-2); }
-  .body { font-family: var(--sans); font-size: clamp(17px, 1.2vw, 21px); line-height: 1.65; color: var(--platinum-2); }
-  .body-sm { font-family: var(--sans); font-size: clamp(15px, 1vw, 17px); line-height: 1.55; color: var(--platinum-d); }
-  .eyebrow { font-family: var(--mono); font-size: clamp(13px, 0.95vw, 15px); letter-spacing: 0.32em; text-transform: uppercase; color: var(--sky); font-weight: 500; }
-  .grad-italic { font-style: italic; background: linear-gradient(135deg, var(--sky) 0%, var(--gold-soft) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  .h-display { font-family: var(--serif); font-weight: 700; font-size: clamp(48px, 6.4vw, 96px); line-height: 1.02; letter-spacing: -0.025em; }
+  .h-card    { font-family: var(--serif); font-weight: 700; font-size: clamp(24px, 2.2vw, 34px); line-height: 1.2; letter-spacing: -0.01em; }
+  .lead      { font-family: var(--sans); font-size: clamp(20px, 1.7vw, 26px); line-height: 1.5; color: var(--platinum-2); }
+  .body      { font-family: var(--sans); font-size: clamp(17px, 1.2vw, 21px); line-height: 1.65; color: var(--platinum-2); }
+  .body-sm   { font-family: var(--sans); font-size: clamp(15px, 1vw, 17px); line-height: 1.55; color: var(--platinum-d); }
+  .eyebrow   { font-family: var(--mono); font-size: clamp(13px, 0.95vw, 15px); letter-spacing: 0.32em; text-transform: uppercase; color: var(--sky); font-weight: 500; }
+  .grad-italic {
+    font-style: italic;
+    background: linear-gradient(135deg, var(--sky) 0%, var(--gold-soft) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hl { font-style: italic; color: var(--gold); }
   .brandmark { font-family: var(--serif); font-weight: 700; font-size: clamp(20px, 1.5vw, 24px); letter-spacing: -0.01em; }
   .navlink { font-family: var(--sans); font-weight: 500; font-size: clamp(15px, 1vw, 17px); color: var(--platinum-2); transition: color .2s ease; }
   .navlink:hover { color: var(--sky); }
-  .card-3d { position: relative; overflow: hidden; border: 1px solid transparent; border-radius: 16px;
-    background-image: linear-gradient(hsl(40 10% 14% / 0.7), hsl(40 10% 14% / 0.5)), linear-gradient(160deg, hsl(42 29% 91% / 0.22) 0%, hsl(40 12% 22% / 0.4) 45%, hsl(0 0% 0% / 0.7) 100%);
-    background-origin: border-box; background-clip: padding-box, border-box;
-    box-shadow: 18px 18px 40px hsl(0 0% 0% / 0.6), 0 22px 44px hsl(0 0% 0% / 0.55), -10px -10px 28px hsl(42 29% 91% / 0.05), inset 0 1px 0 hsl(42 29% 91% / 0.14), inset 0 -1px 0 hsl(0 0% 0% / 0.6);
-    transition: transform .4s cubic-bezier(.22,1,.36,1); }
+
+  .card-3d {
+    position: relative; overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    background-image:
+      linear-gradient(hsl(40 10% 14% / 0.7), hsl(40 10% 14% / 0.5)),
+      linear-gradient(160deg, hsl(42 29% 91% / 0.22) 0%, hsl(40 12% 22% / 0.4) 45%, hsl(0 0% 0% / 0.7) 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow:
+      18px 18px 40px hsl(0 0% 0% / 0.6),
+      0 22px 44px hsl(0 0% 0% / 0.55),
+      -10px -10px 28px hsl(42 29% 91% / 0.05),
+      inset 0 1px 0 hsl(42 29% 91% / 0.14),
+      inset 0 -1px 0 hsl(0 0% 0% / 0.6);
+    transition: transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s ease;
+  }
   .card-3d:hover { transform: translateY(-6px); }
+
   .btn { display: inline-flex; align-items: center; gap: 12px; font-family: var(--sans); font-weight: 600; font-size: clamp(16px, 1.15vw, 19px); padding: 16px 30px; border-radius: 999px; transition: all .25s ease; border: 0; cursor: pointer; }
-  .btn-sky { background: var(--sky); color: var(--navy-deep); box-shadow: 0 12px 30px -12px rgba(135,168,120,0.6); }
+  .btn-sky   { background: var(--sky); color: var(--navy-deep); box-shadow: 0 12px 30px -12px rgba(135,168,120,0.6); }
   .btn-sky:hover { transform: translateY(-2px); }
-  .btn-gold { background: var(--gold); color: var(--navy-deep); box-shadow: 0 14px 34px -14px rgba(201,191,163,0.7); }
+  .btn-gold  { background: var(--gold); color: var(--navy-deep); box-shadow: 0 14px 34px -14px rgba(201,191,163,0.7); }
   .btn-gold:hover { transform: translateY(-2px); }
   .btn-ghost { color: var(--sky); border: 2px solid var(--sky); background: rgba(135,168,120,0.06); }
   .btn-ghost:hover { background: rgba(135,168,120,0.12); }
+
+  /* nav */
   .nav { display: flex; align-items: center; justify-content: space-between; padding-top: 40px; padding-bottom: 24px; }
   .nav-brand { display: flex; align-items: center; gap: 16px; }
-  .nav-mono { width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; font-size: 16px; font-family: var(--serif); font-weight: 700; color: var(--navy-deep); background: linear-gradient(135deg, var(--sky) 0%, var(--gold) 100%); }
+  .nav-mono {
+    width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center;
+    font-size: 16px; font-family: var(--serif); font-weight: 700; color: var(--navy-deep);
+    background: linear-gradient(135deg, var(--sky) 0%, var(--gold) 100%);
+  }
   .nav-links { display: none; align-items: center; gap: 32px; }
   @media (min-width: 768px) { .nav-links { display: flex; } }
   .sticky-nav { position: sticky; top: 0; z-index: 100; background: rgba(15,18,16,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
   .sticky-nav .nav { padding-top: 14px; padding-bottom: 14px; }
-  .hero { padding-top: 56px; padding-bottom: 40px; }
-  .hero .eyebrow { display: block; margin-bottom: 32px; }
-  .content { padding-top: 16px; padding-bottom: 64px; display: flex; flex-direction: column; gap: 28px; }
-  .content-card { padding: 40px; }
-  @media (min-width: 900px) { .content-card { padding: 48px 56px; } }
-  .content-card .eyebrow { display: block; margin-bottom: 16px; }
-  .content-card h2 { margin-bottom: 16px; }
-  .content-card p + p { margin-top: 14px; }
-  .grid-cards { display: grid; gap: 28px; }
-  @media (min-width: 900px) { .grid-cards { grid-template-columns: 1fr 1fr; } }
-  .list { list-style: none; }
-  .list li { padding-left: 22px; position: relative; }
-  .list li + li { margin-top: 8px; }
-  .list li::before { content: "•"; color: var(--sky); position: absolute; left: 0; }
-  .actions { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 12px; }
+
+  /* hero */
+  .hero { padding-top: 64px; padding-bottom: 48px; }
+  @keyframes hero-reveal {
+    from { opacity: 0; transform: translateY(26px); }
+    to   { opacity: 1; transform: none; }
+  }
+  .hero .h-display { opacity: 0; animation: hero-reveal .9s cubic-bezier(.22,1,.36,1) .1s forwards; }
+  .hero .h-display .grad-italic { display: block; text-align: right; padding-bottom: 0.15em; margin-bottom: -0.15em; }
+  @media (prefers-reduced-motion: reduce) {
+    .hero .h-display { opacity: 1; animation: none; }
+  }
+  .hero .eyebrow { display: block; text-align: right; margin-bottom: 40px; }
+  .hero-lead { margin-top: 40px; max-width: 68ch; margin-left: auto; margin-right: auto; text-align: center; }
+
+  /* essay list */
+  .story { padding-top: 32px; padding-bottom: 96px; display: flex; flex-direction: column; gap: 32px; max-width: 980px; margin: 0 auto; }
+  .story-card { padding: 40px; display: block; }
+  @media (min-width: 900px) { .story-card { padding: 56px; } }
+  .story-card .eyebrow { margin-bottom: 20px; display: block; }
+  .story-card h2 { margin-bottom: 24px; }
+  .story-card p + p { margin-top: 16px; }
+  .read-more { display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; font-weight: 600; color: var(--sky); }
+
+  /* footer */
   footer { border-top: 1px solid var(--line); padding-top: 64px; padding-bottom: 64px; }
   .foot-grid { display: grid; gap: 40px; align-items: start; }
   @media (min-width: 768px) { .foot-grid { grid-template-columns: repeat(4, 1fr); } }
@@ -94,12 +153,19 @@
   @media (min-width: 768px) { .fcard { margin-top: 3vh; } }
   .fcard-title { padding: 32px 16px 8px; text-align: center; font-family: var(--sans); font-weight: 700; color: var(--platinum); font-size: 1.14rem; letter-spacing: 0.08em; text-transform: uppercase; }
   .fcard-btnrow { display: flex; justify-content: center; padding: 20px 0; }
-  .fcard-btn { width: 28px; height: 28px; border-radius: 999px; border: 0; background: var(--gold); color: var(--navy-deep); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.45); cursor: pointer; font-weight: 700; font-size: 18px; line-height: 1; }
+  .fcard-btn {
+    width: 28px; height: 28px; border-radius: 999px; border: 0;
+    background: var(--gold); color: var(--navy-deep);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.45); cursor: pointer;
+    font-weight: 700; font-size: 18px; line-height: 1;
+  }
   .fcard-btn span { display: block; transition: transform .25s ease; }
   .fcard-body { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .35s cubic-bezier(.4,0,.2,1), opacity .3s ease; }
   .fcard-links { padding: 4px 12px 20px; }
   .fcard-links a { display: block; text-align: center; padding: 7px 8px; border-radius: 8px; }
   .foot-bottom { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+
   [data-reveal] { opacity: 1; transform: none; transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2,0.8,0.2,1); will-change: opacity, transform; }
 </style>
 </head>
@@ -118,56 +184,41 @@
       <a href="/#skills" class="navlink">What I've Done</a>
       <a href="/#experience" class="navlink">Experience</a>
       <a href="/#build" class="navlink">What I've Built</a>
-      <a href="/#education" class="navlink">Education</a>
-      <a href="/writing/" class="navlink">Writing</a>
+      <a href="/writing/" class="navlink" style="color:var(--sky)" aria-current="page">Writing</a>
       <a href="/her-story/" class="navlink">Her Story</a>
     </div>
     <a href="/#contact" class="btn btn-sky">Work with Me</a>
   </nav></div>
 
   <header class="wrap hero">
-    <span class="eyebrow">Terms of Use</span>
-    <h1 class="h-display">Simple terms for a <span class="grad-italic">simple site.</span></h1>
+    <span class="eyebrow">Writing · Proof before trust</span>
+    <h1 class="h-display">Essays that <span class="grad-italic">show their work.</span></h1>
+    <p class="lead hero-lead">
+      I write about building with AI, evidence discipline, and the habit both depend on: don't trust the output — make it prove itself. Every essay here goes through my own writing standard, the Dual Lane check, before you see it. The standard is public, so you can check my work.
+    </p>
   </header>
 
-  <main class="wrap content">
+  <main class="wrap story">
 
-    <article class="card-3d content-card" data-reveal>
-      <span class="eyebrow">What this site is</span>
-      <h2 class="h-card">A personal and professional website.</h2>
-      <p class="body">This site shares who I am, how I work, and what I build. It exists for employment, partnership, and collaboration conversations. By using it, you agree to these terms.</p>
-      <p class="body">Content here is general information, not professional advice. Pages that discuss legal topics, documentation, or evidence practices describe my own approach and education work — they are not legal advice, and reading them does not create any professional relationship.</p>
-    </article>
+    <a class="card-3d story-card" data-reveal href="/writing/borrowed-discipline/">
+      <span class="eyebrow">Series · Five habits</span>
+      <h2 class="h-card">Borrowed Discipline.</h2>
+      <p class="body">The elite don't just vote — they lobby. Five things the other side of the money line does differently, translated to a regular life: ask who decides, ask who benefits, put expectations in writing, own what compounds, give every belief a test and a date.</p>
+      <p class="body-sm" style="margin-top:16px">None of it requires money. You don't need their money to borrow their discipline.</p>
+      <span class="read-more">Read the series →</span>
+    </a>
 
-    <div class="grid-cards">
-      <article class="card-3d content-card" data-reveal>
-        <span class="eyebrow">Content ownership</span>
-        <h2 class="h-card">The work here is mine.</h2>
-        <p class="body">Text, images, and original material on this site are © Tanya M. Lawson, all rights reserved. Please don't reproduce or republish content without written permission. Linking to pages is welcome.</p>
-      </article>
+    <a class="card-3d story-card" data-reveal href="/i-cant-write-code/">
+      <span class="eyebrow">Essay · July 2026</span>
+      <h2 class="h-card">I Can't Write Code. I Built It Anyway.</h2>
+      <p class="body">This week I shipped a piece of AI security software, and I can't write a single line of the code it's made of. The skill was never coding. It was refusing to accept "it's done" as proof that it was done — and it turns out the machine and I had the very same problem, dressed in different clothes.</p>
+      <p class="body-sm" style="margin-top:16px">On the Memory Firewall, confabulation, hypocrisy, projection — and the mirror we built for the machine and then had to look into ourselves.</p>
+      <span class="read-more">Read the essay →</span>
+    </a>
 
-      <article class="card-3d content-card" data-reveal>
-        <span class="eyebrow">External links</span>
-        <h2 class="h-card">Other sites, their rules.</h2>
-        <p class="body">This site links to outside services (such as YouTube, LinkedIn, and CREATORSEAL at creatorseal.app). Those sites have their own terms and privacy practices, which I don't control.</p>
-      </article>
-
-      <article class="card-3d content-card" data-reveal>
-        <span class="eyebrow">No guarantees</span>
-        <h2 class="h-card">Provided as-is.</h2>
-        <p class="body">I work to keep this site accurate and current, but it's provided "as is," without warranties. I'm not liable for decisions made based on general information found here.</p>
-      </article>
-
-      <article class="card-3d content-card" data-reveal>
-        <span class="eyebrow">Updated</span>
-        <h2 class="h-card">July 2026</h2>
-        <p class="body">These terms may be updated as the site evolves. The current version always lives on this page.</p>
-      </article>
-    </div>
-
-    <div class="actions">
-      <a href="/#contact" class="btn btn-gold">Work with Me →</a>
-      <a href="/" class="btn btn-ghost">Back to Home</a>
+    <div class="card-3d story-card" data-reveal style="text-align:center">
+      <span class="eyebrow" style="display:block">Next</span>
+      <p class="body">More essays are in progress. If you want to know when one lands, <a href="/#contact" style="color:var(--sky);font-weight:600">reach out</a> — or check back here.</p>
     </div>
 
   </main>
@@ -214,7 +265,7 @@
       </div>
       <div class="foot-bottom body-sm">
         <span>© 2026 Tanya M. Lawson. All Rights Reserved. &nbsp;·&nbsp; <a href="/colophon/" class="navlink">Built by Me</a></span>
-        <span><a href="/privacy/" class="navlink">Privacy</a> &nbsp;·&nbsp; <a href="/terms/" class="navlink" style="color:var(--sky)">Terms</a> &nbsp;·&nbsp; <a href="/disclaimer/" class="navlink">Disclaimer</a> &nbsp;·&nbsp; <a href="/acceptable-use/" class="navlink">Acceptable Use</a></span>
+        <span><a href="/privacy/" class="navlink">Privacy</a> &nbsp;·&nbsp; <a href="/terms/" class="navlink">Terms</a> &nbsp;·&nbsp; <a href="/disclaimer/" class="navlink">Disclaimer</a> &nbsp;·&nbsp; <a href="/acceptable-use/" class="navlink">Acceptable Use</a></span>
       </div>
     </div>
   </footer>
@@ -244,7 +295,11 @@
   els.forEach(function(el){ el.style.opacity = "0"; el.style.transform = "translateY(60px) scale(0.96)"; });
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
-      if (e.isIntersecting) { e.target.style.opacity = "1"; e.target.style.transform = "none"; io.unobserve(e.target); }
+      if (e.isIntersecting) {
+        e.target.style.opacity = "1";
+        e.target.style.transform = "none";
+        io.unobserve(e.target);
+      }
     });
   }, { threshold: 0.15 });
   els.forEach(function(el){ io.observe(el); });

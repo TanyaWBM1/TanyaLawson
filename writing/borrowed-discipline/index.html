@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Borrowed Discipline — Tanya M. Lawson</title>
+<meta name="description" content="Five things the other side of the money line does differently — none of which require money. The elite don't just vote; they lobby. Learn the habit, not the mythology.">
+<meta property="og:title" content="Borrowed Discipline — Tanya M. Lawson">
+<meta property="og:description" content="You don't need their money to borrow their discipline. Five habits, translated to regular life.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tanyamlawson.com/writing/borrowed-discipline/">
+<link rel="canonical" href="https://tanyamlawson.com/writing/borrowed-discipline/">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-deep:  #0F1210;
+    --navy:       #1F2621;
+    --navy-elev:  #2A322C;
+    --platinum:   #EFEBE2;
+    --platinum-2: #C7C4B9;
+    --platinum-d: #8A8A80;
+    --gold:       #C9BFA3;
+    --gold-soft:  #DDD4B8;
+    --sky:        #87A878;
+    --sky-soft:   #A8C0A0;
+    --line:       rgba(239,235,226,0.09);
+    --serif:      'Libre Baskerville', Georgia, serif;
+    --sans:       'IBM Plex Sans', system-ui, sans-serif;
+    --mono:       'JetBrains Mono', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--navy-deep); color: var(--platinum); font-family: var(--sans); font-size: clamp(18px, 1.15vw, 20px); line-height: 1.6; min-height: 100vh; }
+  ::selection { background: var(--sky); color: var(--navy-deep); }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .navy-glow { position: fixed; inset: 0; z-index: -1;
+    background: radial-gradient(ellipse at 20% 0%, #1F2621 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 20%, rgba(135,168,120,0.18) 0%, transparent 50%), var(--navy-deep); }
+  .lattice-bg { position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image:
+      linear-gradient(to right, rgba(239,235,226,0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(239,235,226,0.06) 1px, transparent 1px),
+      linear-gradient(to right, rgba(135,168,120,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(135,168,120,0.04) 1px, transparent 1px);
+    background-size: 88px 88px, 88px 88px, 22px 22px, 22px 22px;
+    mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, #000 0%, rgba(0,0,0,0.55) 65%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, #000 0%, rgba(0,0,0,0.55) 65%, transparent 100%); }
+  .page { position: relative; z-index: 1; }
+  .wrap { max-width: 1400px; margin: 0 auto; padding-left: 32px; padding-right: 32px; }
+  .h-display { font-family: var(--serif); font-weight: 700; font-size: clamp(44px, 6vw, 88px); line-height: 1.04; letter-spacing: -0.025em; }
+  .h-section { font-family: var(--serif); font-weight: 700; font-size: clamp(36px, 4.6vw, 64px); line-height: 1.08; letter-spacing: -0.02em; }
+  .h-card    { font-family: var(--serif); font-weight: 700; font-size: clamp(24px, 2.2vw, 34px); line-height: 1.2; letter-spacing: -0.01em; }
+  .lead      { font-family: var(--sans); font-size: clamp(20px, 1.7vw, 26px); line-height: 1.5; color: var(--platinum-2); }
+  .body      { font-family: var(--sans); font-size: clamp(17px, 1.2vw, 21px); line-height: 1.65; color: var(--platinum-2); }
+  .body-sm   { font-family: var(--sans); font-size: clamp(15px, 1vw, 17px); line-height: 1.55; color: var(--platinum-d); }
+  .eyebrow   { font-family: var(--mono); font-size: clamp(13px, 0.95vw, 15px); letter-spacing: 0.32em; text-transform: uppercase; color: var(--sky); font-weight: 500; }
+  .grad-italic { font-style: italic; background: linear-gradient(135deg, var(--sky) 0%, var(--gold-soft) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hl { font-style: italic; color: var(--gold); }
+  .brandmark { font-family: var(--serif); font-weight: 700; font-size: clamp(20px, 1.5vw, 24px); letter-spacing: -0.01em; }
+  .navlink { font-family: var(--sans); font-weight: 500; font-size: clamp(15px, 1vw, 17px); color: var(--platinum-2); transition: color .2s ease; }
+  .navlink:hover { color: var(--sky); }
+  .card-3d { position: relative; overflow: hidden; border: 1px solid transparent; border-radius: 16px;
+    background-image: linear-gradient(hsl(40 10% 14% / 0.7), hsl(40 10% 14% / 0.5)),
+      linear-gradient(160deg, hsl(42 29% 91% / 0.22) 0%, hsl(40 12% 22% / 0.4) 45%, hsl(0 0% 0% / 0.7) 100%);
+    background-origin: border-box; background-clip: padding-box, border-box;
+    box-shadow: 18px 18px 40px hsl(0 0% 0% / 0.6), 0 22px 44px hsl(0 0% 0% / 0.55), -10px -10px 28px hsl(42 29% 91% / 0.05), inset 0 1px 0 hsl(42 29% 91% / 0.14), inset 0 -1px 0 hsl(0 0% 0% / 0.6);
+    transition: transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s ease; }
+  .card-3d:hover { transform: translateY(-6px); }
+  .btn { display: inline-flex; align-items: center; gap: 12px; font-family: var(--sans); font-weight: 600; font-size: clamp(16px, 1.15vw, 19px); padding: 16px 30px; border-radius: 999px; transition: all .25s ease; border: 0; cursor: pointer; }
+  .btn-sky   { background: var(--sky); color: var(--navy-deep); box-shadow: 0 12px 30px -12px rgba(135,168,120,0.6); }
+  .btn-sky:hover { transform: translateY(-2px); }
+  .btn-gold  { background: var(--gold); color: var(--navy-deep); box-shadow: 0 14px 34px -14px rgba(201,191,163,0.7); }
+  .btn-gold:hover { transform: translateY(-2px); }
+  .btn-ghost { color: var(--sky); border: 2px solid var(--sky); background: rgba(135,168,120,0.06); }
+  .btn-ghost:hover { background: rgba(135,168,120,0.12); }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding-top: 40px; padding-bottom: 24px; }
+  .nav-brand { display: flex; align-items: center; gap: 16px; }
+  .nav-mono { width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; font-size: 16px; font-family: var(--serif); font-weight: 700; color: var(--navy-deep); background: linear-gradient(135deg, var(--sky) 0%, var(--gold) 100%); }
+  .nav-links { display: none; align-items: center; gap: 32px; }
+  @media (min-width: 768px) { .nav-links { display: flex; } }
+  .sticky-nav { position: sticky; top: 0; z-index: 100; background: rgba(15,18,16,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+  .sticky-nav .nav { padding-top: 14px; padding-bottom: 14px; }
+  .hero { padding-top: 64px; padding-bottom: 48px; }
+  @keyframes hero-reveal { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+  .hero .h-display { opacity: 0; animation: hero-reveal .9s cubic-bezier(.22,1,.36,1) .1s forwards; }
+  .hero .h-display .grad-italic { display: block; text-align: right; padding-bottom: 0.15em; margin-bottom: -0.15em; }
+  @media (prefers-reduced-motion: reduce) { .hero .h-display { opacity: 1; animation: none; } }
+  .hero .eyebrow { display: block; text-align: right; margin-bottom: 40px; }
+  .hero-lead { margin-top: 40px; max-width: 68ch; margin-left: auto; margin-right: auto; text-align: center; }
+  .story { padding-top: 32px; padding-bottom: 48px; display: flex; flex-direction: column; gap: 32px; max-width: 980px; margin: 0 auto; }
+  .story-card { padding: 40px; }
+  @media (min-width: 900px) { .story-card { padding: 56px; } }
+  .story-card .eyebrow { margin-bottom: 20px; display: block; }
+  .story-card h2 { margin-bottom: 24px; }
+  .story-card p + p { margin-top: 16px; }
+  .homework { margin-top: 24px; padding: 18px 22px; border: 1px dashed var(--sky); border-radius: 12px; }
+  .homework .k { font-family: var(--mono); font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sky); display: block; margin-bottom: 8px; }
+  .cta { padding-top: 32px; padding-bottom: 96px; }
+  .cta-card { padding: 48px 40px; text-align: center; max-width: 900px; margin: 0 auto; }
+  .cta-actions { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+  footer { border-top: 1px solid var(--line); padding-top: 48px; padding-bottom: 48px; }
+  .foot-simple { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+  [data-reveal] { opacity: 1; transform: none; transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2,0.8,0.2,1); will-change: opacity, transform; }
+</style>
+</head>
+<body>
+<div class="navy-glow"></div>
+<div class="lattice-bg" aria-hidden="true"></div>
+<div class="page">
+
+  <div class="sticky-nav"><nav class="wrap nav">
+    <a href="/" class="nav-brand">
+      <span class="nav-mono" aria-hidden="true">TL</span>
+      <span class="brandmark">Tanya M. Lawson</span>
+    </a>
+    <div class="nav-links">
+      <a href="/" class="navlink">Home</a>
+      <a href="/#skills" class="navlink">What I've Done</a>
+      <a href="/#build" class="navlink">What I've Built</a>
+      <a href="/writing/" class="navlink" style="color:var(--sky)">Writing</a>
+      <a href="/her-story/" class="navlink">Her Story</a>
+    </div>
+    <a href="/#contact" class="btn btn-sky">Work with Me</a>
+  </nav></div>
+
+  <header class="wrap hero">
+    <span class="eyebrow">A series · Five habits · No money required</span>
+    <h1 class="h-display">Borrowed <span class="grad-italic">discipline.</span></h1>
+    <p class="lead hero-lead">
+      Nobody taught most of us what the children of wealth learn at the dinner table. This series is my attempt to write it down — five things the other side of the money line does differently, translated to a regular life. You don't need their money to borrow their discipline.
+    </p>
+  </header>
+
+  <main class="wrap story">
+
+    <article class="card-3d story-card" data-reveal>
+      <span class="eyebrow">Habit one</span>
+      <h2 class="h-card">They don't just vote — they lobby.</h2>
+      <p class="body">Most of us participate in systems at the level the system offers us. We vote when there's an election. We apply when there's an opening. We accept the price on the tag and the terms in the fine print. That's the participation layer — and it's real, but it's the layer built for us, not by us.</p>
+      <p class="body">Wealthy interests work one level up. They spend billions every year on lobbying — not because they're cheating, but because they understand something most of us were never told: <span class="hl">influencing the rule beats playing well under it.</span> While regular folks argue about the game, they're in the room where the rulebook gets edited.</p>
+      <p class="body">You can't hire a lobbying firm. But you can stop only filling out the forms you're handed. Every system in your life has a decision-maker: the landlord behind the leasing agent, the manager behind the policy, the owner behind the clerk, the billing department that can waive what the first phone rep cannot. Regular people talk to the counter. Borrowed discipline asks: <b>who actually decides — and what do they care about?</b> Then it speaks to that person, in writing, with a specific ask.</p>
+      <div class="homework"><span class="k">This week</span><p class="body">Find one place where you've been voting when you could lobby. Appeal the bill. Email the owner. Propose your terms instead of accepting the defaults. Worst case, they say no — which is exactly where you already were.</p></div>
+    </article>
+
+    <article class="card-3d story-card" data-reveal>
+      <span class="eyebrow">Habit two</span>
+      <h2 class="h-card">They don't read the headline — they ask who paid for it.</h2>
+      <p class="body">A headline is not information. A headline is a product, engineered to make you click, feel, and share. The publication earns when you react — not when you're correct. Once you see that incentive, you can't unsee it.</p>
+      <p class="body">People with real money already know this, because they can't afford to be steered. Before a serious investor believes a story about a company, they read the company's actual filings. Before they believe a study, they look at who funded it. The move isn't cynicism — it's a habit of asking one question before believing anything: <span class="hl">who benefits if I believe this?</span></p>
+      <p class="body">At regular scale the habit is nearly free. The article about the miracle food — who sells the food? The guru's warning that you're falling behind — what's he selling that fixes it? The rage-bait about people like you or unlike you — who profits when you're angry? <b>Engineered emotion is the tell.</b> The stronger a piece of information makes you feel, the more likely someone paid for that feeling.</p>
+      <div class="homework"><span class="k">This week</span><p class="body">The next headline that spikes your emotions, hunt down the primary source — the actual study, the actual bill, the actual quote in context. Compare it to the headline. Do this three times and you will never read the news the same way.</p></div>
+    </article>
+
+    <article class="card-3d story-card" data-reveal>
+      <span class="eyebrow">Habit three</span>
+      <h2 class="h-card">They don't hope — they put it in writing.</h2>
+      <p class="body">Regular life runs on handshakes and good vibes. We agree in conversations, remember what suits us, and get hurt when the other person remembers differently. The wealthy stopped doing that centuries ago — not because they trust less, but because they know something kinder and colder: <span class="hl">memory bends toward self-interest, in everyone, always.</span> Paper doesn't.</p>
+      <p class="body">That's why their world is made of term sheets, contracts, and meeting minutes. Writing it down isn't an insult to the relationship — it's protection for it. The expectation gets named before the bet, so nobody has to fight later about what was promised.</p>
+      <p class="body">The regular-scale version costs one email. After any conversation that matters — a raise discussion, a family agreement about money, a client's promise — send the recap: "So we're on the same page: here's what we agreed." You'll learn something immediately, because <b>people who meant it will confirm, and people who didn't will suddenly have questions.</b> Both answers are gifts.</p>
+      <div class="homework"><span class="k">This week</span><p class="body">Pick one verbal agreement currently floating in your life and put it in writing today — kindly, plainly, dated. Then notice how differently you both behave once it exists.</p></div>
+    </article>
+
+    <article class="card-3d story-card" data-reveal>
+      <span class="eyebrow">Habit four</span>
+      <h2 class="h-card">They don't work harder at everything — they own what compounds.</h2>
+      <p class="body">Here's the quiet difference between wage life and wealth life: wages have to be re-earned every single day, and wealth mostly doesn't. Money makes money while its owner sleeps. That's compounding, and the people who have it protect it above almost everything else.</p>
+      <p class="body">Meanwhile, regular folks get sold hustle — as if the problem were effort. It almost never is. The problem is that all the effort resets to zero each morning. <span class="hl">Busy is not the same as building.</span> The question the wealthy ask about any effort is the one nobody taught us to ask: <b>what becomes easier, cheaper, or more automatic after this is done?</b> If the answer is nothing, it's a treadmill, however noble the sweat.</p>
+      <p class="body">And compounding isn't only money. A template you reuse compounds. A skill that stacks on another skill compounds. A reputation compounds. A relationship where trust accumulates compounds. One honest hour spent building something reusable quietly outworks a week of effort that vanishes at sundown.</p>
+      <div class="homework"><span class="k">This week</span><p class="body">List what you did last week. Mark each item: did it make anything about this week easier? Whatever earned no mark is your treadmill. Convert one treadmill item into an asset — a template, a system, a standing arrangement — before Friday.</p></div>
+    </article>
+
+    <article class="card-3d story-card" data-reveal>
+      <span class="eyebrow">Habit five</span>
+      <h2 class="h-card">They don't keep comfortable stories.</h2>
+      <p class="body">Professional money managers do something that looks almost inhuman: before they enter a position, they write down what would prove them wrong — a number, a date — and when it arrives, they exit. No debate, no "it just needs more time." The kill condition was set when their head was clear, precisely so it could overrule them when their heart wasn't.</p>
+      <p class="body">Regular folks were taught the opposite: persistence as a virtue, quitting as a character flaw. So we keep dead strategies, dead jobs, and dead stories alive for years, paying for them monthly in time and hope. <span class="hl">Nobody ever taught us that a belief should have an expiration date and a test.</span></p>
+      <p class="body">The habit transfers whole: before you start the thing, write one sentence — <b>"I'm wrong about this if ___ by ___."</b> Then honor it. Killing a strategy that reality already rejected isn't failure; it's a refund on your remaining time. The people with the most resources guard nothing more fiercely than that.</p>
+      <div class="homework"><span class="k">This week</span><p class="body">Take one ongoing effort you've been defending on hope and write its wrong-if sentence. Put the check date on your calendar. When the date comes, believe the number over the story.</p></div>
+    </article>
+
+    <article class="card-3d story-card" data-reveal>
+      <span class="eyebrow">The thread</span>
+      <h2 class="h-card">One relationship, five faces.</h2>
+      <p class="body">Read the five again and you'll notice they're one habit wearing five outfits: <b>a different relationship with information and decisions.</b> Ask who decides. Ask who benefits. Name the expectation in writing. Sort effort by what compounds. Give every belief a test and a date.</p>
+      <p class="body">None of it requires capital. All of it requires practice — and practice is easier with structure. I'm building a tool that turns these five habits into a daily practice: a sealed ledger for your decisions, your expectations, and the claims the world feeds you. It's almost ready. The essay below tells the story of how I build things.</p>
+    </article>
+
+  </main>
+
+  <section class="wrap cta">
+    <div class="card-3d cta-card" data-reveal>
+      <span class="eyebrow" style="display:block;margin-bottom:24px">Keep reading</span>
+      <h2 class="h-section">The story behind <span class="grad-italic">the builder.</span></h2>
+      <p class="lead" style="margin-top:24px;max-width:56ch;margin-left:auto;margin-right:auto">I can't write code — and I shipped tested software anyway. The same discipline this series teaches is how it happened.</p>
+      <div class="cta-actions">
+        <a href="/i-cant-write-code/" class="btn btn-gold">Read the essay →</a>
+        <a href="/writing/" class="btn btn-ghost">All writing</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot-simple body-sm">
+      <span>© 2026 Tanya M. Lawson. All Rights Reserved. &nbsp;·&nbsp; <a href="/colophon/" class="navlink">Built by Me</a></span>
+      <span><a href="/privacy/" class="navlink">Privacy</a> &nbsp;·&nbsp; <a href="/terms/" class="navlink">Terms</a> &nbsp;·&nbsp; <a href="/disclaimer/" class="navlink">Disclaimer</a></span>
+    </div>
+  </footer>
+
+</div>
+<script>
+(function(){
+  var els = document.querySelectorAll("[data-reveal]");
+  if (!("IntersectionObserver" in window)) return;
+  els.forEach(function(el){ el.style.opacity = "0"; el.style.transform = "translateY(60px) scale(0.96)"; });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.style.opacity = "1"; e.target.style.transform = "none"; io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
